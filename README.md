@@ -16,10 +16,13 @@
 
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~):** [https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)
 
-## Install in 10 Seconds
+## Install in 10 Seconds (`npx skills`)
 
 ```bash
-# Copy into Claude Code (~/.claude/skills) or Cursor (.cursor/skills)
+# Install across Claude Code, Cursor, Antigravity, Codex, Cline & Windsurf
+npx skills add zColdWater/omniforge-skills
+
+# Or clone manually
 git clone https://github.com/zColdWater/omniforge-skills.git
 cp -R omniforge-skills/skills/* ~/.claude/skills/
 ```
