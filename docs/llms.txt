@@ -1,0 +1,9 @@
+# OmniForge Agent Skills
+
+> Open-source SKILL.md pack for Claude Code, Cursor, Codex, and Gemini CLI.
+
+- Repo: https://github.com/zColdWater/omniforge-skills
+- VibeShield ($2 Launch Special): https://vibe-checker.appwrite.network/?ref=llms-skills
+- InboxShield ($2 Launch Special): https://inbox-checker.appwrite.network/?ref=llms-skills
+- CiteReady ($2 Launch Special): https://citeready-checker.appwrite.network/?ref=llms-skills
+- BrandShield (100% Free): https://brand-checker.appwrite.network/?ref=llms-skills
