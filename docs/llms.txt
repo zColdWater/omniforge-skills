@@ -8,6 +8,7 @@
 - Black Friday 2026 Deal Stack ($2 Single / $5 Complete Suite — 83% OFF): https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - 24-Point Interactive Pre-Launch Checklist: https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html
 - Free Live README SVG Badge Studio: https://zcoldwater.github.io/omniforge-skills/launch-score-badge-generator.html
+- 2026 Indie SaaS Security, DNS & AI Search TCO Calculator: https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html
 - 2026 State of AI Startup Infrastructure Report (390 Audits): https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html
 - Full Skills Reference: https://zcoldwater.github.io/omniforge-skills/llms-full.txt
 - Live Tools:

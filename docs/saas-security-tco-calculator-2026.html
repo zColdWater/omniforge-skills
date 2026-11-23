@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 Indie SaaS Security, Email DNS &amp; AI Search TCO Calculator ($0/mo vs. Subscriptions) | OmniForge</title>
+  <meta name="description" content="Interactive 1-year and 3-year TCO calculator comparing recurring web security, DMARC monitoring, and AI visibility SaaS subscriptions against one-time pre-launch fix passes ($2 single / $5 3-in-1 suite) + free MIT CI gates." />
+  <link rel="canonical" href="https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Cpath d='M9 16.5L14 21.5L23.5 11' stroke='%2310b981' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="2026 Indie SaaS Security, Email DNS &amp; AI Search TCO Calculator | OmniForge" />
+  <meta property="og:description" content="Plug in your own monthly security, DMARC, and AI search tool quotes to compare 1-year and 3-year costs against $5 one-time remediation + free MIT GitHub Actions." />
+  <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "2026 Indie SaaS Security, Email DNS & AI Search TCO Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Compare 1-year and 3-year total cost of ownership between recurring web security, DMARC, and AI search SaaS subscriptions versus one-time pre-launch audit passes ($2 single / $5 3-in-1 suite) plus MIT GitHub Actions CI gates."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When does a $5 one-time launch audit suite make sense versus recurring security/DMARC SaaS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indie SaaS, micro-SaaS, and seed-stage apps typically need to eliminate leaked keys, lock Supabase RLS, flatten SPF below 10 lookups, enforce DMARC, and ship /llms.txt before launch, then catch regressions on PRs via free MIT GitHub Actions. Enterprise teams with SOC-2 continuous alerting, multi-team RBAC, or millions of monthly emails collecting forensic RUA/RUF analytics still benefit from dedicated continuous monitoring SaaS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the default monthly SaaS prices in the calculator editable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every monthly subscription input (Web Security scanner, Email DMARC monitor, AI Search GEO monitor, domain count, and 1-year or 3-year horizon) can be adjusted to match your exact vendor quotes."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --accent: #059669;
+      --accent-dark: #047857;
+      --accent-soft: #ecfdf5;
+      --accent-border: #a7f3d0;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.56; }
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar { border-bottom: 1px solid var(--border); background: #ffffff; position: sticky; top: 0; z-index: 20; }
+    .topbar-in { max-width: 1080px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .brand { font-weight: 800; color: var(--ink); font-size: 0.95rem; letter-spacing: -0.02em; }
+    .nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.85rem; }
+    .nav a { color: var(--muted); font-weight: 600; }
+    .nav a:hover { color: var(--ink); text-decoration: none; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 34px 20px 68px; }
+    .eyebrow { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-dark); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 999px; padding: 4px 12px; margin-bottom: 14px; }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.7rem); line-height: 1.12; letter-spacing: -0.03em; margin: 0 0 12px; max-width: 860px; }
+    .lead { font-size: 1.02rem; color: var(--muted); max-width: 780px; margin: 0 0 24px; }
+    .calc-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 20px; align-items: start; }
+    .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+    .panel-white { background: #ffffff; border: 2px solid var(--ink); border-radius: 14px; padding: 22px; }
+    .field { margin-bottom: 16px; }
+    .field label { display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+    .field input[type="range"] { width: 100%; accent-color: var(--ink); }
+    .field select { width: 100%; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border-strong); background: #ffffff; color: var(--ink); font-size: 0.92rem; }
+    .pillar-row {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pillar-left { display: flex; align-items: center; gap: 10px; }
+    .pillar-left input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--accent); }
+    .pillar-name { font-weight: 700; font-size: 0.9rem; }
+    .pillar-sub { font-size: 0.78rem; color: var(--subtle); }
+    .mo-input { display: flex; align-items: center; gap: 5px; font-size: 0.82rem; color: var(--muted); }
+    .mo-input input { width: 72px; padding: 6px 8px; border: 1px solid var(--border-strong); border-radius: 6px; font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+    .kicker { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--subtle); }
+    .big-num { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.03em; margin: 4px 0; }
+    .compare-bar-wrap { margin: 16px 0; }
+    .bar-label { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; margin-bottom: 4px; }
+    .bar-track { height: 12px; background: #e2e8f0; border-radius: 999px; overflow: hidden; margin-bottom: 10px; }
+    .bar-fill-sub { height: 100%; background: #64748b; transition: width 0.2s ease; }
+    .bar-fill-omni { height: 100%; background: var(--accent); transition: width 0.2s ease; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; border: 1px solid transparent; cursor: pointer; }
+    .btn:hover { text-decoration: none; }
+    .btn-accent { background: var(--accent); color: #ffffff; }
+    .btn-dark { background: var(--ink); color: #ffffff; }
+    .btn-out { background: #ffffff; color: var(--ink); border-color: var(--border-strong); }
+    .btn-sm { padding: 8px 13px; font-size: 0.82rem; }
+    .qs-panel { margin-top: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+    .input-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .input-row input { flex: 1 1 240px; min-width: 0; padding: 10px 13px; border-radius: 8px; border: 1px solid var(--border-strong); font-size: 0.94rem; background: #ffffff; color: var(--ink); }
+    .table-wrap { margin-top: 28px; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: #ffffff; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; min-width: 600px; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: var(--surface); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--subtle); }
+    tr:last-child td { border-bottom: 0; }
+    footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.83rem; color: var(--subtle); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    @media (max-width: 780px) {
+      .calc-grid { grid-template-columns: minmax(0, 1fr); }
+      .wrap { padding: 24px 16px 52px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="./index.html">OmniForge · TCO Calculator</a>
+      <nav class="nav">
+        <a href="./black-friday-2026-developer-security-deal.html">Black Friday Deal ($2 / $5)</a>
+        <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a>
+        <a href="./launch-score-badge-generator.html">SVG Badge Studio</a>
+        <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="eyebrow">TRANSPARENT 1-YEAR &amp; 3-YEAR STACK COST CALCULATOR</div>
+    <h1>2026 Indie SaaS Security, Email DNS &amp; AI Search TCO Calculator</h1>
+    <p class="lead">Adjust the monthly vendor prices below to match your real SaaS quotes and compare 1-year or 3-year subscription spend against a one-time pre-launch fix pack ($2 single / $5 3-in-1 suite) paired with free MIT GitHub Actions CI gates.</p>
+
+    <section class="calc-grid">
+      <div class="panel">
+        <div class="field">
+          <label for="tco-domains"><span>Production Domains / Micro-SaaS Apps</span><span id="tco-domains-val">1 domain</span></label>
+          <input id="tco-domains" type="range" min="1" max="20" value="1" />
+        </div>
+        <div class="field">
+          <label for="tco-horizon"><span>Cost Horizon</span></label>
+          <select id="tco-horizon">
+            <option value="1">1 Year (12 months)</option>
+            <option value="3" selected>3 Years (36 months)</option>
+          </select>
+        </div>
+
+        <div class="kicker" style="margin-bottom:8px;">EDITABLE MONTHLY SUBSCRIPTION QUOTES (PER DOMAIN)</div>
+
+        <div class="pillar-row">
+          <div class="pillar-left">
+            <input id="tco-sec-on" type="checkbox" checked />
+            <div>
+              <div class="pillar-name">Web &amp; BaaS Security Scanner</div>
+              <div class="pillar-sub">vs. VibeShield v7.0 ($2 one-time) + free MIT CLI/CI</div>
+            </div>
+          </div>
+          <div class="mo-input">$<input id="tco-sec-mo" type="number" min="0" max="500" value="29" aria-label="Web security monthly cost" />/mo</div>
+        </div>
+
+        <div class="pillar-row">
+          <div class="pillar-left">
+            <input id="tco-mail-on" type="checkbox" checked />
+            <div>
+              <div class="pillar-name">Email DMARC &amp; SPF Flattener SaaS</div>
+              <div class="pillar-sub">vs. InboxShield v7.0 ($2 one-time) + free MIT CLI/CI</div>
+            </div>
+          </div>
+          <div class="mo-input">$<input id="tco-mail-mo" type="number" min="0" max="500" value="36" aria-label="Email DMARC monthly cost" />/mo</div>
+        </div>
+
+        <div class="pillar-row">
+          <div class="pillar-left">
+            <input id="tco-geo-on" type="checkbox" checked />
+            <div>
+              <div class="pillar-name">AI Search &amp; /llms.txt GEO Monitor</div>
+              <div class="pillar-sub">vs. CiteReady v6.0 ($2 one-time) + free MIT CLI/CI</div>
+            </div>
+          </div>
+          <div class="mo-input">$<input id="tco-geo-mo" type="number" min="0" max="500" value="49" aria-label="AI search GEO monthly cost" />/mo</div>
+        </div>
+
+        <div style="font-size:0.78rem;color:var(--subtle);margin-top:8px;">
+          Note: Default values ($29 / $36 / $49 per month) represent typical starter tiers for recurring web security, DMARC/SPF, and AI visibility SaaS in 2026. Edit any input to match your exact quotes. BrandShield v6.2 (78+ TLDs &amp; USPTO) is always $0.
+        </div>
+      </div>
+
+      <div class="panel-white">
+        <div class="kicker" style="color:var(--accent-dark);">ESTIMATED SAVINGS</div>
+        <div class="big-num" id="out-save" style="color:var(--accent-dark);">$4,099</div>
+        <div id="out-save-pct" style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:14px;">99.9% saved over 3 yrs</div>
+
+        <div class="compare-bar-wrap">
+          <div class="bar-label"><span>Recurring SaaS Subscriptions</span><span id="out-sub-total">$4,104</span></div>
+          <div style="font-size:0.78rem;color:var(--subtle);margin-bottom:6px;" id="out-sub-detail">$114/mo across 36 months</div>
+          <div class="bar-track"><div class="bar-fill-sub" id="bar-sub" style="width:100%;"></div></div>
+
+          <div class="bar-label"><span>OmniForge Black Friday 2026 Stack</span><span id="out-omni-total">$5</span></div>
+          <div style="font-size:0.78rem;color:var(--subtle);margin-bottom:6px;" id="out-omni-detail">$5 one-time Complete 3-in-1 Suite</div>
+          <div class="bar-track"><div class="bar-fill-omni" id="bar-omni" style="width:2%;"></div></div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:18px;">
+          <a class="btn btn-accent" data-paywall="tco-suite-5" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener">Unlock 3-in-1 Complete Suite — $5 (83% OFF)</a>
+          <a class="btn btn-out btn-sm" href="./black-friday-2026-developer-security-deal.html">View All $2 Single Passes &amp; Free Tools</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="qs-panel">
+      <div class="kicker">TEST BEFORE YOU SPEND $5</div>
+      <h2 style="margin:4px 0 4px;font-size:1.2rem;">Run a Live Free 3-in-1 Audit on Your Own Domain</h2>
+      <p style="margin:0;font-size:0.88rem;color:var(--muted);">Check your actual Security, Email DNS, and AI Search scores right here — zero signup, strictly read-only.</p>
+      <div class="input-row">
+        <input id="tco-domain" type="text" placeholder="yourdomain.com (e.g. supabase.com)" aria-label="Domain to audit" />
+        <button id="tco-qs-btn" class="btn btn-dark" type="button">Run Live 3-in-1 Audit (Free)</button>
+      </div>
+      <div id="tco-qs-out" style="display:none;margin-top:12px;background:#ffffff;border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;" aria-live="polite"></div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Honest Boundary Comparison</th>
+            <th>OmniForge ($5 One-Time + MIT CI)</th>
+            <th>Recurring Enterprise SaaS ($100+/mo)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Best fit</strong></td>
+            <td>Indie hackers, micro-SaaS, AI apps (Cursor/Lovable/Next.js/Supabase), and seed teams fixing launch hygiene fast.</td>
+            <td>Compliance-heavy orgs needing 24/7 SOC-2 continuous alerting, hosted RUA/RUF forensic dashboards, and multi-team RBAC.</td>
+          </tr>
+          <tr>
+            <td><strong>Continuous regression guard</strong></td>
+            <td>Run our free MIT GitHub Actions (<code>vibeshield-action</code>, <code>inboxshield-action</code>, <code>citeready-action</code>) on every PR or cron at $0/mo.</td>
+            <td>Managed SaaS cloud polling, Slack/PagerDuty SLAs, and dedicated account support.</td>
+          </tr>
+          <tr>
+            <td><strong>Cost model</strong></td>
+            <td>$0 free diagnostics + optional $2/$5 one-time copy-paste fix passes ($0/mo forever).</td>
+            <td>Monthly or annual recurring per-domain / per-seat contracts.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <div>MIT (c) OmniForge · Agent Arena Studio · Honest comparison with editable inputs</div>
+      <div>
+        <a href="./black-friday-2026-developer-security-deal.html">Black Friday Deal</a> ·
+        <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a> ·
+        <a href="./launch-score-badge-generator.html">SVG Badge Studio</a> ·
+        <a href="./index.html">50 Agent Skills</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+(function () {
+  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  function opTrack(ev, extra) {
+    try {
+      var p = JSON.stringify(Object.assign({
+        site: "vibeshield",
+        event: ev,
+        path: "/saas-security-tco-calculator-2026",
+        referrer: document.referrer || "",
+        lang: "en",
+        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "") || "",
+        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : ""
+      }, extra || {}));
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(TRACK_URL, new Blob([p], { type: "text/plain;charset=UTF-8" }));
+      }
+    } catch (_) {}
+  }
+  opTrack("pageview");
+
+  function escHtml(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function fmtUsd(n) {
+    return "$" + Math.round(n).toLocaleString("en-US");
+  }
+
+  var domainsEl = document.getElementById("tco-domains");
+  var domainsVal = document.getElementById("tco-domains-val");
+  var horizonEl = document.getElementById("tco-horizon");
+  var secChk = document.getElementById("tco-sec-on");
+  var secMo = document.getElementById("tco-sec-mo");
+  var mailChk = document.getElementById("tco-mail-on");
+  var mailMo = document.getElementById("tco-mail-mo");
+  var geoChk = document.getElementById("tco-geo-on");
+  var geoMo = document.getElementById("tco-geo-mo");
+
+  var outSubTotal = document.getElementById("out-sub-total");
+  var outSubDetail = document.getElementById("out-sub-detail");
+  var outOmniTotal = document.getElementById("out-omni-total");
+  var outOmniDetail = document.getElementById("out-omni-detail");
+  var outSave = document.getElementById("out-save");
+  var outSavePct = document.getElementById("out-save-pct");
+  var barSub = document.getElementById("bar-sub");
+  var barOmni = document.getElementById("bar-omni");
+
+  function recalc() {
+    var domains = Math.max(1, Math.min(20, parseInt(domainsEl ? domainsEl.value : "1", 10) || 1));
+    if (domainsVal) domainsVal.textContent = domains + (domains === 1 ? " domain" : " domains");
+    var years = parseInt(horizonEl ? horizonEl.value : "3", 10) || 3;
+    var months = years * 12;
+
+    var mSec = secChk && secChk.checked ? Math.max(0, Number(secMo ? secMo.value : 0) || 0) : 0;
+    var mMail = mailChk && mailChk.checked ? Math.max(0, Number(mailMo ? mailMo.value : 0) || 0) : 0;
+    var mGeo = geoChk && geoChk.checked ? Math.max(0, Number(geoMo ? geoMo.value : 0) || 0) : 0;
+
+    var monthlyPerDomain = mSec + mMail + mGeo;
+    var subTotal = monthlyPerDomain * domains * months;
+
+    var activeTools = (secChk && secChk.checked ? 1 : 0) + (mailChk && mailChk.checked ? 1 : 0) + (geoChk && geoChk.checked ? 1 : 0);
+    var omniCost = activeTools === 0 ? 0 : (activeTools >= 3 ? 5 : activeTools * 2);
+    var omniLabel = activeTools === 0
+      ? "Free diagnostics only ($0)"
+      : activeTools >= 3
+        ? "$5 one-time Complete 3-in-1 Suite (83% OFF, $0/mo + free MIT CI)"
+        : "$" + omniCost + " one-time (" + activeTools + " single pass" + (activeTools === 1 ? "" : "es") + " at $2 each, $0/mo)";
+
+    var savings = Math.max(0, subTotal - omniCost);
+    var pct = subTotal > 0 ? Math.min(99.9, (savings / subTotal) * 100) : 0;
+
+    if (outSubTotal) outSubTotal.textContent = fmtUsd(subTotal);
+    if (outSubDetail) outSubDetail.textContent = fmtUsd(monthlyPerDomain * domains) + "/mo across " + months + " months";
+    if (outOmniTotal) outOmniTotal.textContent = "$" + omniCost;
+    if (outOmniDetail) outOmniDetail.textContent = omniLabel;
+    if (outSave) outSave.textContent = fmtUsd(savings);
+    if (outSavePct) outSavePct.textContent = subTotal > 0 ? (pct.toFixed(1) + "% saved over " + years + " yr" + (years > 1 ? "s" : "")) : "Enable at least one pillar above";
+
+    if (barSub) barSub.style.width = subTotal > 0 ? "100%" : "0%";
+    if (barOmni) barOmni.style.width = subTotal > 0 ? Math.max(2, Math.min(100, (omniCost / subTotal) * 100)).toFixed(1) + "%" : "0%";
+  }
+
+  [domainsEl, horizonEl, secChk, secMo, mailChk, mailMo, geoChk, geoMo].forEach(function (el) {
+    if (el) el.addEventListener("input", recalc);
+    if (el) el.addEventListener("change", recalc);
+  });
+  recalc();
+
+  var qsInput = document.getElementById("tco-domain");
+  var qsBtn = document.getElementById("tco-qs-btn");
+  var qsOut = document.getElementById("tco-qs-out");
+
+  function sanitizeHost(raw) {
+    var v = (raw || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/\/.*$/, "").replace(/[^a-z0-9.-]/g, "");
+    return v || "supabase.com";
+  }
+
+  function runQs() {
+    if (!qsOut) return;
+    var raw = qsInput ? qsInput.value.trim() : "";
+    var host = sanitizeHost(raw);
+    if (qsInput && !raw) qsInput.value = host;
+    if (qsBtn) { qsBtn.disabled = true; qsBtn.textContent = "Auditing..."; }
+    qsOut.style.display = "block";
+    qsOut.innerHTML = '<div style="font-size:0.88rem;color:#475569;">Running live read-only 3-in-1 check on <strong>' + escHtml(host) + '</strong>...</div>';
+    opTrack("scan", { target: "tco-quick-score", domain: host });
+
+    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok) throw new Error("Unexpected response");
+        var ov = d.overall || {};
+        var vb = (d.engines && d.engines.vibeshield) || {};
+        var ib = (d.engines && d.engines.inboxshield) || {};
+        var cr = (d.engines && d.engines.citeready) || {};
+        var co = d.checkout || {};
+        var suiteUrl = co.completeSuite5Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
+        qsOut.innerHTML =
+          '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">' +
+            '<div>' +
+              '<div style="font-size:0.74rem;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:#047857;">LIVE AUDIT · ' + escHtml(d.domain || host) + ' · OVERALL ' + escHtml(ov.score) + '/100 (' + escHtml(ov.grade || "-") + ')</div>' +
+              '<div style="font-size:0.86rem;color:#334155;margin-top:3px;">Security ' + escHtml(vb.score) + '/100 (' + escHtml(vb.issues || 0) + ' issues) · Email DNS ' + escHtml(ib.score) + '/100 (DMARC ' + escHtml(ib.dmarcPolicy || "none") + ') · AI GEO ' + escHtml(cr.score) + '/100 (Entity ' + escHtml(cr.entityScore != null ? cr.entityScore : "-") + ')</div>' +
+            '</div>' +
+            '<a class="btn btn-accent btn-sm" data-paywall="tco-live-suite" href="' + escHtml(suiteUrl) + '" target="_blank" rel="noopener">Fix All ' + escHtml(ov.totalIssues || 0) + ' Issues — $5 One-Time</a>' +
+          '</div>';
+      })
+      .catch(function (err) {
+        qsOut.innerHTML = '<div style="font-size:0.85rem;color:#b45309;">Live quick-score unavailable (' + escHtml(err && err.message ? err.message : "network") + '). Open any scanner directly from the deal page.</div>';
+      })
+      .finally(function () {
+        if (qsBtn) { qsBtn.disabled = false; qsBtn.textContent = "Run Live 3-in-1 Audit (Free)"; }
+      });
+  }
+
+  if (qsBtn) qsBtn.addEventListener("click", runQs);
+  if (qsInput) qsInput.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); runQs(); } });
+
+  document.addEventListener("click", function (e) {
+    var pw = e.target.closest("a[data-paywall]");
+    if (pw) opTrack("paywall", { target: pw.getAttribute("data-paywall"), href: pw.getAttribute("href") });
+  });
+})();
+</script>
+</body>
+</html>
