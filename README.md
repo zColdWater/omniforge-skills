@@ -1,12 +1,12 @@
-# OmniForge Agent Skills — 30 Pre-Launch Security, Email DNS, Domain & AI Search Skills
+# OmniForge Agent Skills — 40 Pre-Launch Security, Email DNS, Domain & AI Search Skills
 
-[![GitHub Release](https://img.shields.io/badge/release-v2.1.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
-[![Skills Count](https://img.shields.io/badge/skills-30-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
+[![GitHub Release](https://img.shields.io/badge/release-v2.2.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
+[![Skills Count](https://img.shields.io/badge/skills-40-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-**Zero-dependency `SKILL.md` pack (30 specialized developer skills) for Claude Code, Cursor, OpenAI Codex CLI, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
+**Zero-dependency `SKILL.md` pack (40 specialized developer skills) for Claude Code, Cursor, OpenAI Codex CLI, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
 
-## Install All 30 Skills in 10 Seconds (`npx skills`)
+## Install All 40 Skills in 10 Seconds (`npx skills`)
 
 ```bash
 # Install across Claude Code, Cursor, Antigravity, Codex, Cline & Windsurf
@@ -22,7 +22,7 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 
 ---
 
-## Included Skills (30)
+## Included Skills (40)
 
 | # | Skill | Pillar | Focus & Free Live Check |
 | :---: | :--- | :--- | :--- |
@@ -56,6 +56,16 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 | 28 | [`resend-postmark-email-audit`](./skills/resend-postmark-email-audit/SKILL.md) | InboxShield v7.0 | Audit transactional SaaS email DNS (Resend, Postmark, SendGrid, Amazon SES): catches SPF >10 lookup PermErrors, missing DKIM CNA... |
 | 29 | [`bimi-mta-sts-email-security`](./skills/bimi-mta-sts-email-security/SKILL.md) | InboxShield v7.0 | Audit advanced email transport & brand trust records: _mta-sts policy & HTTPS policy host, _smtp._tls (TLS-RPT), and default._bi... |
 | 30 | [`robots-txt-ai-crawler-audit`](./skills/robots-txt-ai-crawler-audit/SKILL.md) | CiteReady v6.0 | Audit /robots.txt rules across 10 AI crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, GPTBot, Google-Extended, A... |
+| 31 | [`v0-security-audit`](./skills/v0-security-audit/SKILL.md) | VibeShield v7.0 | Audit Vercel v0.dev generated Next.js and React apps for NEXT_PUBLIC_ secret leaks, CVE-2025-29927 middleware bypass, unauthenti... |
+| 32 | [`replit-security-audit`](./skills/replit-security-audit/SKILL.md) | VibeShield v7.0 | Run a read-only 6-phase security audit on Replit Agent deployed web apps: detect client JS API key leaks, exposed .env/.git/debu... |
+| 33 | [`vite-env-leak-scanner`](./skills/vite-env-leak-scanner/SKILL.md) | VibeShield v7.0 | Scan live compiled Vite/React/Vue/Svelte JS chunks and sourcemaps for accidentally exposed VITE_* / PUBLIC_* private keys (Strip... |
+| 34 | [`firebase-security-rules-audit`](./skills/firebase-security-rules-audit/SKILL.md) | VibeShield v7.0 | Detect misconfigured Firebase RTDB (/.json public read) and open Cloud Firestore collections from live deployed web apps, verify... |
+| 35 | [`cold-email-deliverability-audit`](./skills/cold-email-deliverability-audit/SKILL.md) | InboxShield v7.0 | Audit secondary cold-email and outbound SaaS domains for SPF 10-lookup limits, 24 DKIM selectors, enforced DMARC (p=quarantine/r... |
+| 36 | [`aws-ses-sendgrid-dns-audit`](./skills/aws-ses-sendgrid-dns-audit/SKILL.md) | InboxShield v7.0 | Verify custom MAIL FROM / Return-Path SPF alignment, Easy DKIM / SendGrid s1/s2 CNAME selectors, RFC 7489 DMARC policy, and 10-l... |
+| 37 | [`microsoft-365-spf-dmarc-audit`](./skills/microsoft-365-spf-dmarc-audit/SKILL.md) | InboxShield v7.0 | Verify Microsoft 365 / Office 365 Exchange Online DNS authentication: include:spf.protection.outlook.com lookup budget, selector... |
+| 38 | [`chatgpt-perplexity-seo-audit`](./skills/chatgpt-perplexity-seo-audit/SKILL.md) | CiteReady v6.0 | Audit how well ChatGPT Search, Perplexity, and Claude can discover, parse, and cite your SaaS product pages: checks /llms.txt, O... |
+| 39 | [`uspto-trademark-domain-check`](./skills/uspto-trademark-domain-check/SKILL.md) | BrandShield v6.2 (100% Free) | 100% free live startup naming clearance: screen USPTO trademark collisions, verify 78+ TLD availability via real-time RDAP, dete... |
+| 40 | [`saas-launch-audit`](./skills/saas-launch-audit/SKILL.md) | OmniForge Complete Suite ($5 Launch) | Run a complete pre-launch audit across all 4 production pillars in 30 seconds: Web/AI Security (VibeShield v7.0), Email DNS Deli... |
 
 ---
 

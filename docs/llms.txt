@@ -1,6 +1,6 @@
-# OmniForge Agent Skills — 30 SKILL.md Pre-Launch Audit Skills
+# OmniForge Agent Skills — 40 SKILL.md Pre-Launch Audit Skills
 
-> Install 30 zero-dependency skills for Claude Code, Cursor, Codex CLI, Windsurf, Cline, Antigravity & Gemini CLI: npx skills add zColdWater/omniforge-skills
+> Install 40 zero-dependency skills for Claude Code, Cursor, Codex CLI, Windsurf, Cline, Antigravity & Gemini CLI: npx skills add zColdWater/omniforge-skills
 
 - Registry: https://www.skills.sh/zColdWater/omniforge-skills
 - GitHub Repo: https://github.com/zColdWater/omniforge-skills
@@ -11,7 +11,7 @@
   - BrandShield v6.2 (100% Free Forever): https://brand-checker.appwrite.network/
   - OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29): https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
 
-## 30 Skills
+## 40 Skills
 - vibeshield-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/vibeshield-security-audit — Run a read-only 6-phase security audit on Next.js, Vite, Cursor, Lovable, Bolt, Supabase, and Firebase apps: TLS 443, CNAME takeover, 24 full JS bundles (52 secret patterns), 28 SPA-filtered probes, Supabase RLS, Firebase rules, CSP AST & passive CVEs.
 - supabase-rls-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/supabase-rls-audit — Audit Supabase projects for CVE-2025-48757: leaked service_role JWTs, unauthenticated PostgREST table reads across up to 20 tables, exposed RPC endpoints, and enumerable public Storage buckets.
 - nextjs-security-scanner (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/nextjs-security-scanner — Audit Next.js App Router and Pages Router deployments for CVE-2025-29927 middleware bypass versions, exposed NEXT_PUBLIC secrets, productionBrowserSourceMaps, X-Powered-By leaks, and vercel.json CSP/HSTS headers.
@@ -42,3 +42,13 @@
 - resend-postmark-email-audit (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/resend-postmark-email-audit — Audit transactional SaaS email DNS (Resend, Postmark, SendGrid, Amazon SES): catches SPF >10 lookup PermErrors, missing DKIM CNAME/TXT selectors, unaligned DMARC, and blacklisted IPs.
 - bimi-mta-sts-email-security (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/bimi-mta-sts-email-security — Audit advanced email transport & brand trust records: _mta-sts policy & HTTPS policy host, _smtp._tls (TLS-RPT), and default._bimi SVG Tiny PS logo + VMC readiness.
 - robots-txt-ai-crawler-audit (CiteReady v6.0): https://www.skills.sh/zColdWater/omniforge-skills/robots-txt-ai-crawler-audit — Audit /robots.txt rules across 10 AI crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, GPTBot, Google-Extended, Applebot-Extended, CCBot) so AI search cites your site without unwanted training scraping.
+- v0-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/v0-security-audit — Audit Vercel v0.dev generated Next.js and React apps for NEXT_PUBLIC_ secret leaks, CVE-2025-29927 middleware bypass, unauthenticated Supabase/Neon API routes, exposed sourcemaps, and missing CSP/HSTS headers.
+- replit-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/replit-security-audit — Run a read-only 6-phase security audit on Replit Agent deployed web apps: detect client JS API key leaks, exposed .env/.git/debug endpoints, permissive CORS, missing TLS/HSTS headers, and public DB reads.
+- vite-env-leak-scanner (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/vite-env-leak-scanner — Scan live compiled Vite/React/Vue/Svelte JS chunks and sourcemaps for accidentally exposed VITE_* / PUBLIC_* private keys (Stripe, OpenAI, Supabase service_role, AWS, GitHub, Resend) using 52 high-precision rules.
+- firebase-security-rules-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/firebase-security-rules-audit — Detect misconfigured Firebase RTDB (/.json public read) and open Cloud Firestore collections from live deployed web apps, verify client apiKey restrictions, and generate least-privilege security rules.
+- cold-email-deliverability-audit (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/cold-email-deliverability-audit — Audit secondary cold-email and outbound SaaS domains for SPF 10-lookup limits, 24 DKIM selectors, enforced DMARC (p=quarantine/reject), MX IPv4 redundancy, MTA-STS, and 5 major DNSBL blacklists.
+- aws-ses-sendgrid-dns-audit (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/aws-ses-sendgrid-dns-audit — Verify custom MAIL FROM / Return-Path SPF alignment, Easy DKIM / SendGrid s1/s2 CNAME selectors, RFC 7489 DMARC policy, and 10-lookup SPF safety for Amazon SES, SendGrid, and Mailgun.
+- microsoft-365-spf-dmarc-audit (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/microsoft-365-spf-dmarc-audit — Verify Microsoft 365 / Office 365 Exchange Online DNS authentication: include:spf.protection.outlook.com lookup budget, selector1/selector2 DKIM CNAMEs, DMARC RFC 7489 syntax, and MX redundancy.
+- chatgpt-perplexity-seo-audit (CiteReady v6.0): https://www.skills.sh/zColdWater/omniforge-skills/chatgpt-perplexity-seo-audit — Audit how well ChatGPT Search, Perplexity, and Claude can discover, parse, and cite your SaaS product pages: checks /llms.txt, OAI-SearchBot/PerplexityBot/ClaudeBot access, JSON-LD entities, and direct-answer density.
+- uspto-trademark-domain-check (BrandShield v6.2 (100% Free)): https://www.skills.sh/zColdWater/omniforge-skills/uspto-trademark-domain-check — 100% free live startup naming clearance: screen USPTO trademark collisions, verify 78+ TLD availability via real-time RDAP, detect 17 aftermarket marketplaces, and check GitHub/npm/PyPI/social handles.
+- saas-launch-audit (OmniForge Complete Suite ($5 Launch)): https://www.skills.sh/zColdWater/omniforge-skills/saas-launch-audit — Run a complete pre-launch audit across all 4 production pillars in 30 seconds: Web/AI Security (VibeShield v7.0), Email DNS Deliverability (InboxShield v7.0), AI Search /llms.txt GEO (CiteReady v6.0), and 78-TLD Brand Clearance (BrandShield v6.2).
