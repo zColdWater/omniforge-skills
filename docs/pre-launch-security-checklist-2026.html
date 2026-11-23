@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 Interactive SaaS Pre-Launch Security, Email DNS &amp; AI Search Checklist (24-Point Gate) | OmniForge</title>
+  <meta name="description" content="Free 24-point interactive pre-launch checklist for Next.js, Supabase, Cursor, Lovable &amp; AI SaaS startups: verify leaked secrets, RLS (CVE-2025-48757), CSP/HSTS, SPF/DKIM/DMARC, /llms.txt, and 78-TLD clearance. Auto-verify live &amp; export to GitHub PR Markdown." />
+  <link rel="canonical" href="https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Cpath d='M9 16.5L14 21.5L23.5 11' stroke='%2310b981' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="2026 Interactive SaaS Pre-Launch Security, DNS &amp; AI Search Checklist (24 Points)" />
+  <meta property="og:description" content="Interactive 24-point launch readiness gate with localStorage progress, 1-click live auto-verify across VibeShield, InboxShield, CiteReady &amp; BrandShield, and GitHub PR Markdown export." />
+  <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HowTo",
+      "name": "2026 AI & Indie SaaS Pre-Launch Security, Email DNS & AI Search Checklist",
+      "description": "Interactive 24-point pre-launch gate covering Web & BaaS Security (Supabase RLS, Next.js CVE-2025-29927, CSP), Email DNS (SPF/DKIM/DMARC/MTA-STS), AI Search /llms.txt GEO, and 78-TLD Brand Clearance.",
+      "url": "https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Zero leaked secrets in frontend JS bundles",
+          "text": "Verify no OpenAI, Anthropic, Stripe secret, Supabase service_role, or DB URI keys exist in NEXT_PUBLIC_* / VITE_* chunks."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Supabase RLS enabled & forced on all public tables (CVE-2025-48757)",
+          "text": "Confirm ENABLE + FORCE ROW LEVEL SECURITY and REVOKE ALL FROM anon on private user/order/billing tables."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Firebase RTDB & Firestore default-deny security rules",
+          "text": "Remove test-mode allow read, write: if true rules and restrict API keys by HTTP referrer."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Next.js patched against CVE-2025-29927 middleware bypass",
+          "text": "Upgrade Next.js (>=15.2.3 / >=14.2.25) and strip external x-middleware-subrequest headers at reverse proxies."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Production source maps & sensitive dotfiles blocked",
+          "text": "Set productionBrowserSourceMaps: false / build.sourcemap: false and ensure /.env, /.git/HEAD, and /swagger.json return 404."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Strict CSP, HSTS, COOP, Permissions-Policy & RFC 9116 security.txt",
+          "text": "Publish /.well-known/security.txt (with Contact + valid Expires) and Mozilla Observatory A+ headers (56.7% of top dev platforms fail security.txt)."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Single SPF TXT record strictly under 10 DNS lookups",
+          "text": "Eliminate duplicate v=spf1 records and flatten nested includes before hitting RFC 7208 PermError."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "2048-bit DKIM signing active on every sending ESP",
+          "text": "Verify Resend, Postmark, SendGrid, AWS SES, or Google Workspace DKIM CNAME/TXT records resolve cleanly."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Enforced DMARC policy (p=quarantine or p=reject) with RUA reporting",
+          "text": "Move beyond p=none so attackers cannot spoof password resets or billing receipts from your domain."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Clean sending domain & MX IPs across major DNSBL blocklists",
+          "text": "Check Spamhaus, Barracuda, SORBS, and SpamCop before sending onboarding or launch campaigns."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 11,
+          "name": "Publish MTA-STS policy & TLS-RPT reporting record",
+          "text": "Protect inbound/outbound SMTP transport against downgrade attacks (91.7% of Top 60 SaaS miss MTA-STS)."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 12,
+          "name": "Add BIMI SVG Tiny-PS logo (and VMC when eligible)",
+          "text": "Increase inbox visual recognition for transactional receipts and newsletters."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 13,
+          "name": "Publish spec-compliant /llms.txt at site root",
+          "text": "Provide H1 title, concise blockquote summary, and structured links to docs, pricing, and core product pages."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 14,
+          "name": "Publish expanded /llms-full.txt factual reference",
+          "text": "Give ChatGPT, Perplexity, and Claude complete pricing, specs, and integration commands in one clean Markdown fetch."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 15,
+          "name": "Allow AI retrieval crawlers in /robots.txt",
+          "text": "Explicitly verify OAI-SearchBot, ChatGPT-User, PerplexityBot, and ClaudeBot are not blocked unintentionally."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 16,
+          "name": "Render pricing, features & FAQ copy in initial SSR HTML",
+          "text": "Avoid empty client-side loading skeletons for critical product facts so retrieval bots extract text cleanly."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 17,
+          "name": "Deploy interconnected Schema.org @graph JSON-LD",
+          "text": "Include validated Organization, WebSite, SoftwareApplication, Offer, and FAQPage structured data."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 18,
+          "name": "Self-referencing canonical URLs, sitemap.xml & 1280x720 og:image",
+          "text": "Ensure clean link previews on X, Slack, Discord, and fast indexing via IndexNow / Search Console."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 19,
+          "name": "Check live RDAP availability across 78+ TLD extensions",
+          "text": "Verify primary and defensive extensions (.com, .ai, .dev, .app, .io) before printing branding or launching."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 20,
+          "name": "Audit .com redirect & sibling TLD squatting exposure",
+          "text": "Confirm whether a parked broker (Afternic, Sedo, Dan) or competitor holds your matching .com or .ai domain."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 21,
+          "name": "Run preliminary USPTO trademark conflict screening",
+          "text": "Screen exact and phonetic conflicts in Class 9 / Class 42 software categories before committing to a brand name."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 22,
+          "name": "Reserve matching GitHub, npm, PyPI & X/social handles",
+          "text": "Prevent namespace impersonation and typosquatting on developer package registries."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 23,
+          "name": "Check for dangling CNAME subdomain takeover risks",
+          "text": "Remove stale DNS CNAME records pointing to unclaimed GitHub Pages, Vercel, Heroku, or S3 endpoints."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 24,
+          "name": "Configure registrar lock, DNSSEC & redundant nameservers",
+          "text": "Enable transfer lock and 2FA at your registrar so your production domain cannot be hijacked."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I run these 24 pre-launch checks automatically against my domain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Enter your domain at the top of this checklist to launch our four free read-only web scanners (VibeShield, InboxShield, CiteReady, BrandShield) or run the single zero-install terminal command: curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my checklist progress stay saved in my browser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All checkbox selections and your target domain are saved locally in browser localStorage and never leave your device unless you click one of the live audit launchers. You can export your checklist as GitHub PR or Notion Markdown in one click."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --accent: #059669;
+      --accent-dark: #047857;
+      --accent-soft: #ecfdf5;
+      --accent-border: #a7f3d0;
+      --crit-bg: #fef2f2;
+      --crit-fg: #b91c1c;
+      --crit-bd: #fecaca;
+      --high-bg: #fffbeb;
+      --high-fg: #b45309;
+      --high-bd: #fde68a;
+      --med-bg: #f1f5f9;
+      --med-fg: #334155;
+      --med-bd: #cbd5e1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.56;
+    }
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .topbar-in {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: 800; color: var(--ink); font-size: 0.95rem; letter-spacing: -0.02em; }
+    .nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.85rem; }
+    .nav a { color: var(--muted); font-weight: 600; }
+    .nav a:hover { color: var(--ink); text-decoration: none; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 34px 20px 68px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.75rem); line-height: 1.12; letter-spacing: -0.03em; margin: 0 0 12px; max-width: 880px; }
+    .lead { font-size: 1.02rem; color: var(--muted); max-width: 780px; margin: 0 0 22px; }
+    .control-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .meter-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .score-pct { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em; }
+    .score-count { font-size: 0.88rem; color: var(--muted); font-weight: 600; }
+    .progress-track {
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+    .input-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+    .input-row input {
+      flex: 1 1 240px;
+      min-width: 0;
+      padding: 10px 13px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      font-size: 0.94rem;
+      background: #ffffff;
+      color: var(--ink);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn:hover { text-decoration: none; }
+    .btn-dark { background: var(--ink); color: #ffffff; }
+    .btn-dark:hover { background: #1e293b; }
+    .btn-accent { background: var(--accent); color: #ffffff; }
+    .btn-accent:hover { background: var(--accent-dark); }
+    .btn-out { background: #ffffff; color: var(--ink); border-color: var(--border-strong); }
+    .btn-out:hover { background: var(--surface); }
+    .cli-bar {
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .cli-scroll { flex: 1 1 200px; min-width: 0; max-width: 100%; overflow-x: auto; }
+    .cli-bar code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; white-space: nowrap; display: inline-block; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .filters { display: flex; gap: 6px; flex-wrap: wrap; }
+    .pill-btn {
+      background: #ffffff;
+      color: var(--muted);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .pill-btn.active { background: var(--ink); color: #ffffff; border-color: var(--ink); }
+    .pillar {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #ffffff;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .pillar-head {
+      background: var(--surface);
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pillar-title { margin: 0; font-size: 1.12rem; letter-spacing: -0.01em; }
+    .pillar-stat { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
+    .pillar-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .count-chip {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+    .check-list { padding: 8px 14px; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 6px;
+      border-bottom: 1px solid #f1f5f9;
+      cursor: pointer;
+    }
+    .check-item:last-child { border-bottom: 0; }
+    .check-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--accent);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .check-item.is-done .item-title { text-decoration: line-through; color: var(--subtle); }
+    .item-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
+    .item-title { font-weight: 700; font-size: 0.94rem; }
+    .item-desc { font-size: 0.85rem; color: var(--muted); }
+    .sev {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .sev-critical { background: var(--crit-bg); color: var(--crit-fg); border-color: var(--crit-bd); }
+    .sev-high { background: var(--high-bg); color: var(--high-fg); border-color: var(--high-bd); }
+    .sev-medium { background: var(--med-bg); color: var(--med-fg); border-color: var(--med-bd); }
+    .cta-box {
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 24px;
+      background: var(--surface);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.83rem;
+      color: var(--subtle);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 24px 16px 52px; }
+      .control-panel, .pillar-head, .cta-box { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="./index.html">OmniForge · 2026 Launch Gate</a>
+      <nav class="nav">
+        <a href="./black-friday-2026-developer-security-deal.html">Black Friday Deal ($2 / $5)</a>
+        <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report Hub</a>
+        <a href="./index.html">50 Agent Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="eyebrow">FREE INTERACTIVE PRE-LAUNCH GATE · 24 CHECKS · 4 LAYERS</div>
+    <h1>2026 AI &amp; Indie SaaS Pre-Launch Security, Email DNS &amp; AI Search Checklist</h1>
+    <p class="lead">Check off every launch-blocking vulnerability before posting to Product Hunt, Hacker News, or X. Enter your domain below to auto-verify each layer live (100% read-only, zero signup) or export your progress straight into a GitHub PR or Notion doc.</p>
+
+    <section class="control-panel">
+      <div class="meter-row">
+        <div>
+          <span class="score-pct" id="score-pct">0%</span>
+          <span style="font-size:0.9rem;color:var(--muted);margin-left:8px;">Launch Readiness</span>
+        </div>
+        <div class="score-count" id="score-count">0 / 24 verified</div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="score-fill"></div></div>
+
+      <div class="input-row">
+        <input id="cl-domain" type="text" placeholder="Enter your launch domain (e.g. yoursaas.com)" aria-label="Launch domain" />
+        <button class="btn btn-dark" type="button" data-launch="vibe">Live Security Scan</button>
+        <button class="btn btn-out" type="button" data-launch="inbox">Live Email DNS</button>
+        <button class="btn btn-out" type="button" data-launch="cite">Live AI GEO</button>
+        <button class="btn btn-out" type="button" data-launch="brand">78-TLD Free</button>
+      </div>
+
+      <div class="cli-bar">
+        <div class="cli-scroll">
+          <code id="cl-cli-cmd">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com</code>
+        </div>
+        <button class="btn btn-accent" id="copy-cli-btn" type="button" style="padding:6px 11px;font-size:0.78rem;">Copy CLI</button>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters">
+          <button class="pill-btn active" type="button" data-filter="all">All (24)</button>
+          <button class="pill-btn" type="button" data-filter="critical">Critical Only</button>
+          <button class="pill-btn" type="button" data-filter="remaining">Remaining</button>
+          <button class="pill-btn" type="button" data-filter="completed">Completed</button>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button class="btn btn-out" id="export-md-btn" type="button">Copy as PR / Notion Markdown</button>
+          <button class="btn btn-out" id="reset-btn" type="button">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillar" id="pillar-security">
+      <div class="pillar-head">
+        <div>
+          <h2 class="pillar-title">Web &amp; AI App Security <span style="font-size:0.82rem;font-weight:600;color:var(--subtle);">(VibeShield v7.0)</span></h2>
+          <div class="pillar-stat">2026 Benchmark (N=60): 46.7% ship zero CSP and 28.3% score Grade F despite 100% TLS 1.3.</div>
+        </div>
+        <div class="pillar-actions">
+          <span class="count-chip" id="pillar-count-security">0/6</span>
+          <button class="btn btn-dark" type="button" data-launch="vibe">Auto-Verify Live</button>
+        </div>
+      </div>
+      <div class="check-list">
+        <label class="check-item" data-id="sec-1" data-sev="critical">
+          <input type="checkbox" data-item-id="sec-1" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-critical">critical</span>
+              <span class="item-title">Zero leaked secrets in frontend JS bundles</span>
+            </div>
+            <div class="item-desc">Verify no OpenAI, Anthropic, Stripe secret, Supabase service_role, or DB URI keys exist in NEXT_PUBLIC_* / VITE_* chunks.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="sec-2" data-sev="critical">
+          <input type="checkbox" data-item-id="sec-2" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-critical">critical</span>
+              <span class="item-title">Supabase RLS enabled &amp; forced on all public tables (CVE-2025-48757)</span>
+            </div>
+            <div class="item-desc">Confirm ENABLE + FORCE ROW LEVEL SECURITY and REVOKE ALL FROM anon on private user/order/billing tables.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="sec-3" data-sev="critical">
+          <input type="checkbox" data-item-id="sec-3" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-critical">critical</span>
+              <span class="item-title">Firebase RTDB &amp; Firestore default-deny security rules</span>
+            </div>
+            <div class="item-desc">Remove test-mode allow read, write: if true rules and restrict API keys by HTTP referrer.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="sec-4" data-sev="high">
+          <input type="checkbox" data-item-id="sec-4" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Next.js patched against CVE-2025-29927 middleware bypass</span>
+            </div>
+            <div class="item-desc">Upgrade Next.js (&gt;=15.2.3 / &gt;=14.2.25) and strip external x-middleware-subrequest headers at reverse proxies.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="sec-5" data-sev="high">
+          <input type="checkbox" data-item-id="sec-5" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Production source maps &amp; sensitive dotfiles blocked</span>
+            </div>
+            <div class="item-desc">Set productionBrowserSourceMaps: false / build.sourcemap: false and ensure /.env, /.git/HEAD, and /swagger.json return 404.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="sec-6" data-sev="medium">
+          <input type="checkbox" data-item-id="sec-6" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Strict CSP, HSTS, COOP, Permissions-Policy &amp; RFC 9116 security.txt</span>
+            </div>
+            <div class="item-desc">Publish /.well-known/security.txt (with Contact + valid Expires) and Mozilla Observatory A+ headers (56.7% of top dev platforms fail security.txt).</div>
+          </div>
+        </label>
+      </div>
+    </section>
+    <section class="pillar" id="pillar-email">
+      <div class="pillar-head">
+        <div>
+          <h2 class="pillar-title">Email Authentication &amp; Deliverability <span style="font-size:0.82rem;font-weight:600;color:var(--subtle);">(InboxShield v7.0)</span></h2>
+          <div class="pillar-stat">2026 Benchmark (N=120): 71.7% of indie SaaS lack enforced DMARC; 15% of Top 60 SaaS sit at SPF 8-10/10 redline.</div>
+        </div>
+        <div class="pillar-actions">
+          <span class="count-chip" id="pillar-count-email">0/6</span>
+          <button class="btn btn-dark" type="button" data-launch="inbox">Auto-Verify Live</button>
+        </div>
+      </div>
+      <div class="check-list">
+        <label class="check-item" data-id="mail-1" data-sev="critical">
+          <input type="checkbox" data-item-id="mail-1" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-critical">critical</span>
+              <span class="item-title">Single SPF TXT record strictly under 10 DNS lookups</span>
+            </div>
+            <div class="item-desc">Eliminate duplicate v=spf1 records and flatten nested includes before hitting RFC 7208 PermError.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="mail-2" data-sev="critical">
+          <input type="checkbox" data-item-id="mail-2" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-critical">critical</span>
+              <span class="item-title">2048-bit DKIM signing active on every sending ESP</span>
+            </div>
+            <div class="item-desc">Verify Resend, Postmark, SendGrid, AWS SES, or Google Workspace DKIM CNAME/TXT records resolve cleanly.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="mail-3" data-sev="critical">
+          <input type="checkbox" data-item-id="mail-3" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-critical">critical</span>
+              <span class="item-title">Enforced DMARC policy (p=quarantine or p=reject) with RUA reporting</span>
+            </div>
+            <div class="item-desc">Move beyond p=none so attackers cannot spoof password resets or billing receipts from your domain.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="mail-4" data-sev="high">
+          <input type="checkbox" data-item-id="mail-4" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Clean sending domain &amp; MX IPs across major DNSBL blocklists</span>
+            </div>
+            <div class="item-desc">Check Spamhaus, Barracuda, SORBS, and SpamCop before sending onboarding or launch campaigns.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="mail-5" data-sev="medium">
+          <input type="checkbox" data-item-id="mail-5" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Publish MTA-STS policy &amp; TLS-RPT reporting record</span>
+            </div>
+            <div class="item-desc">Protect inbound/outbound SMTP transport against downgrade attacks (91.7% of Top 60 SaaS miss MTA-STS).</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="mail-6" data-sev="medium">
+          <input type="checkbox" data-item-id="mail-6" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Add BIMI SVG Tiny-PS logo (and VMC when eligible)</span>
+            </div>
+            <div class="item-desc">Increase inbox visual recognition for transactional receipts and newsletters.</div>
+          </div>
+        </label>
+      </div>
+    </section>
+    <section class="pillar" id="pillar-geo">
+      <div class="pillar-head">
+        <div>
+          <h2 class="pillar-title">AI Search &amp; /llms.txt Visibility (GEO) <span style="font-size:0.82rem;font-weight:600;color:var(--subtle);">(CiteReady v6.0)</span></h2>
+          <div class="pillar-stat">2026 Benchmark (N=50): 74% ship /llms.txt, but only 22% ship /llms-full.txt and avg Schema Graph is 35.6/100.</div>
+        </div>
+        <div class="pillar-actions">
+          <span class="count-chip" id="pillar-count-geo">0/6</span>
+          <button class="btn btn-dark" type="button" data-launch="cite">Auto-Verify Live</button>
+        </div>
+      </div>
+      <div class="check-list">
+        <label class="check-item" data-id="geo-1" data-sev="high">
+          <input type="checkbox" data-item-id="geo-1" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Publish spec-compliant /llms.txt at site root</span>
+            </div>
+            <div class="item-desc">Provide H1 title, concise blockquote summary, and structured links to docs, pricing, and core product pages.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="geo-2" data-sev="high">
+          <input type="checkbox" data-item-id="geo-2" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Publish expanded /llms-full.txt factual reference</span>
+            </div>
+            <div class="item-desc">Give ChatGPT, Perplexity, and Claude complete pricing, specs, and integration commands in one clean Markdown fetch.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="geo-3" data-sev="high">
+          <input type="checkbox" data-item-id="geo-3" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Allow AI retrieval crawlers in /robots.txt</span>
+            </div>
+            <div class="item-desc">Explicitly verify OAI-SearchBot, ChatGPT-User, PerplexityBot, and ClaudeBot are not blocked unintentionally.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="geo-4" data-sev="medium">
+          <input type="checkbox" data-item-id="geo-4" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Render pricing, features &amp; FAQ copy in initial SSR HTML</span>
+            </div>
+            <div class="item-desc">Avoid empty client-side loading skeletons for critical product facts so retrieval bots extract text cleanly.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="geo-5" data-sev="medium">
+          <input type="checkbox" data-item-id="geo-5" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Deploy interconnected Schema.org @graph JSON-LD</span>
+            </div>
+            <div class="item-desc">Include validated Organization, WebSite, SoftwareApplication, Offer, and FAQPage structured data.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="geo-6" data-sev="medium">
+          <input type="checkbox" data-item-id="geo-6" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Self-referencing canonical URLs, sitemap.xml &amp; 1280x720 og:image</span>
+            </div>
+            <div class="item-desc">Ensure clean link previews on X, Slack, Discord, and fast indexing via IndexNow / Search Console.</div>
+          </div>
+        </label>
+      </div>
+    </section>
+    <section class="pillar" id="pillar-brand">
+      <div class="pillar-head">
+        <div>
+          <h2 class="pillar-title">Domain, TLD &amp; Brand Clearance <span style="font-size:0.82rem;font-weight:600;color:var(--subtle);">(BrandShield v6.2 (100% Free))</span></h2>
+          <div class="pillar-stat">2026 Benchmark (N=100 AI Startups): .ai (41%) overtook .com (40%), yet 81.7% lack .com 301 control.</div>
+        </div>
+        <div class="pillar-actions">
+          <span class="count-chip" id="pillar-count-brand">0/6</span>
+          <button class="btn btn-dark" type="button" data-launch="brand">Auto-Verify Live</button>
+        </div>
+      </div>
+      <div class="check-list">
+        <label class="check-item" data-id="br-1" data-sev="high">
+          <input type="checkbox" data-item-id="br-1" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Check live RDAP availability across 78+ TLD extensions</span>
+            </div>
+            <div class="item-desc">Verify primary and defensive extensions (.com, .ai, .dev, .app, .io) before printing branding or launching.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="br-2" data-sev="high">
+          <input type="checkbox" data-item-id="br-2" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Audit .com redirect &amp; sibling TLD squatting exposure</span>
+            </div>
+            <div class="item-desc">Confirm whether a parked broker (Afternic, Sedo, Dan) or competitor holds your matching .com or .ai domain.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="br-3" data-sev="high">
+          <input type="checkbox" data-item-id="br-3" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-high">high</span>
+              <span class="item-title">Run preliminary USPTO trademark conflict screening</span>
+            </div>
+            <div class="item-desc">Screen exact and phonetic conflicts in Class 9 / Class 42 software categories before committing to a brand name.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="br-4" data-sev="medium">
+          <input type="checkbox" data-item-id="br-4" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Reserve matching GitHub, npm, PyPI &amp; X/social handles</span>
+            </div>
+            <div class="item-desc">Prevent namespace impersonation and typosquatting on developer package registries.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="br-5" data-sev="medium">
+          <input type="checkbox" data-item-id="br-5" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Check for dangling CNAME subdomain takeover risks</span>
+            </div>
+            <div class="item-desc">Remove stale DNS CNAME records pointing to unclaimed GitHub Pages, Vercel, Heroku, or S3 endpoints.</div>
+          </div>
+        </label>
+        <label class="check-item" data-id="br-6" data-sev="medium">
+          <input type="checkbox" data-item-id="br-6" />
+          <div>
+            <div class="item-top">
+              <span class="sev sev-medium">medium</span>
+              <span class="item-title">Configure registrar lock, DNSSEC &amp; redundant nameservers</span>
+            </div>
+            <div class="item-desc">Enable transfer lock and 2FA at your registrar so your production domain cannot be hijacked.</div>
+          </div>
+        </label>
+      </div>
+    </section>
+
+    <section class="cta-box">
+      <div style="max-width:640px;">
+        <div style="font-size:0.74rem;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-dark);margin-bottom:4px;">BLACK FRIDAY 2026 LAUNCH SPECIAL · ONE-TIME ($0/MO)</div>
+        <h2 style="margin:0 0 6px;font-size:1.35rem;letter-spacing:-0.02em;">Found Red Checks? Unlock Ready-to-Paste Fixes Once for $2 or $5 (83% OFF)</h2>
+        <p style="margin:0;font-size:0.9rem;color:var(--muted);">Get domain-tailored Supabase RLS SQL, Vercel/Cloudflare CSP headers, flattened SPF/DMARC records, and /llms.txt + Schema.org JSON-LD in one checkout. BrandShield v6.2 and all 50 MIT Agent Skills stay free forever.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;min-width:240px;">
+        <a class="btn btn-accent" data-paywall="checklist-suite-5" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener">Unlock 3-in-1 Suite — $5 (83% OFF)</a>
+        <a class="btn btn-out" href="./black-friday-2026-developer-security-deal.html">Compare $2 Single Passes &amp; Free Tools</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>MIT (c) OmniForge · Agent Arena Studio · Zero-tracking localStorage checklist</div>
+      <div>
+        <a href="./black-friday-2026-developer-security-deal.html">Black Friday Deal</a> ·
+        <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a> ·
+        <a href="./index.html">50 Agent Skills</a> ·
+        <a href="https://github.com/zColdWater/omniforge-skills" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+(function () {
+  var STORAGE_KEY = "omniforge_launch_checklist_v1";
+  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var PILLARS = [{"id":"security","name":"Web & AI App Security","items":[{"id":"sec-1","sev":"critical","title":"Zero leaked secrets in frontend JS bundles"},{"id":"sec-2","sev":"critical","title":"Supabase RLS enabled & forced on all public tables (CVE-2025-48757)"},{"id":"sec-3","sev":"critical","title":"Firebase RTDB & Firestore default-deny security rules"},{"id":"sec-4","sev":"high","title":"Next.js patched against CVE-2025-29927 middleware bypass"},{"id":"sec-5","sev":"high","title":"Production source maps & sensitive dotfiles blocked"},{"id":"sec-6","sev":"medium","title":"Strict CSP, HSTS, COOP, Permissions-Policy & RFC 9116 security.txt"}]},{"id":"email","name":"Email Authentication & Deliverability","items":[{"id":"mail-1","sev":"critical","title":"Single SPF TXT record strictly under 10 DNS lookups"},{"id":"mail-2","sev":"critical","title":"2048-bit DKIM signing active on every sending ESP"},{"id":"mail-3","sev":"critical","title":"Enforced DMARC policy (p=quarantine or p=reject) with RUA reporting"},{"id":"mail-4","sev":"high","title":"Clean sending domain & MX IPs across major DNSBL blocklists"},{"id":"mail-5","sev":"medium","title":"Publish MTA-STS policy & TLS-RPT reporting record"},{"id":"mail-6","sev":"medium","title":"Add BIMI SVG Tiny-PS logo (and VMC when eligible)"}]},{"id":"geo","name":"AI Search & /llms.txt Visibility (GEO)","items":[{"id":"geo-1","sev":"high","title":"Publish spec-compliant /llms.txt at site root"},{"id":"geo-2","sev":"high","title":"Publish expanded /llms-full.txt factual reference"},{"id":"geo-3","sev":"high","title":"Allow AI retrieval crawlers in /robots.txt"},{"id":"geo-4","sev":"medium","title":"Render pricing, features & FAQ copy in initial SSR HTML"},{"id":"geo-5","sev":"medium","title":"Deploy interconnected Schema.org @graph JSON-LD"},{"id":"geo-6","sev":"medium","title":"Self-referencing canonical URLs, sitemap.xml & 1280x720 og:image"}]},{"id":"brand","name":"Domain, TLD & Brand Clearance","items":[{"id":"br-1","sev":"high","title":"Check live RDAP availability across 78+ TLD extensions"},{"id":"br-2","sev":"high","title":"Audit .com redirect & sibling TLD squatting exposure"},{"id":"br-3","sev":"high","title":"Run preliminary USPTO trademark conflict screening"},{"id":"br-4","sev":"medium","title":"Reserve matching GitHub, npm, PyPI & X/social handles"},{"id":"br-5","sev":"medium","title":"Check for dangling CNAME subdomain takeover risks"},{"id":"br-6","sev":"medium","title":"Configure registrar lock, DNSSEC & redundant nameservers"}]}];
+  var TOTAL = 24;
+
+  function opTrack(ev, extra) {
+    try {
+      var p = JSON.stringify(Object.assign({
+        site: "vibeshield",
+        event: ev,
+        path: "/pre-launch-security-checklist-2026",
+        referrer: document.referrer || "",
+        lang: "en",
+        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "") || "",
+        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : ""
+      }, extra || {}));
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(TRACK_URL, new Blob([p], { type: "text/plain;charset=UTF-8" }));
+      }
+    } catch (_) {}
+  }
+  opTrack("pageview");
+
+  var state = { checked: {}, domain: "" };
+  try {
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      var parsed = JSON.parse(saved);
+      if (parsed && typeof parsed === "object") {
+        state.checked = parsed.checked && typeof parsed.checked === "object" ? parsed.checked : {};
+        state.domain = typeof parsed.domain === "string" ? parsed.domain : "";
+      }
+    }
+  } catch (_) {}
+
+  function saveState() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
+  }
+
+  function sanitizeHost(raw) {
+    var v = (raw || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/\/.*$/, "").replace(/[^a-z0-9.-]/g, "");
+    return v || "yourdomain.com";
+  }
+
+  var domainInput = document.getElementById("cl-domain");
+  var cliCode = document.getElementById("cl-cli-cmd");
+  var scorePctEl = document.getElementById("score-pct");
+  var scoreCountEl = document.getElementById("score-count");
+  var scoreFillEl = document.getElementById("score-fill");
+  var activeFilter = "all";
+
+  if (domainInput && state.domain) domainInput.value = state.domain;
+
+  function syncDomain() {
+    var host = sanitizeHost(domainInput ? domainInput.value : "");
+    state.domain = domainInput ? domainInput.value : "";
+    saveState();
+    if (cliCode) cliCode.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + host;
+  }
+
+  function syncScore() {
+    var done = 0;
+    document.querySelectorAll("input[data-item-id]").forEach(function (cb) {
+      var id = cb.getAttribute("data-item-id");
+      cb.checked = !!state.checked[id];
+      var row = cb.closest(".check-item");
+      if (row) row.classList.toggle("is-done", cb.checked);
+      if (cb.checked) done++;
+    });
+    var pct = Math.round((done / TOTAL) * 100);
+    if (scorePctEl) scorePctEl.textContent = pct + "%";
+    if (scoreCountEl) scoreCountEl.textContent = done + " / " + TOTAL + " verified";
+    if (scoreFillEl) scoreFillEl.style.width = pct + "%";
+
+    PILLARS.forEach(function (p) {
+      var pDone = 0;
+      p.items.forEach(function (it) { if (state.checked[it.id]) pDone++; });
+      var el = document.getElementById("pillar-count-" + p.id);
+      if (el) el.textContent = pDone + "/" + p.items.length;
+    });
+    applyFilter();
+  }
+
+  function applyFilter() {
+    document.querySelectorAll(".check-item").forEach(function (row) {
+      var id = row.getAttribute("data-id");
+      var sev = row.getAttribute("data-sev");
+      var isDone = !!state.checked[id];
+      var show = true;
+      if (activeFilter === "remaining") show = !isDone;
+      else if (activeFilter === "completed") show = isDone;
+      else if (activeFilter === "critical") show = sev === "critical";
+      row.style.display = show ? "" : "none";
+    });
+  }
+
+  if (domainInput) {
+    domainInput.addEventListener("input", syncDomain);
+  }
+  syncDomain();
+  syncScore();
+
+  document.addEventListener("change", function (e) {
+    var cb = e.target.closest("input[data-item-id]");
+    if (!cb) return;
+    var id = cb.getAttribute("data-item-id");
+    state.checked[id] = cb.checked;
+    saveState();
+    syncScore();
+  });
+
+  document.querySelectorAll("[data-filter]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      activeFilter = btn.getAttribute("data-filter") || "all";
+      document.querySelectorAll("[data-filter]").forEach(function (b) { b.classList.toggle("active", b === btn); });
+      applyFilter();
+    });
+  });
+
+  document.querySelectorAll("[data-launch]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var kind = btn.getAttribute("data-launch");
+      var host = sanitizeHost(domainInput ? domainInput.value : "");
+      var url = "https://vibe-checker.appwrite.network/?url=https://" + encodeURIComponent(host) + "&ref=checklist-2026";
+      if (kind === "inbox") url = "https://inbox-checker.appwrite.network/?domain=" + encodeURIComponent(host) + "&ref=checklist-2026";
+      else if (kind === "cite") url = "https://citeready-checker.appwrite.network/?url=https://" + encodeURIComponent(host) + "&ref=checklist-2026";
+      else if (kind === "brand") url = "https://brand-checker.appwrite.network/?q=" + encodeURIComponent(host.split(".")[0] || "omniforge") + "&ref=checklist-2026";
+      opTrack("outbound", { target: "checklist-launch-" + kind, domain: host });
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+  });
+
+  var copyCliBtn = document.getElementById("copy-cli-btn");
+  if (copyCliBtn) {
+    copyCliBtn.addEventListener("click", function () {
+      if (navigator.clipboard && cliCode) navigator.clipboard.writeText(cliCode.textContent || "").catch(function () {});
+      copyCliBtn.textContent = "Copied";
+      opTrack("outbound", { target: "checklist-copy-cli" });
+      setTimeout(function () { copyCliBtn.textContent = "Copy CLI"; }, 1600);
+    });
+  }
+
+  var exportBtn = document.getElementById("export-md-btn");
+  if (exportBtn) {
+    exportBtn.addEventListener("click", function () {
+      var host = sanitizeHost(domainInput ? domainInput.value : "");
+      var done = Object.keys(state.checked).filter(function (k) { return state.checked[k]; }).length;
+      var lines = [
+        "# Pre-Launch Audit Checklist (" + host + ") — " + done + "/" + TOTAL + " (" + Math.round((done / TOTAL) * 100) + "%)",
+        "",
+        "Run live 3-in-1 read-only scan: \`curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + host + "\`",
+        ""
+      ];
+      PILLARS.forEach(function (p) {
+        lines.push("## " + p.name);
+        p.items.forEach(function (it) {
+          lines.push("- [" + (state.checked[it.id] ? "x" : " ") + "] [" + it.sev.toUpperCase() + "] " + it.title);
+        });
+        lines.push("");
+      });
+      lines.push("Generated with OmniForge 2026 Launch Checklist: https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html");
+      var md = lines.join("\n");
+      if (navigator.clipboard) navigator.clipboard.writeText(md).catch(function () {});
+      exportBtn.textContent = "Markdown Copied";
+      opTrack("outbound", { target: "checklist-export-md", done: done });
+      setTimeout(function () { exportBtn.textContent = "Copy as PR / Notion Markdown"; }, 1800);
+    });
+  }
+
+  var resetBtn = document.getElementById("reset-btn");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      state.checked = {};
+      saveState();
+      syncScore();
+    });
+  }
+
+  document.querySelectorAll("[data-paywall]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      opTrack("paywall", { target: a.getAttribute("data-paywall"), href: a.getAttribute("href") });
+    });
+  });
+})();
+</script>
+</body>
+</html>

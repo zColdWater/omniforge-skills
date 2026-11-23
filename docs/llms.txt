@@ -6,7 +6,8 @@
 - GitHub Repo: https://github.com/zColdWater/omniforge-skills
 - Zero-Install 1-Line Audit: curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com
 - Black Friday 2026 Deal Stack ($2 Single / $5 Complete Suite — 83% OFF): https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
-- 2026 State of AI Startup Infrastructure Report (330 Audits): https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html
+- 24-Point Interactive Pre-Launch Checklist: https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html
+- 2026 State of AI Startup Infrastructure Report (390 Audits): https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html
 - Full Skills Reference: https://zcoldwater.github.io/omniforge-skills/llms-full.txt
 - Live Tools:
   - VibeShield v7.0 ($2 Launch Special, reg. $9): https://vibe-checker.appwrite.network/
