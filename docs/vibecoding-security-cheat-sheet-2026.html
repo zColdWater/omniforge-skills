@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 Cursor, Lovable, Bolt.new &amp; v0 Security Cheat Sheet &amp; Copy-Paste Fix Playbook | OmniForge</title>
+  <meta name="description" content="Top 8 security &amp; launch failures in AI-generated web apps (Supabase RLS CVE-2025-48757, Next.js CVE-2025-29927, leaked JS keys, Firebase rules, CSP/HSTS, SPF/DMARC, /llms.txt) with copy-paste Cursor/Lovable/Claude Code fix prompts and a live free 3-in-1 scanner." />
+  <link rel="canonical" href="https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Cpath d='M9 16.5L14 21.5L23.5 11' stroke='%2310b981' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="2026 Cursor, Lovable, Bolt.new &amp; v0 Security Cheat Sheet (8 Copy-Paste Fix Prompts)" />
+  <meta property="og:description" content="Harden any AI-built SaaS in 10 minutes: copy-paste Cursor/Lovable prompts for Supabase RLS, Next.js CVE-2025-29927, leaked keys, CSP, SPF/DMARC &amp; /llms.txt, plus live read-only 3-in-1 scan." />
+  <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-vibeshield-2usd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-vibeshield-2usd.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "2026 Cursor, Lovable, Bolt.new & v0 Security Cheat Sheet & Copy-Paste Fix Playbook",
+      "description": "The 8 highest-impact security, email DNS, and AI search fixes for AI-generated web apps — with copy-paste Cursor/Lovable/Claude Code prompts, live read-only 3-in-1 auditor, and zero-install cli.sh.",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "author": {
+        "@type": "Organization",
+        "name": "OmniForge · Agent Arena Studio"
+      },
+      "image": "https://brand-checker.appwrite.network/assets/cover-vibeshield-2usd.png",
+      "mainEntityOfPage": "https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I check my Cursor, Lovable, or Bolt.new app for all 8 issues in one command?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com in any POSIX terminal (zero install) or enter your domain in the live in-page 3-in-1 auditor at the top of this cheat sheet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I install these security checks permanently as Claude Code or Cursor agent skills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Run npx skills add zColdWater/omniforge-skills to install all 50 zero-dependency MIT pre-launch security, email DNS, domain, and /llms.txt skills into Claude Code, Cursor, Codex CLI, Windsurf, and Gemini CLI."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --accent: #059669;
+      --accent-dark: #047857;
+      --accent-soft: #ecfdf5;
+      --accent-border: #a7f3d0;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.56; }
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar { border-bottom: 1px solid var(--border); background: #ffffff; position: sticky; top: 0; z-index: 20; }
+    .topbar-in { max-width: 1080px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .brand { font-weight: 800; color: var(--ink); font-size: 0.95rem; letter-spacing: -0.02em; }
+    .nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.85rem; }
+    .nav a { color: var(--muted); font-weight: 600; }
+    .nav a:hover { color: var(--ink); text-decoration: none; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 34px 20px 68px; }
+    .eyebrow { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-dark); background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 999px; padding: 4px 12px; margin-bottom: 14px; }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.7rem); line-height: 1.12; letter-spacing: -0.03em; margin: 0 0 12px; max-width: 880px; }
+    .lead { font-size: 1.02rem; color: var(--muted); max-width: 780px; margin: 0 0 22px; }
+    .hero-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 28px; }
+    .input-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+    .input-row input { flex: 1 1 250px; min-width: 0; padding: 11px 14px; border-radius: 8px; border: 1px solid var(--border-strong); font-size: 0.94rem; background: #ffffff; color: var(--ink); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 15px; border-radius: 8px; font-weight: 700; font-size: 0.86rem; border: 1px solid transparent; cursor: pointer; }
+    .btn:hover { text-decoration: none; }
+    .btn-accent { background: var(--accent); color: #ffffff; }
+    .btn-dark { background: var(--ink); color: #ffffff; }
+    .btn-out { background: #ffffff; color: var(--ink); border-color: var(--border-strong); }
+    .btn-sm { padding: 7px 12px; font-size: 0.8rem; }
+    .cli-bar { background: #0f172a; color: #e2e8f0; border-radius: 10px; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; max-width: 100%; overflow: hidden; }
+    .cli-scroll { flex: 1 1 200px; min-width: 0; max-width: 100%; overflow-x: auto; }
+    .cli-bar code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; white-space: nowrap; display: inline-block; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+    .card { background: #ffffff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .tag { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border-strong); color: var(--muted); background: var(--surface); }
+    .tag-crit { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+    .tag-high { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+    .card h2 { margin: 0 0 6px; font-size: 1.08rem; letter-spacing: -0.01em; }
+    .stat { font-size: 0.8rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 8px; }
+    .card p { margin: 0 0 12px; font-size: 0.87rem; color: var(--muted); }
+    .prompt-box { background: #0f172a; color: #e2e8f0; border-radius: 8px; padding: 11px 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.77rem; line-height: 1.48; white-space: pre-wrap; word-break: break-word; margin: 0 0 12px; }
+    .cta-banner { margin-top: 30px; border: 2px solid var(--ink); border-radius: 14px; padding: 24px; background: var(--surface); display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+    footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.83rem; color: var(--subtle); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    @media (max-width: 640px) {
+      .wrap { padding: 24px 16px 52px; }
+      .cards { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="./index.html">OmniForge · Vibe-Coding Security Playbook</a>
+      <nav class="nav">
+        <a href="./black-friday-2026-developer-security-deal.html">Black Friday Deal ($2 / $5)</a>
+        <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a>
+        <a href="./launch-score-badge-generator.html">SVG Badge Studio</a>
+        <a href="./saas-security-tco-calculator-2026.html">TCO Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="eyebrow">2026 AI APP SECURITY PLAYBOOK · CURSOR · LOVABLE · BOLT.NEW · V0</div>
+    <h1>2026 Vibe-Coding Security Cheat Sheet &amp; Copy-Paste Fix Prompts</h1>
+    <p class="lead">The 8 production vulnerabilities that hit AI-generated Next.js, Vite, Supabase, and Firebase apps most often — paired with ready-to-paste Cursor, Lovable, and Claude Code remediation prompts plus a free live 3-in-1 domain check.</p>
+
+    <section class="hero-box">
+      <div class="input-row">
+        <input id="vc-domain" type="text" placeholder="yourdomain.com (or preview.vercel.app / app.lovable.app)" aria-label="App domain to scan" />
+        <button id="vc-scan-btn" class="btn btn-accent" type="button">Run Instant 3-in-1 Audit (Free)</button>
+      </div>
+      <div id="vc-scan-out" style="display:none;background:#ffffff;border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;margin-bottom:12px;" aria-live="polite"></div>
+      <div class="cli-bar">
+        <div class="cli-scroll">
+          <code id="vc-cli">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com</code>
+        </div>
+        <button id="vc-copy-cli" class="btn btn-out btn-sm" type="button">Copy CLI</button>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-crit">CRITICAL</span>
+            <span class="tag">CVE-2025-48757</span>
+          </div>
+          <h2>1. Lock Supabase Row-Level Security (RLS) on Every Public Table</h2>
+          <div class="stat">Top failure across Lovable, Bolt.new &amp; Cursor Supabase MVPs</div>
+          <p>AI builders frequently create public tables without ENABLE ROW LEVEL SECURITY or leave permissive USING (true) policies, letting anyone with your public anon key dump every user row via PostgREST.</p>
+          <pre class="prompt-box" id="prompt-rls">Audit every CREATE TABLE statement in supabase/migrations/. For every table in the public schema storing user data, add ALTER TABLE public.&lt;table&gt; ENABLE ROW LEVEL SECURITY; ALTER TABLE public.&lt;table&gt; FORCE ROW LEVEL SECURITY; REVOKE ALL ON TABLE public.&lt;table&gt; FROM anon; and add owner-scoped SELECT/INSERT/UPDATE/DELETE policies checking auth.uid() = user_id. Show the exact SQL migration diff.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="rls">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-crit">CRITICAL</span>
+            <span class="tag">52 SECRET PATTERNS</span>
+          </div>
+          <h2>2. Purge Hardcoded Keys from NEXT_PUBLIC_* and VITE_* Client Chunks</h2>
+          <div class="stat">VibeShield checks 24 full JS bundles (up to 2.5MB each)</div>
+          <p>Anything prefixed NEXT_PUBLIC_ or VITE_ is compiled verbatim into browser JavaScript. OpenAI, Anthropic, Stripe secret, Resend, or Supabase service_role keys get scraped in minutes.</p>
+          <pre class="prompt-box" id="prompt-secrets">Search the entire codebase for NEXT_PUBLIC_, VITE_, sk_live_, sk-proj-, sk-ant-, sb_secret_, service_role, and hardcoded database URIs. Move all third-party API calls requiring secret keys into authenticated server-side API routes or Edge Functions, rotate any exposed env var names, and confirm zero secret keys remain in client-imported files.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="secrets">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-crit">CRITICAL</span>
+            <span class="tag">CVE-2025-29927</span>
+          </div>
+          <h2>3. Patch Next.js Middleware Auth Bypass &amp; Disable Source Maps</h2>
+          <div class="stat">Affects unpatched Next.js &lt;15.2.3 / &lt;14.2.25 / &lt;13.5.9 / &lt;12.3.5</div>
+          <p>An external x-middleware-subrequest header can skip middleware auth guards on vulnerable versions. Meanwhile, exposed .js.map files leak your entire TypeScript source tree.</p>
+          <pre class="prompt-box" id="prompt-nextjs">Check package.json and upgrade next to a patched release (&gt;=15.2.3 or &gt;=14.2.25) to remediate CVE-2025-29927. In next.config.mjs / next.config.ts, explicitly set poweredByHeader: false and productionBrowserSourceMaps: false. Also enforce server-side session verification inside every Server Action and Route Handler instead of relying solely on middleware.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="nextjs">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-crit">CRITICAL</span>
+            <span class="tag">RTDB / FIRESTORE</span>
+          </div>
+          <h2>4. Replace Test-Mode Firebase Rules with Default-Deny Auth Rules</h2>
+          <div class="stat">Public /.json?shallow=true &amp; Firestore document reads checked passively</div>
+          <p>Default Firebase test-mode rules allow global read/write until an expiry date that founders forget to tighten before launch.</p>
+          <pre class="prompt-box" id="prompt-firebase">Review firestore.rules and database.rules.json. Replace any allow read, write: if true or timestamp-based test rules with a default deny rule (match /{document=**} { allow read, write: if false; }) and explicit per-collection rules requiring request.auth != null &amp;&amp; request.auth.uid == resource.data.userId.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="firebase">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-high">HIGH</span>
+            <span class="tag">OBSERVATORY A+</span>
+          </div>
+          <h2>5. Ship Strict CSP, HSTS, COOP &amp; Permissions-Policy Headers</h2>
+          <div class="stat">2026 N=60 Benchmark: 46.7% ship zero CSP; 28.3% score Grade F</div>
+          <p>100% of audited indie SaaS apps ran TLS 1.3, yet 85% lacked strict CSP and 81.7% missed Cross-Origin-Opener-Policy, leaving apps open to XSS and clickjacking.</p>
+          <pre class="prompt-box" id="prompt-csp">Add Mozilla Observatory A+ HTTP security headers (Strict-Transport-Security with includeSubDomains, Content-Security-Policy without unsafe-eval, X-Content-Type-Options: nosniff, X-Frame-Options: DENY, Referrer-Policy: strict-origin-when-cross-origin, Cross-Origin-Opener-Policy: same-origin, and Permissions-Policy) to next.config.mjs or vercel.json, plus publish /.well-known/security.txt (RFC 9116).</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="csp">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-high">HIGH</span>
+            <span class="tag">28 PROBES</span>
+          </div>
+          <h2>6. Block Exposed /.env, /.git, GraphQL Introspection &amp; Open Redirects</h2>
+          <div class="stat">Single misconfigured static rule exposes secrets or schema maps</div>
+          <p>Self-hosted Docker, Nginx, and misconfigured static hosts frequently serve .env, .git/HEAD, /swagger.json, or allow ?next=https://evil.com redirects.</p>
+          <pre class="prompt-box" id="prompt-dotfiles">Verify .dockerignore, .gitignore, and web server rules block /.env*, /.git/*, /backup.sql, and /swagger.json in production. Disable GraphQL introspection when NODE_ENV === 'production', and validate all login redirect/next query parameters against a strict relative-path allowlist starting with a single /.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="dotfiles">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag tag-high">HIGH</span>
+            <span class="tag">RFC 7208 / 7489</span>
+          </div>
+          <h2>7. Flatten SPF Under 10 Lookups &amp; Enforce DMARC Beyond p=none</h2>
+          <div class="stat">2026 N=120 Benchmark: 71.7% of indie SaaS lack enforced DMARC</div>
+          <p>Exceeding 10 recursive SPF lookups triggers PermError and lands onboarding/reset emails in spam; p=none lets attackers spoof your brand domain.</p>
+          <pre class="prompt-box" id="prompt-email">Audit my sending services (Google Workspace, Resend, Postmark, Stripe, etc.) and produce a single v=spf1 TXT record strictly under 10 DNS lookups, confirm 2048-bit DKIM alignment for each ESP, and provide a staged DMARC rollout plan from p=quarantine to p=reject with rua= reporting plus MTA-STS.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="email">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="tags">
+            <span class="tag ">MEDIUM</span>
+            <span class="tag">LLMS.TXT / GEO</span>
+          </div>
+          <h2>8. Publish /llms.txt, /llms-full.txt &amp; Validated Schema.org @graph</h2>
+          <div class="stat">2026 N=50 Benchmark: Only 22% ship /llms-full.txt; avg Schema 35.6/100</div>
+          <p>AI answer engines (ChatGPT Search, Perplexity, Claude) skip client-only SPA skeletons and cite sites with clean Markdown specs and verified Schema.org entities.</p>
+          <pre class="prompt-box" id="prompt-geo">Create /public/llms.txt (H1, concise blockquote, grouped doc/pricing links) and /public/llms-full.txt (complete factual product &amp; pricing reference), verify /robots.txt allows OAI-SearchBot, PerplexityBot, and ClaudeBot, and add validated Organization + WebSite + SoftwareApplication + FAQPage JSON-LD in the root layout.</pre>
+        </div>
+        <div>
+          <button class="btn btn-dark btn-sm" type="button" data-copy-prompt="geo">Copy Cursor / Claude Fix Prompt</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta-banner">
+      <div style="max-width:650px;">
+        <div style="font-size:0.74rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:4px;">AUTOMATE ALL 50 CHECKS INSIDE YOUR CODING AGENT</div>
+        <h2 style="margin:0 0 6px;font-size:1.3rem;">Install 50 Free MIT Security &amp; Launch Skills — Or Unlock Domain-Tailored Fixes for $5 (83% OFF)</h2>
+        <p style="margin:0;font-size:0.88rem;color:var(--muted);">Run <code>npx skills add zColdWater/omniforge-skills</code> in Claude Code, Cursor, Codex, or Gemini CLI for free forever. Need exact line-by-line unmasked findings and ready-to-paste Vercel/Cloudflare/RLS/DNS/GEO packs for your domain? Unlock the 3-in-1 Complete Suite once for $5 ($0/mo).</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;min-width:240px;">
+        <a class="btn btn-accent" data-paywall="vc-banner-suite" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener">Unlock 3-in-1 Suite — $5 (83% OFF)</a>
+        <a class="btn btn-out btn-sm" href="./black-friday-2026-developer-security-deal.html">Compare $2 Single Passes</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>MIT (c) OmniForge · Agent Arena Studio · Strictly read-only security diagnostics</div>
+      <div>
+        <a href="./index.html">50 Agent Skills</a> ·
+        <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a> ·
+        <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a> ·
+        <a href="https://github.com/zColdWater/omniforge-skills" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+(function () {
+  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  function opTrack(ev, extra) {
+    try {
+      var p = JSON.stringify(Object.assign({
+        site: "vibeshield",
+        event: ev,
+        path: "/vibecoding-security-cheat-sheet-2026",
+        referrer: document.referrer || "",
+        lang: "en",
+        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "") || "",
+        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : ""
+      }, extra || {}));
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(TRACK_URL, new Blob([p], { type: "text/plain;charset=UTF-8" }));
+      }
+    } catch (_) {}
+  }
+  opTrack("pageview");
+
+  function escHtml(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function sanitizeHost(raw) {
+    var v = (raw || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/\/.*$/, "").replace(/[^a-z0-9.-]/g, "");
+    return v || "yourdomain.com";
+  }
+
+  var inp = document.getElementById("vc-domain");
+  var btn = document.getElementById("vc-scan-btn");
+  var out = document.getElementById("vc-scan-out");
+  var cliEl = document.getElementById("vc-cli");
+
+  function syncCli() {
+    var h = sanitizeHost(inp ? inp.value : "");
+    if (cliEl) cliEl.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + h;
+  }
+  if (inp) { inp.addEventListener("input", syncCli); syncCli(); }
+
+  function runScan() {
+    if (!out) return;
+    var raw = inp ? inp.value.trim() : "";
+    var host = sanitizeHost(raw || "supabase.com");
+    if (inp && !raw) { inp.value = host; syncCli(); }
+    if (btn) { btn.disabled = true; btn.textContent = "Scanning " + host + "..."; }
+    out.style.display = "block";
+    out.innerHTML = '<div style="font-size:0.88rem;color:#475569;">Auditing <strong>' + escHtml(host) + '</strong> across VibeShield v7.0 + InboxShield + CiteReady...</div>';
+    opTrack("scan", { target: "vibecoding-cheat-sheet", domain: host });
+
+    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok) throw new Error("Bad payload");
+        var ov = d.overall || {};
+        var vb = (d.engines && d.engines.vibeshield) || {};
+        var ib = (d.engines && d.engines.inboxshield) || {};
+        var cr = (d.engines && d.engines.citeready) || {};
+        var co = d.checkout || {};
+        var suiteUrl = co.completeSuite5Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
+        out.innerHTML =
+          '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">' +
+            '<div>' +
+              '<div style="font-size:0.74rem;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:#047857;">LIVE 3-IN-1 SCORE · ' + escHtml(d.domain || host) + ' · ' + escHtml(ov.score) + '/100 (' + escHtml(ov.grade || "-") + ')</div>' +
+              '<div style="font-size:0.86rem;color:#334155;margin-top:3px;">Security ' + escHtml(vb.score) + '/100 (' + escHtml(vb.issues || 0) + ' issues) · Email DNS ' + escHtml(ib.score) + '/100 (DMARC ' + escHtml(ib.dmarcPolicy || "none") + ') · AI GEO ' + escHtml(cr.score) + '/100</div>' +
+            '</div>' +
+            '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+              '<a class="btn btn-out btn-sm" href="' + escHtml(vb.reportUrl || "https://vibe-checker.appwrite.network/") + '" target="_blank" rel="noopener">Open Full Report</a>' +
+              '<a class="btn btn-accent btn-sm" data-paywall="vc-live-suite" href="' + escHtml(suiteUrl) + '" target="_blank" rel="noopener">Unlock All ' + escHtml(ov.totalIssues || 0) + ' Fixes — $5 Suite</a>' +
+            '</div>' +
+          '</div>';
+      })
+      .catch(function (err) {
+        out.innerHTML = '<div style="font-size:0.85rem;color:#b45309;">Live quick-score unavailable (' + escHtml(err && err.message ? err.message : "network") + '). Run the 1-line cli.sh command below or open vibe-checker.appwrite.network directly.</div>';
+      })
+      .finally(function () {
+        if (btn) { btn.disabled = false; btn.textContent = "Run Instant 3-in-1 Audit (Free)"; }
+      });
+  }
+
+  if (btn) btn.addEventListener("click", runScan);
+  if (inp) inp.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); runScan(); } });
+
+  document.addEventListener("click", function (e) {
+    var cp = e.target.closest("button[data-copy-prompt]");
+    if (cp) {
+      var id = cp.getAttribute("data-copy-prompt");
+      var pre = document.getElementById("prompt-" + id);
+      if (pre && navigator.clipboard) navigator.clipboard.writeText(pre.textContent || "").catch(function () {});
+      var orig = cp.textContent;
+      cp.textContent = "Prompt Copied";
+      opTrack("outbound", { target: "vc-copy-prompt-" + id });
+      setTimeout(function () { cp.textContent = orig; }, 1600);
+      return;
+    }
+    var cliBtn = e.target.closest("#vc-copy-cli");
+    if (cliBtn && cliEl) {
+      if (navigator.clipboard) navigator.clipboard.writeText(cliEl.textContent || "").catch(function () {});
+      cliBtn.textContent = "Copied";
+      opTrack("outbound", { target: "vc-copy-cli" });
+      setTimeout(function () { cliBtn.textContent = "Copy CLI"; }, 1600);
+      return;
+    }
+    var pw = e.target.closest("a[data-paywall]");
+    if (pw) opTrack("paywall", { target: pw.getAttribute("data-paywall"), href: pw.getAttribute("href") });
+  });
+})();
+</script>
+</body>
+</html>

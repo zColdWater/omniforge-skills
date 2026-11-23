@@ -1,6 +1,6 @@
 # OmniForge Agent Skills — 50 Pre-Launch Security, Email DNS, Domain & AI Search Skills
 
-[![GitHub Release](https://img.shields.io/badge/release-v2.5.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
+[![GitHub Release](https://img.shields.io/badge/release-v2.6.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
 [![Skills Count](https://img.shields.io/badge/skills-50-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
 [![OmniForge Launch Score](https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=vibe-checker.appwrite.network)](https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html)
 [![AI Search Readiness](https://citeready-checker.appwrite.network/api/badge?url=zcoldwater.github.io/omniforge-skills)](https://citeready-checker.appwrite.network/?url=https://zcoldwater.github.io/omniforge-skills/)
@@ -37,6 +37,7 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 - **Interactive 24-Point Launch Gate (Auto-Verify + PR Markdown Export):** [2026 SaaS Pre-Launch Security, Email DNS & AI Search Checklist](https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html)
 - **Free Live README SVG Badge Studio (6 Self-Updating Security/DNS/GEO Badges):** [Launch Score SVG Badge Generator](https://zcoldwater.github.io/omniforge-skills/launch-score-badge-generator.html)
 - **2026 SaaS Security, DNS & AI Search TCO Calculator (Subscriptions vs. $5 One-Time):** [Interactive 1-Yr / 3-Yr TCO Calculator](https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html)
+- **2026 Vibe-Coding Security Cheat Sheet (8 Copy-Paste Cursor/Lovable/Claude Fix Prompts):** [Vibe-Coding Security Playbook](https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html)
 - **Live Vercel Skills Registry Directory:** [https://www.skills.sh/zColdWater/omniforge-skills](https://www.skills.sh/zColdWater/omniforge-skills)
 - **2026 Flagship Empirical Report Hub (390 Live Audits Across Security, security.txt, Email DNS, AI Search & TLDs):** [2026 State of Indie & AI Startup Infrastructure Report](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html) · [Master JSON](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.json)
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~ — Unlocks VibeShield + InboxShield + CiteReady):** [https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)
