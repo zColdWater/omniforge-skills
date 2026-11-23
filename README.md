@@ -35,6 +35,7 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 
 - **Black Friday 2026 Deal Stack ($2 Single / $5 Complete 3-in-1 Suite — 83% OFF, One-Time):** [Black Friday 2026 Developer Security, DNS & AI Search Deal](https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html)
 - **Interactive 24-Point Launch Gate (Auto-Verify + PR Markdown Export):** [2026 SaaS Pre-Launch Security, Email DNS & AI Search Checklist](https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html)
+- **Free Live README SVG Badge Studio (6 Self-Updating Security/DNS/GEO Badges):** [Launch Score SVG Badge Generator](https://zcoldwater.github.io/omniforge-skills/launch-score-badge-generator.html)
 - **Live Vercel Skills Registry Directory:** [https://www.skills.sh/zColdWater/omniforge-skills](https://www.skills.sh/zColdWater/omniforge-skills)
 - **2026 Flagship Empirical Report Hub (390 Live Audits Across Security, security.txt, Email DNS, AI Search & TLDs):** [2026 State of Indie & AI Startup Infrastructure Report](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html) · [Master JSON](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.json)
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~ — Unlocks VibeShield + InboxShield + CiteReady):** [https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)
