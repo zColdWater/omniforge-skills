@@ -22,8 +22,8 @@
   "@graph": [
     {
       "@type": "TechArticle",
-      "headline": "2026 State of Indie & AI Startup Infrastructure: 330 Live Audits Across Security, Email DNS, AI Search & Domains",
-      "description": "Unified empirical infrastructure study of 330 live SaaS and AI startup domains across four layers: Web Security Headers & TLS (N=60), Email Authentication & SPF Bloat (N=60 Top SaaS + N=60 Indie), AI Search /llms.txt Readiness (N=50), and AI Startup TLD Adoption (N=100, 500 probes).",
+      "headline": "2026 State of Indie & AI Startup Infrastructure: 390 Live Audits Across Security, security.txt, Email DNS, AI Search & Domains",
+      "description": "Unified empirical infrastructure study of 390 live SaaS and AI startup audits across five layers: Web Security Headers & TLS (N=60), RFC 9116 security.txt & Browser Isolation (N=60), Email Authentication & SPF Bloat (N=60 Top SaaS + N=60 Indie), AI Search /llms.txt Readiness (N=50), and AI Startup TLD Adoption (N=100, 500 probes).",
       "datePublished": "2026-11-23",
       "dateModified": "2026-11-23",
       "author": {
@@ -58,6 +58,12 @@
           "name": "Web Security Headers & TLS 443 (60 Active Indie SaaS & AI Web Apps)",
           "description": "46.7% zero CSP (85.0% missing or 'unsafe-inline'); 31.7% no clickjacking defense; 28.3% Grade F; 81.7% missing COOP despite 100% TLS 1.3",
           "url": "https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html"
+        },
+        {
+          "@type": "Dataset",
+          "name": "RFC 9116 security.txt, Sourcemaps & Browser Isolation (Top 60 Dev & AI Platforms)",
+          "description": "56.7% lack a valid RFC 9116 security.txt (36.7% completely missing); 81.7% lack Permissions-Policy; 80.0% lack COOP; 28.3% emit wildcard CORS on HTML",
+          "url": "https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.html"
         },
         {
           "@type": "Dataset",
@@ -161,9 +167,9 @@
   </header>
 
   <main class="wrap">
-    <div class="eyebrow">OPEN EMPIRICAL TELEMETRY · NOVEMBER 2026 · 330 LIVE PRODUCTION AUDITS · 730+ PROBES</div>
+    <div class="eyebrow">OPEN EMPIRICAL TELEMETRY · NOVEMBER 2026 · 390 LIVE PRODUCTION AUDITS · 790+ PROBES</div>
     <h1>2026 State of Indie &amp; AI Startup Infrastructure Report</h1>
-    <p class="lead">Across November 2026, OmniForge ran strictly passive, non-intrusive public telemetry across <strong>330 active SaaS and AI startup domains</strong> spanning four launch-critical layers: <strong>Web Security Headers &amp; TLS</strong>, <strong>Email Authentication &amp; DMARC</strong>, <strong>AI Search / <code>/llms.txt</code> Visibility</strong>, and <strong>Domain TLD &amp; Aftermarket Control</strong>. Every dataset below is open-source (MIT) and independently reproducible in seconds.</p>
+    <p class="lead">Across November 2026, OmniForge ran strictly passive, non-intrusive public telemetry across <strong>390 active SaaS and AI startup audits</strong> spanning five launch-critical layers: <strong>Web Security Headers &amp; TLS</strong>, <strong>RFC 9116 <code>security.txt</code> &amp; Browser Isolation</strong>, <strong>Email Authentication &amp; DMARC</strong>, <strong>AI Search / <code>/llms.txt</code> Visibility</strong>, and <strong>Domain TLD &amp; Aftermarket Control</strong>. Every dataset below is open-source (MIT) and independently reproducible in seconds.</p>
 
     <section class="kpi-grid">
       <div class="kpi">
@@ -286,6 +292,26 @@
           <a class="btn btn-emerald" href="https://brand-checker.appwrite.network/?ref=state-of-infra-card" target="_blank" rel="noopener" data-track="outbound">Check 78 TLDs (100% Free)</a>
         </div>
       </article>
+
+      <article class="p-card">
+        <div>
+          <div class="p-head">
+            <span class="pill pill-red">Study 5 · RFC 9116 &amp; Browser Isolation</span>
+            <span class="mono" style="font-size:0.78rem;color:var(--subtle);">N=60 Top Dev &amp; AI Platforms</span>
+          </div>
+          <h3>2026 Top 60 Dev &amp; AI Platforms RFC 9116 <code>security.txt</code>, Sourcemaps &amp; Isolation Study</h3>
+          <ul>
+            <li><strong>Mean score 56.7/100</strong> across 60 prominent developer and AI platforms audited passively in November 2026.</li>
+            <li><strong>56.7%</strong> lack a valid RFC 9116 <code>/.well-known/security.txt</code> file (<strong>36.7%</strong> publish none at all).</li>
+            <li><strong>81.7%</strong> miss <code>Permissions-Policy</code>, <strong>80.0%</strong> miss <code>COOP</code>, and <strong>28.3%</strong> emit wildcard <code>Access-Control-Allow-Origin: *</code> on HTML.</li>
+          </ul>
+        </div>
+        <div class="p-actions">
+          <a class="btn btn-out" href="https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.html" target="_blank" rel="noopener">Read Full Study</a>
+          <a class="btn btn-out" href="https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.json" target="_blank" rel="noopener">Raw JSON</a>
+          <a class="btn btn-blue" href="https://zcoldwater.github.io/vibeshield-action/security-txt-generator.html" target="_blank" rel="noopener" data-track="outbound">Free security.txt Generator</a>
+        </div>
+      </article>
     </section>
 
     <h2 id="summary-matrix" class="sec-title">Cross-Layer Open Research Matrix &amp; Reproducible Datasets</h2>
@@ -323,6 +349,13 @@
             <td><a href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.json" target="_blank" rel="noopener">JSON</a> · <a href="https://vibe-checker.appwrite.network/?ref=state-of-infra-2026" target="_blank" rel="noopener">Live Tool</a></td>
           </tr>
           <tr>
+            <td><strong>RFC 9116 security.txt, Sourcemaps & Browser Isolation</strong><div style="font-size:0.78rem;color:var(--subtle);">VibeShield Action (CI/CD)</div></td>
+            <td>Top 60 Dev & AI Platforms</td>
+            <td class="mono"><strong>56.7/100</strong></td>
+            <td>56.7% lack a valid RFC 9116 security.txt (36.7% completely missing); 81.7% lack Permissions-Policy; 80.0% lack COOP; 28.3% emit wildcard CORS on HTML</td>
+            <td><a href="https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.json" target="_blank" rel="noopener">JSON</a> · <a href="https://zcoldwater.github.io/vibeshield-action/security-txt-generator.html" target="_blank" rel="noopener">Live Tool</a></td>
+          </tr>
+          <tr>
             <td><strong>AI Search Citation Readiness & /llms.txt</strong><div style="font-size:0.78rem;color:var(--subtle);">CiteReady v6.0</div></td>
             <td>Top 50 AI & Developer SaaS Products</td>
             <td class="mono"><strong>74.8/100</strong></td>
@@ -344,7 +377,11 @@
       <div style="max-width:640px;">
         <h3 style="margin:0 0 6px;font-size:1.08rem;">Automate All 4 Launch Checks Inside Claude Code, Codex, Cursor &amp; CI</h3>
         <p style="margin:0;font-size:0.88rem;color:var(--muted);">Install our 50 zero-dependency MIT <code>SKILL.md</code> skills via Vercel <code>skills.sh</code>, connect our 5-tool MCP server, or unlock complete copy-paste remediation kits across VibeShield + InboxShield + CiteReady for <strong>$5 one-time (reg. $29)</strong>.</p>
-        <pre>npx skills add zColdWater/omniforge-skills</pre>
+        <pre># Zero-install 1-line 3-in-1 launch audit (VibeShield + InboxShield + CiteReady)
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com
+
+# Or install all 50 MIT Agent Skills (Claude Code, Codex, Cursor, Windsurf, Gemini CLI)
+npx skills add zColdWater/omniforge-skills</pre>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;">
         <a class="btn btn-emerald" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener" data-track="paywall">Unlock 3-in-1 Complete Suite ($5 Launch, reg. $29)</a>

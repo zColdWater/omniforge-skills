@@ -3,8 +3,8 @@
   "publishedAt": "2026-11-23",
   "author": "OmniForge · Agent Arena Studio",
   "canonicalUrl": "https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html",
-  "totalAuditedEntities": 330,
-  "totalDomainProbes": 730,
+  "totalAuditedEntities": 390,
+  "totalDomainProbes": 790,
   "studies": [
     {
       "id": "email-top60",
@@ -44,6 +44,19 @@
       "jsonUrl": "https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.json",
       "liveToolUrl": "https://vibe-checker.appwrite.network/?ref=state-of-infra-2026",
       "pricing": "Free 6-Phase Audit · $2 Launch Special Fix (reg. $9)"
+    },
+    {
+      "id": "security-txt-isolation-60",
+      "pillar": "RFC 9116 security.txt, Sourcemaps & Browser Isolation",
+      "tool": "VibeShield Action (CI/CD)",
+      "sampleSize": 60,
+      "cohort": "Top 60 Dev & AI Platforms",
+      "meanScore": 56.7,
+      "headlineMetric": "56.7% lack a valid RFC 9116 security.txt (36.7% completely missing); 81.7% lack Permissions-Policy; 80.0% lack COOP; 28.3% emit wildcard CORS on HTML",
+      "reportUrl": "https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.html",
+      "jsonUrl": "https://zcoldwater.github.io/vibeshield-action/security-txt-sourcemap-benchmark-2026.json",
+      "liveToolUrl": "https://zcoldwater.github.io/vibeshield-action/security-txt-generator.html",
+      "pricing": "Free RFC 9116 Generator & MIT GitHub Action · $2 VibeShield Fix"
     },
     {
       "id": "ai-search-geo-50",
