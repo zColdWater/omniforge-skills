@@ -1,11 +1,25 @@
 # OmniForge Agent Skills — 50 Pre-Launch Security, Email DNS, Domain & AI Search Skills
 
-[![GitHub Release](https://img.shields.io/badge/release-v2.3.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
+[![GitHub Release](https://img.shields.io/badge/release-v2.4.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
 [![Skills Count](https://img.shields.io/badge/skills-50-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
 [![AI Search Readiness](https://citeready-checker.appwrite.network/api/badge?url=zcoldwater.github.io/omniforge-skills)](https://citeready-checker.appwrite.network/?url=https://zcoldwater.github.io/omniforge-skills/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-**Zero-dependency `SKILL.md` & Codex Plugin pack (50 specialized developer skills) for Claude Code, OpenAI Codex CLI, Cursor, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
+**Zero-dependency `SKILL.md`, Codex Plugin & Claude Code Plugin pack (50 specialized developer skills) for Claude Code, OpenAI Codex CLI, Cursor, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs, a zero-install POSIX `cli.sh` one-liner, and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
+
+## Zero-Install 1-Line Terminal Audit (`cli.sh` — No Node/npm Required)
+
+```bash
+# 6-phase Web/AI Security audit (116+ read-only checks)
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yourdomain.com
+
+# Parallel 3-in-1 Suite (VibeShield + InboxShield + CiteReady)
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com
+
+# CI/CD Score Gate (exits code 2 if score < 80) or raw JSON for jq
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --fail-below 80 yourdomain.com
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --json yourdomain.com | jq '.assessment'
+```
 
 ## Install All 50 Skills in 10 Seconds (`npx skills`)
 
@@ -18,6 +32,7 @@ git clone https://github.com/zColdWater/omniforge-skills.git
 cp -R omniforge-skills/skills/* ~/.claude/skills/
 ```
 
+- **Black Friday 2026 Deal Stack ($2 Single / $5 Complete 3-in-1 Suite — 83% OFF, One-Time):** [Black Friday 2026 Developer Security, DNS & AI Search Deal](https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html)
 - **Live Vercel Skills Registry Directory:** [https://www.skills.sh/zColdWater/omniforge-skills](https://www.skills.sh/zColdWater/omniforge-skills)
 - **2026 Flagship Empirical Report Hub (330 Live Audits Across Security, Email DNS, AI Search & TLDs):** [2026 State of Indie & AI Startup Infrastructure Report](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html) · [Master JSON](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.json)
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~ — Unlocks VibeShield + InboxShield + CiteReady):** [https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)

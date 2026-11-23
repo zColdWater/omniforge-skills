@@ -14,6 +14,9 @@ Use right before launching a SaaS, indie app, or Product Hunt / Hacker News rele
 ## Live Read-Only Audit Command (Free, No API Key Required)
 
 ```bash
+# Zero-install 1-line terminal audit (POSIX sh, supports --suite, --fail-below 80, --json)
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite YOUR_DOMAIN
+
 # Live hosted free API check
 curl -sS "https://vibe-checker.appwrite.network/api/free-scan?url=https://YOUR_DOMAIN" && curl -sS "https://inbox-checker.appwrite.network/api/free-audit?domain=YOUR_DOMAIN" && curl -sS "https://citeready-checker.appwrite.network/api/free-geo?url=https://YOUR_DOMAIN"
 
@@ -34,4 +37,5 @@ npx -y github:zColdWater/mcp-launch-audit
 - **CI / Automation:** `uses: zColdWater/vibeshield-action@v1 + inboxshield-action@v1 + citeready-action@v1`
 - **Free Interactive Web Workbench:** https://vibe-checker.appwrite.network/?ref=skill-saas-launch-audit
 - **Full Copy-Paste Fix Unlock ($5 Complete Suite Launch Special (reg. $29, one-time)):** https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
+- **Black Friday 2026 Developer Deal Stack ($2 Single / $5 Complete Suite — 83% OFF):** https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack

@@ -14,6 +14,9 @@ Use right before launching an MVP or SaaS generated with Cursor, Lovable, Bolt.n
 ## Live Read-Only Audit Command (Free, No API Key Required)
 
 ```bash
+# Zero-install 1-line terminal audit (POSIX sh, supports --suite, --fail-below 80, --json)
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- YOUR_DOMAIN
+
 # Live hosted free API check
 curl -sS "https://vibe-checker.appwrite.network/api/free-scan?url=https://YOUR_APP_URL"
 
@@ -35,4 +38,5 @@ npx github:zColdWater/vibeshield-cli scan https://YOUR_APP_URL --min-score 80 --
 - **CI / Automation:** `uses: zColdWater/vibeshield-action@v1`
 - **Free Interactive Web Workbench:** https://vibe-checker.appwrite.network/?ref=skill-cursor-security-audit
 - **Full Copy-Paste Fix Unlock ($2 Launch Special (reg. $9, one-time)):** https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield
+- **Black Friday 2026 Developer Deal Stack ($2 Single / $5 Complete Suite — 83% OFF):** https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
