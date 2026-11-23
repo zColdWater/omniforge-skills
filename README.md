@@ -1,12 +1,12 @@
-# OmniForge Agent Skills — 20 Pre-Launch Security, Email DNS, Domain & AI Search Skills
+# OmniForge Agent Skills — 30 Pre-Launch Security, Email DNS, Domain & AI Search Skills
 
-[![GitHub Release](https://img.shields.io/badge/release-v2.0.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
-[![Skills Count](https://img.shields.io/badge/skills-20-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
+[![GitHub Release](https://img.shields.io/badge/release-v2.1.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
+[![Skills Count](https://img.shields.io/badge/skills-30-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-**Zero-dependency `SKILL.md` pack (20 specialized developer skills) for Claude Code, Cursor, OpenAI Codex CLI, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
+**Zero-dependency `SKILL.md` pack (30 specialized developer skills) for Claude Code, Cursor, OpenAI Codex CLI, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
 
-## Install All 20 Skills in 10 Seconds (`npx skills`)
+## Install All 30 Skills in 10 Seconds (`npx skills`)
 
 ```bash
 # Install across Claude Code, Cursor, Antigravity, Codex, Cline & Windsurf
@@ -22,7 +22,7 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 
 ---
 
-## Included Skills (20)
+## Included Skills (30)
 
 | # | Skill | Pillar | Focus & Free Live Check |
 | :---: | :--- | :--- | :--- |
@@ -46,6 +46,16 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 | 18 | [`llms-txt-citation-readiness`](./skills/llms-txt-citation-readiness/SKILL.md) | CiteReady v6.0 | Audit website readiness for ChatGPT Search, Perplexity, Claude, and Google AI Overviews: 10 AI crawler robots.txt rules, /llms.t... |
 | 19 | [`llms-txt-generator`](./skills/llms-txt-generator/SKILL.md) | CiteReady v6.0 | Check whether a site serves a valid llmstxt.org /llms.txt index (catching SPA HTML soft-404s) and generate structured Markdown d... |
 | 20 | [`ai-search-geo-schema-audit`](./skills/ai-search-geo-schema-audit/SKILL.md) | CiteReady v6.0 | Audit Schema.org JSON-LD entity graphs (Organization, SoftwareApplication, FAQPage, Offer), AI crawler robots.txt policies, and ... |
+| 21 | [`lovable-security-audit`](./skills/lovable-security-audit/SKILL.md) | VibeShield v7.0 | Audit Lovable.dev (.lovable.app & custom domain) apps before launch: detects leaked VITE_ API keys across 52 patterns, open Supa... |
+| 22 | [`bolt-new-security-audit`](./skills/bolt-new-security-audit/SKILL.md) | VibeShield v7.0 | Audit Bolt.new (.bolt.host, Netlify, Vercel) web apps across 6 phases: unpacks full JS bundles for 52 leaked API key types, test... |
+| 23 | [`vercel-security-headers`](./skills/vercel-security-headers/SKILL.md) | VibeShield v7.0 | Verify live Vercel deployments against 10 Mozilla Observatory security headers, CSP AST syntax defects, HSTS preload compliance,... |
+| 24 | [`cloudflare-waf-security-audit`](./skills/cloudflare-waf-security-audit/SKILL.md) | VibeShield v7.0 | Audit Cloudflare-proxied sites across TLS 443, CNAME takeover, 28 sensitive endpoint probes, CSP/HSTS/COOP/CORP headers, and gen... |
+| 25 | [`graphql-introspection-audit`](./skills/graphql-introspection-audit/SKILL.md) | VibeShield v7.0 | Test live /graphql and /api/graphql endpoints for enabled production schema introspection ({__schema{types{name}}}) plus exposed... |
+| 26 | [`oauth-cookie-cors-security-audit`](./skills/oauth-cookie-cors-security-audit/SKILL.md) | VibeShield v7.0 | Audit response Set-Cookie headers (Secure, HttpOnly, SameSite), test untrusted Origin reflection with Access-Control-Allow-Crede... |
+| 27 | [`google-workspace-spf-dmarc-setup`](./skills/google-workspace-spf-dmarc-setup/SKILL.md) | InboxShield v7.0 | Verify Google Workspace custom domain DNS: MX priority redundancy, include:_spf.google.com lookup count (RFC 7208), google._doma... |
+| 28 | [`resend-postmark-email-audit`](./skills/resend-postmark-email-audit/SKILL.md) | InboxShield v7.0 | Audit transactional SaaS email DNS (Resend, Postmark, SendGrid, Amazon SES): catches SPF >10 lookup PermErrors, missing DKIM CNA... |
+| 29 | [`bimi-mta-sts-email-security`](./skills/bimi-mta-sts-email-security/SKILL.md) | InboxShield v7.0 | Audit advanced email transport & brand trust records: _mta-sts policy & HTTPS policy host, _smtp._tls (TLS-RPT), and default._bi... |
+| 30 | [`robots-txt-ai-crawler-audit`](./skills/robots-txt-ai-crawler-audit/SKILL.md) | CiteReady v6.0 | Audit /robots.txt rules across 10 AI crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, GPTBot, Google-Extended, A... |
 
 ---
 

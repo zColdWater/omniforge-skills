@@ -1,6 +1,6 @@
-# OmniForge Agent Skills — 20 SKILL.md Pre-Launch Audit Skills
+# OmniForge Agent Skills — 30 SKILL.md Pre-Launch Audit Skills
 
-> Install 20 zero-dependency skills for Claude Code, Cursor, Codex CLI, Windsurf, Cline, Antigravity & Gemini CLI: npx skills add zColdWater/omniforge-skills
+> Install 30 zero-dependency skills for Claude Code, Cursor, Codex CLI, Windsurf, Cline, Antigravity & Gemini CLI: npx skills add zColdWater/omniforge-skills
 
 - Registry: https://www.skills.sh/zColdWater/omniforge-skills
 - GitHub Repo: https://github.com/zColdWater/omniforge-skills
@@ -11,7 +11,7 @@
   - BrandShield v6.2 (100% Free Forever): https://brand-checker.appwrite.network/
   - OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29): https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
 
-## 20 Skills
+## 30 Skills
 - vibeshield-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/vibeshield-security-audit — Run a read-only 6-phase security audit on Next.js, Vite, Cursor, Lovable, Bolt, Supabase, and Firebase apps: TLS 443, CNAME takeover, 24 full JS bundles (52 secret patterns), 28 SPA-filtered probes, Supabase RLS, Firebase rules, CSP AST & passive CVEs.
 - supabase-rls-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/supabase-rls-audit — Audit Supabase projects for CVE-2025-48757: leaked service_role JWTs, unauthenticated PostgREST table reads across up to 20 tables, exposed RPC endpoints, and enumerable public Storage buckets.
 - nextjs-security-scanner (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/nextjs-security-scanner — Audit Next.js App Router and Pages Router deployments for CVE-2025-29927 middleware bypass versions, exposed NEXT_PUBLIC secrets, productionBrowserSourceMaps, X-Powered-By leaks, and vercel.json CSP/HSTS headers.
@@ -32,3 +32,13 @@
 - llms-txt-citation-readiness (CiteReady v6.0): https://www.skills.sh/zColdWater/omniforge-skills/llms-txt-citation-readiness — Audit website readiness for ChatGPT Search, Perplexity, Claude, and Google AI Overviews: 10 AI crawler robots.txt rules, /llms.txt soft-404 detection, and Schema.org JSON-LD entity validation.
 - llms-txt-generator (CiteReady v6.0): https://www.skills.sh/zColdWater/omniforge-skills/llms-txt-generator — Check whether a site serves a valid llmstxt.org /llms.txt index (catching SPA HTML soft-404s) and generate structured Markdown documentation indexes for ChatGPT, Claude, and Perplexity.
 - ai-search-geo-schema-audit (CiteReady v6.0): https://www.skills.sh/zColdWater/omniforge-skills/ai-search-geo-schema-audit — Audit Schema.org JSON-LD entity graphs (Organization, SoftwareApplication, FAQPage, Offer), AI crawler robots.txt policies, and benchmark AI search visibility head-to-head against a competitor.
+- lovable-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/lovable-security-audit — Audit Lovable.dev (.lovable.app & custom domain) apps before launch: detects leaked VITE_ API keys across 52 patterns, open Supabase PostgREST tables (CVE-2025-48757), exposed source maps, and missing CSP/HSTS headers.
+- bolt-new-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/bolt-new-security-audit — Audit Bolt.new (.bolt.host, Netlify, Vercel) web apps across 6 phases: unpacks full JS bundles for 52 leaked API key types, tests Supabase/Firebase read exposure, 28 sensitive endpoints, and browser security headers.
+- vercel-security-headers (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/vercel-security-headers — Verify live Vercel deployments against 10 Mozilla Observatory security headers, CSP AST syntax defects, HSTS preload compliance, SourceMap exposure, and CVE-2025-29927, and generate hardened vercel.json headers.
+- cloudflare-waf-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/cloudflare-waf-security-audit — Audit Cloudflare-proxied sites across TLS 443, CNAME takeover, 28 sensitive endpoint probes, CSP/HSTS/COOP/CORP headers, and generate Cloudflare Transform Rules + WAF dotfile/SourceMap blocks.
+- graphql-introspection-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/graphql-introspection-audit — Test live /graphql and /api/graphql endpoints for enabled production schema introspection ({__schema{types{name}}}) plus exposed Swagger/OpenAPI JSON docs and CORS reflection.
+- oauth-cookie-cors-security-audit (VibeShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/oauth-cookie-cors-security-audit — Audit response Set-Cookie headers (Secure, HttpOnly, SameSite), test untrusted Origin reflection with Access-Control-Allow-Credentials: true, and detect unvalidated ?next= Open Redirects.
+- google-workspace-spf-dmarc-setup (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/google-workspace-spf-dmarc-setup — Verify Google Workspace custom domain DNS: MX priority redundancy, include:_spf.google.com lookup count (RFC 7208), google._domainkey 2048-bit DKIM, and RFC 7489 DMARC enforcement.
+- resend-postmark-email-audit (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/resend-postmark-email-audit — Audit transactional SaaS email DNS (Resend, Postmark, SendGrid, Amazon SES): catches SPF >10 lookup PermErrors, missing DKIM CNAME/TXT selectors, unaligned DMARC, and blacklisted IPs.
+- bimi-mta-sts-email-security (InboxShield v7.0): https://www.skills.sh/zColdWater/omniforge-skills/bimi-mta-sts-email-security — Audit advanced email transport & brand trust records: _mta-sts policy & HTTPS policy host, _smtp._tls (TLS-RPT), and default._bimi SVG Tiny PS logo + VMC readiness.
+- robots-txt-ai-crawler-audit (CiteReady v6.0): https://www.skills.sh/zColdWater/omniforge-skills/robots-txt-ai-crawler-audit — Audit /robots.txt rules across 10 AI crawlers (OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, GPTBot, Google-Extended, Applebot-Extended, CCBot) so AI search cites your site without unwanted training scraping.
