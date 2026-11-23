@@ -10,6 +10,7 @@
 - Free Live README SVG Badge Studio: https://zcoldwater.github.io/omniforge-skills/launch-score-badge-generator.html
 - 2026 Indie SaaS Security, DNS & AI Search TCO Calculator: https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html
 - 2026 Vibe-Coding Security Cheat Sheet (Cursor/Lovable/Bolt/v0): https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html
+- 2026 HTTP Security Headers & RFC 9116 security.txt Generator (5 Stacks): https://zcoldwater.github.io/omniforge-skills/security-headers-generator-2026.html
 - 2026 State of AI Startup Infrastructure Report (390 Audits): https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html
 - Full Skills Reference: https://zcoldwater.github.io/omniforge-skills/llms-full.txt
 - Live Tools:

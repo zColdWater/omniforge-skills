@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 HTTP Security Headers &amp; RFC 9116 security.txt Generator (Next.js, Vercel, Cloudflare, Netlify &amp; Nginx) | OmniForge</title>
+  <meta name="description" content="Free interactive HTTP security headers (CSP, HSTS, X-Frame-Options, COOP, CORP, Permissions-Policy) and RFC 9116 security.txt generator for Next.js, Vercel, Cloudflare Pages, Netlify, and Nginx with live production header verification." />
+  <link rel="canonical" href="https://zcoldwater.github.io/omniforge-skills/security-headers-generator-2026.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Cpath d='M9 16.5L14 21.5L23.5 11' stroke='%2310b981' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="2026 HTTP Security Headers &amp; RFC 9116 security.txt Generator (5 Stacks)" />
+  <meta property="og:description" content="Generate copy-paste Grade A+ CSP, HSTS, COOP, Permissions-Policy &amp; RFC 9116 security.txt configs for Next.js, Vercel, Cloudflare Pages, Netlify, and Nginx — and verify your live domain free." />
+  <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/security-headers-generator-2026.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-vibeshield-2usd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-vibeshield-2usd.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "2026 HTTP Security Headers & RFC 9116 security.txt Config Generator",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "url": "https://zcoldwater.github.io/omniforge-skills/security-headers-generator-2026.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "description": "Free interactive HTTP security headers (CSP, HSTS, X-Frame-Options, COOP, CORP, Permissions-Policy) and RFC 9116 security.txt generator for Next.js, Vercel, Cloudflare Pages, Netlify, and Nginx with live domain verification."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do 85% of indie SaaS apps lose points on Content-Security-Policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our 2026 empirical scan of 60 live indie SaaS apps found 46.7% ship zero Content-Security-Policy header at all and 85.0% either omit CSP or include unsafe-inline script directives, leaving apps vulnerable to XSS token theft and script injection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where must RFC 9116 security.txt be hosted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per RFC 9116, host the file at https://yourdomain.com/.well-known/security.txt over HTTPS with Content-Type text/plain; charset=utf-8, a Contact field, a Canonical URL, and an ISO-8601 Expires timestamp less than 1 year in the future."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I verify my live production security headers after deploying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run the free in-page 3-in-1 Live Audit above, open VibeShield v7.0 at vibe-checker.appwrite.network, or run curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yourdomain.com directly from your terminal."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg:#ffffff; --surface:#f8fafc; --border:#e2e8f0; --border-strong:#cbd5e1;
+      --ink:#0f172a; --muted:#475569; --subtle:#64748b;
+      --accent:#059669; --accent-dark:#047857; --accent-soft:#ecfdf5; --accent-border:#a7f3d0;
+      --code-bg:#0f172a; --code-fg:#e2e8f0;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.58; -webkit-font-smoothing:antialiased; }
+    a { color:var(--accent-dark); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topbar { border-bottom:1px solid var(--border); background:#ffffff; position:sticky; top:0; z-index:20; }
+    .topbar-inner { max-width:1100px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .brand { font-weight:800; font-size:0.95rem; color:var(--ink); }
+    .nav-links { display:flex; gap:14px; flex-wrap:wrap; font-size:0.84rem; }
+    .nav-links a { color:var(--muted); font-weight:600; }
+    .wrap { max-width:1100px; margin:0 auto; padding:34px 20px 68px; }
+    .eyebrow { display:inline-block; font-size:0.74rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--accent-dark); background:var(--accent-soft); border:1px solid var(--accent-border); border-radius:999px; padding:4px 12px; margin-bottom:14px; }
+    h1 { font-size:clamp(1.85rem,4vw,2.75rem); line-height:1.12; letter-spacing:-0.03em; margin:0 0 12px; max-width:880px; }
+    h2 { font-size:1.35rem; letter-spacing:-0.02em; margin:34px 0 10px; }
+    .lead { color:var(--muted); font-size:1.02rem; max-width:780px; margin:0 0 22px; }
+    .stat-strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:18px 0 26px; }
+    .stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
+    .stat strong { display:block; font-size:1.45rem; letter-spacing:-0.02em; color:var(--ink); }
+    .stat span { font-size:0.8rem; color:var(--muted); }
+    .panel { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px; margin:18px 0; }
+    .stack-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 16px; }
+    .tab { padding:8px 14px; border-radius:8px; border:1px solid var(--border-strong); background:#ffffff; color:var(--ink); font-size:0.84rem; font-weight:700; cursor:pointer; }
+    .tab.active, .tab:hover { background:var(--ink); color:#ffffff; border-color:var(--ink); }
+    .opt-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:10px; margin:12px 0 18px; }
+    .opt { display:flex; align-items:flex-start; gap:8px; background:#ffffff; border:1px solid var(--border); border-radius:10px; padding:10px 12px; font-size:0.84rem; cursor:pointer; }
+    .opt input { margin-top:3px; accent-color:var(--accent); }
+    .code-box { background:var(--code-bg); border-radius:12px; overflow:hidden; max-width:100%; }
+    .code-head { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 14px; border-bottom:1px solid #1e293b; flex-wrap:wrap; }
+    .code-title { font-size:0.78rem; font-weight:700; color:#94a3b8; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .copy-btn { background:#1e293b; color:#f8fafc; border:1px solid #334155; border-radius:6px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; }
+    .copy-btn:hover { background:#334155; }
+    pre { margin:0; padding:16px; overflow-x:auto; color:#a7f3d0; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:0.82rem; line-height:1.55; max-width:100%; }
+    .form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:12px 0 16px; }
+    .field label { display:block; font-size:0.78rem; font-weight:700; color:var(--subtle); margin-bottom:4px; }
+    .field input { width:100%; min-width:0; padding:10px 12px; border-radius:8px; border:1px solid var(--border-strong); background:#ffffff; color:var(--ink); font-size:0.9rem; }
+    .input-row { display:flex; gap:10px; flex-wrap:wrap; }
+    .input-row input { flex:1 1 240px; min-width:0; padding:11px 14px; border-radius:8px; border:1px solid var(--border-strong); background:#ffffff; color:var(--ink); font-size:0.94rem; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:10px 16px; border-radius:8px; font-weight:700; font-size:0.9rem; border:1px solid transparent; cursor:pointer; }
+    .btn:hover { text-decoration:none; }
+    .btn-accent { background:var(--accent); color:#ffffff; }
+    .btn-accent:hover { background:var(--accent-dark); }
+    .btn-outline { background:#ffffff; color:var(--ink); border-color:var(--border-strong); }
+    .btn-outline:hover { background:var(--surface); }
+    .btn-sm { padding:7px 12px; font-size:0.82rem; }
+    .sample-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:10px; font-size:0.8rem; color:var(--subtle); }
+    .sample-pill { padding:4px 10px; border-radius:999px; border:1px solid var(--border-strong); background:#ffffff; color:var(--ink); font-size:0.78rem; font-weight:600; cursor:pointer; }
+    .sample-pill:hover { border-color:var(--accent); background:var(--accent-soft); color:var(--accent-dark); }
+    .qs-box { display:none; background:#ffffff; border:1px solid var(--border-strong); border-radius:12px; padding:16px; margin-top:14px; }
+    .qs-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+    .qs-kicker { font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--accent-dark); }
+    .qs-overall { font-size:1.05rem; font-weight:800; color:var(--ink); }
+    .qs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+    .qs-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; font-size:0.84rem; }
+    .qs-lbl { font-size:0.72rem; font-weight:700; text-transform:uppercase; color:var(--subtle); }
+    .qs-val { font-size:1.1rem; font-weight:800; color:var(--ink); margin:2px 0; }
+    .qs-meta { font-size:0.8rem; color:var(--muted); margin-bottom:6px; }
+    footer { margin-top:44px; padding-top:20px; border-top:1px solid var(--border); color:var(--subtle); font-size:0.84rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+    @media (max-width:680px) {
+      .wrap { padding:24px 16px 52px; }
+      .panel { padding:16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./index.html">OmniForge · Agent Arena Studio</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="./black-friday-2026-developer-security-deal.html">Black Friday ($2 / $5)</a>
+        <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a>
+        <a href="./vibecoding-security-cheat-sheet-2026.html">Fix Prompts</a>
+        <a href="./launch-score-badge-generator.html">Badge Studio</a>
+        <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="eyebrow">FREE DEVELOPER UTILITY · GRADE A+ OBSERVATORY HEADERS + RFC 9116 SECURITY.TXT</div>
+    <h1>2026 HTTP Security Headers &amp; RFC 9116 security.txt Config Generator</h1>
+    <p class="lead">Generate production-ready Content-Security-Policy (CSP), HSTS, X-Frame-Options, COOP, CORP, Permissions-Policy, and RFC 9116 <code>/.well-known/security.txt</code> configs for Next.js, Vercel, Cloudflare Pages, Netlify, and Nginx — then verify your live headers free.</p>
+
+    <div class="stat-strip">
+      <div class="stat"><strong>46.7%</strong><span>Indie SaaS apps ship zero CSP header (Study 1, N=60)</span></div>
+      <div class="stat"><strong>85.0%</strong><span>Missing or unsafe-inline CSP scripts (Study 1, N=60)</span></div>
+      <div class="stat"><strong>80.0%</strong><span>Top dev &amp; AI platforms lack COOP isolation (Study 5, N=60)</span></div>
+      <div class="stat"><strong>56.7%</strong><span>Fail valid RFC 9116 security.txt (Study 5, N=60)</span></div>
+    </div>
+
+    <section class="panel" id="live-verify">
+      <div style="font-weight:800;font-size:0.96rem;margin-bottom:4px;">Step 1: Check Your Domain's Current Live Security Headers (Free, Read-Only)</div>
+      <div style="color:var(--muted);font-size:0.86rem;margin-bottom:12px;">Audit your production headers, TLS 443, DMARC/SPF, and /llms.txt in one click before applying the config below.</div>
+      <div class="input-row">
+        <input id="hdr-audit-domain" type="text" placeholder="yourdomain.com (e.g. myapp.vercel.app)" aria-label="Domain to verify" />
+        <button id="hdr-audit-btn" class="btn btn-accent" type="button">Verify Live Headers (Free)</button>
+      </div>
+      <div class="sample-row">
+        <span>Try 1-click live audit:</span>
+        <button class="sample-pill" type="button" data-sample-domain="v0.dev">v0.dev</button>
+        <button class="sample-pill" type="button" data-sample-domain="supabase.com">supabase.com</button>
+        <button class="sample-pill" type="button" data-sample-domain="vercel.com">vercel.com</button>
+      </div>
+      <div id="hdr-audit-out" class="qs-box" aria-live="polite"></div>
+    </section>
+
+    <h2>Step 2: Choose Hosting Stack &amp; Third-Party CSP Integrations</h2>
+    <section class="panel">
+      <div class="stack-tabs" role="tablist" aria-label="Hosting framework">
+        <button class="tab active" type="button" data-stack="nextjs">Next.js (next.config.mjs)</button>
+        <button class="tab" type="button" data-stack="vercel">Vercel (vercel.json)</button>
+        <button class="tab" type="button" data-stack="cloudflare">Cloudflare Pages (_headers)</button>
+        <button class="tab" type="button" data-stack="netlify">Netlify (netlify.toml)</button>
+        <button class="tab" type="button" data-stack="nginx">Nginx (conf)</button>
+      </div>
+
+      <div class="opt-grid">
+        <label class="opt"><input type="checkbox" data-opt="supabase" checked /><span><strong>Supabase</strong> (*.supabase.co HTTPS + WSS)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="stripe" checked /><span><strong>Stripe Checkout</strong> (js.stripe.com + api/hooks)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="gfonts" checked /><span><strong>Google Fonts</strong> (googleapis + gstatic)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="auth" /><span><strong>Clerk / Auth0</strong> (hosted auth scripts &amp; frames)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="analytics" /><span><strong>PostHog / Plausible</strong> (first-party analytics)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="inlineStyle" checked /><span><strong>Allow Inline Styles</strong> ('unsafe-inline' in style-src)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="hstsPreload" checked /><span><strong>HSTS Preload</strong> (2-yr max-age + preload)</span></label>
+        <label class="opt"><input type="checkbox" data-opt="strictIsolation" checked /><span><strong>COOP + CORP Isolation</strong> (same-origin)</span></label>
+      </div>
+
+      <div class="code-box">
+        <div class="code-head">
+          <span id="hdr-config-title" class="code-title">next.config.mjs</span>
+          <button class="copy-btn" type="button" data-copy-id="hdr-config-out">Copy Config</button>
+        </div>
+        <pre id="hdr-config-out"></pre>
+      </div>
+    </section>
+
+    <h2>Step 3: Generate RFC 9116 <code>/.well-known/security.txt</code></h2>
+    <section class="panel">
+      <div class="form-grid">
+        <div class="field"><label for="sec-domain">Production Domain</label><input id="sec-domain" type="text" placeholder="yourdomain.com" /></div>
+        <div class="field"><label for="sec-email">Security Contact Email</label><input id="sec-email" type="email" placeholder="security@yourdomain.com" /></div>
+        <div class="field"><label for="sec-policy">Disclosure Policy URL</label><input id="sec-policy" type="url" placeholder="https://yourdomain.com/security" /></div>
+      </div>
+      <div class="code-box">
+        <div class="code-head">
+          <span class="code-title">public/.well-known/security.txt (RFC 9116 compliant · auto 11-month Expires)</span>
+          <button class="copy-btn" type="button" data-copy-id="sectxt-out">Copy security.txt</button>
+        </div>
+        <pre id="sectxt-out"></pre>
+      </div>
+    </section>
+
+    <section class="panel" style="background:#f0fdf4;border-color:#a7f3d0;">
+      <div style="font-weight:800;font-size:1.05rem;margin-bottom:6px;">Need Domain-Tailored Fixes for Leaked Secrets, Supabase RLS, Email DMARC &amp; /llms.txt Too?</div>
+      <p style="color:var(--muted);font-size:0.9rem;margin:0 0 14px;">Headers are only 1 of 6 audit phases. Unlock VibeShield v7.0 ($2) or the Complete 3-in-1 Launch Suite ($5 one-time, 83% off regular $29, $0/mo) for unmasked SQL policies, DNS records, and Cursor/Lovable fix prompts.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn btn-accent" data-paywall="hdr-footer-suite" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener">Unlock 3-in-1 Complete Suite — $5 (83% OFF)</a>
+        <a class="btn btn-outline" data-paywall="hdr-footer-vibe" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">VibeShield Single Fix — $2 (78% OFF)</a>
+        <a class="btn btn-outline" href="./vibecoding-security-cheat-sheet-2026.html">8 Vibe-Coding Fix Prompts &rarr;</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>OmniForge · Agent Arena Studio · <code>agentarenastudio@proton.me</code> · <a href="https://x.com/agentarenastudi" target="_blank" rel="noopener">@agentarenastudi</a></div>
+      <div><a href="./index.html">50 Agent Skills</a> · <a href="./black-friday-2026-developer-security-deal.html">Black Friday Deal</a> · <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a> · <a href="./launch-score-badge-generator.html">Badge Studio</a> · <a href="./saas-security-tco-calculator-2026.html">TCO Calc</a> · <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a></div>
+    </footer>
+  </main>
+  <script>
+(function () {
+  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  function opTrack(eventName, extra) {
+    try {
+      var p = JSON.stringify(Object.assign({
+        site: "vibeshield",
+        event: eventName,
+        path: "/security-headers-generator-2026",
+        referrer: document.referrer || "",
+        lang: "en",
+        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "") || "",
+        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : ""
+      }, extra || {}));
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(TRACK_URL, new Blob([p], { type: "text/plain;charset=UTF-8" }));
+      }
+    } catch (_) {}
+  }
+
+  opTrack("pageview");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function sanitizeHost(raw) {
+    var v = (raw || "").trim().toLowerCase();
+    v = v.replace(/^https?:\/\//, "").replace(/\/.*$/, "").replace(/[^a-z0-9.-]/g, "");
+    return v || "yourdomain.com";
+  }
+
+  var state = {
+    stack: "nextjs",
+    supabase: true,
+    stripe: true,
+    auth: false,
+    analytics: false,
+    gfonts: true,
+    inlineStyle: true,
+    hstsPreload: true,
+    strictIsolation: true
+  };
+
+  var cfgOut = document.getElementById("hdr-config-out");
+  var cfgTitle = document.getElementById("hdr-config-title");
+  var secTxtOut = document.getElementById("sectxt-out");
+  var secDomainEl = document.getElementById("sec-domain");
+  var secEmailEl = document.getElementById("sec-email");
+  var secPolicyEl = document.getElementById("sec-policy");
+  var auditInput = document.getElementById("hdr-audit-domain");
+  var auditBtn = document.getElementById("hdr-audit-btn");
+  var auditOut = document.getElementById("hdr-audit-out");
+
+  function buildHeaders() {
+    var scriptSrc = ["'self'"];
+    var connectSrc = ["'self'"];
+    var frameSrc = ["'self'"];
+    var styleSrc = ["'self'"];
+    var fontSrc = ["'self'", "data:"];
+    var imgSrc = ["'self'", "data:", "https:"];
+
+    if (state.inlineStyle) styleSrc.push("'unsafe-inline'");
+    if (state.supabase) {
+      connectSrc.push("https://*.supabase.co", "wss://*.supabase.co");
+    }
+    if (state.stripe) {
+      scriptSrc.push("https://js.stripe.com");
+      connectSrc.push("https://api.stripe.com");
+      frameSrc.push("https://js.stripe.com", "https://hooks.stripe.com");
+    }
+    if (state.auth) {
+      scriptSrc.push("https://*.clerk.accounts.dev", "https://cdn.auth0.com");
+      connectSrc.push("https://*.clerk.accounts.dev", "https://*.auth0.com");
+      frameSrc.push("https://*.clerk.accounts.dev", "https://*.auth0.com");
+    }
+    if (state.analytics) {
+      scriptSrc.push("https://us-assets.i.posthog.com", "https://plausible.io");
+      connectSrc.push("https://us.i.posthog.com", "https://plausible.io");
+    }
+    if (state.gfonts) {
+      styleSrc.push("https://fonts.googleapis.com");
+      fontSrc.push("https://fonts.gstatic.com");
+    }
+
+    var csp = [
+      "default-src 'self'",
+      "base-uri 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'none'",
+      "form-action 'self'",
+      "script-src " + scriptSrc.join(" "),
+      "style-src " + styleSrc.join(" "),
+      "img-src " + imgSrc.join(" "),
+      "font-src " + fontSrc.join(" "),
+      "connect-src " + connectSrc.join(" "),
+      "frame-src " + frameSrc.join(" "),
+      "upgrade-insecure-requests"
+    ].join("; ");
+
+    var hsts = state.hstsPreload
+      ? "max-age=63072000; includeSubDomains; preload"
+      : "max-age=31536000; includeSubDomains";
+
+    var headers = [
+      ["Content-Security-Policy", csp],
+      ["Strict-Transport-Security", hsts],
+      ["X-Frame-Options", "DENY"],
+      ["X-Content-Type-Options", "nosniff"],
+      ["Referrer-Policy", "strict-origin-when-cross-origin"],
+      ["Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(self), browsing-topics=()"]
+    ];
+
+    if (state.strictIsolation) {
+      headers.push(["Cross-Origin-Opener-Policy", "same-origin"]);
+      headers.push(["Cross-Origin-Resource-Policy", "same-origin"]);
+    }
+    return headers;
+  }
+
+  function renderConfig() {
+    var headers = buildHeaders();
+    var text = "";
+    var title = "";
+
+    if (state.stack === "nextjs") {
+      title = "next.config.mjs (Next.js App Router / Pages Router)";
+      var items = headers.map(function (h) {
+        return '          { key: "' + h[0] + '", value: "' + h[1] + '" }';
+      }).join(",\n");
+      text =
+        "/** @type {import('next').NextConfig} */\n" +
+        "const nextConfig = {\n" +
+        "  poweredByHeader: false,\n" +
+        "  productionBrowserSourceMaps: false,\n" +
+        "  async headers() {\n" +
+        "    return [\n" +
+        "      {\n" +
+        '        source: "/(.*)",\n' +
+        "        headers: [\n" +
+        items + "\n" +
+        "        ],\n" +
+        "      },\n" +
+        "    ];\n" +
+        "  },\n" +
+        "};\n\n" +
+        "export default nextConfig;";
+    } else if (state.stack === "vercel") {
+      title = "vercel.json (Static / Edge / Serverless)";
+      var obj = {
+        headers: [
+          {
+            source: "/(.*)",
+            headers: headers.map(function (h) { return { key: h[0], value: h[1] }; })
+          }
+        ]
+      };
+      text = JSON.stringify(obj, null, 2);
+    } else if (state.stack === "cloudflare") {
+      title = "public/_headers (Cloudflare Pages)";
+      text = "/*\n" + headers.map(function (h) { return "  " + h[0] + ": " + h[1]; }).join("\n");
+    } else if (state.stack === "netlify") {
+      title = "netlify.toml (Netlify)";
+      text = '[[headers]]\n  for = "/*"\n  [headers.values]\n' +
+        headers.map(function (h) { return '    ' + h[0] + ' = "' + h[1] + '"'; }).join("\n");
+    } else {
+      title = "/etc/nginx/snippets/security-headers.conf (Nginx)";
+      text = "server_tokens off;\n" +
+        headers.map(function (h) { return 'add_header ' + h[0] + ' "' + h[1] + '" always;'; }).join("\n");
+    }
+
+    if (cfgTitle) cfgTitle.textContent = title;
+    if (cfgOut) cfgOut.textContent = text;
+  }
+
+  function renderSecurityTxt() {
+    var host = sanitizeHost(secDomainEl ? secDomainEl.value : "yourdomain.com");
+    var email = (secEmailEl ? secEmailEl.value.trim() : "") || ("security@" + host);
+    var policy = (secPolicyEl ? secPolicyEl.value.trim() : "") || ("https://" + host + "/security");
+    var exp = new Date(Date.now() + 330 * 86400 * 1000).toISOString().replace(/\.\d{3}Z$/, "Z");
+    var txt = [
+      "# Host at https://" + host + "/.well-known/security.txt (RFC 9116)",
+      "Contact: mailto:" + email,
+      "Expires: " + exp,
+      "Preferred-Languages: en",
+      "Canonical: https://" + host + "/.well-known/security.txt",
+      "Policy: " + policy
+    ].join("\n");
+    if (secTxtOut) secTxtOut.textContent = txt;
+  }
+
+  document.querySelectorAll("[data-stack]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      state.stack = btn.getAttribute("data-stack") || "nextjs";
+      document.querySelectorAll("[data-stack]").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      renderConfig();
+      opTrack("outbound", { target: "hdr-stack-" + state.stack });
+    });
+  });
+
+  document.querySelectorAll("[data-opt]").forEach(function (cb) {
+    cb.addEventListener("change", function () {
+      var k = cb.getAttribute("data-opt");
+      if (k && Object.prototype.hasOwnProperty.call(state, k)) {
+        state[k] = !!cb.checked;
+        renderConfig();
+      }
+    });
+  });
+
+  [secDomainEl, secEmailEl, secPolicyEl].forEach(function (el) {
+    if (el) el.addEventListener("input", renderSecurityTxt);
+  });
+
+  document.querySelectorAll("[data-copy-id]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var id = btn.getAttribute("data-copy-id");
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (navigator.clipboard) navigator.clipboard.writeText(el.textContent || "").catch(function () {});
+      var orig = btn.textContent;
+      btn.textContent = "Copied";
+      opTrack("outbound", { target: "hdr-copy-" + id });
+      setTimeout(function () { btn.textContent = orig; }, 1600);
+    });
+  });
+
+  function runAudit() {
+    if (!auditOut) return;
+    var raw = auditInput ? auditInput.value.trim() : "";
+    var host = sanitizeHost(raw || "supabase.com");
+    if (auditInput && !raw) auditInput.value = host;
+    if (secDomainEl && !secDomainEl.value.trim()) { secDomainEl.value = host; renderSecurityTxt(); }
+    if (auditBtn) { auditBtn.disabled = true; auditBtn.textContent = "Auditing " + host + "..."; }
+    auditOut.style.display = "block";
+    auditOut.innerHTML = '<div style="font-size:0.9rem;color:#475569;">Checking live headers, TLS, DMARC &amp; GEO on <strong>' + esc(host) + '</strong>...</div>';
+    opTrack("scan", { target: "hdr-gen-quick-score", domain: host });
+
+    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok || !d.engines) throw new Error("Unexpected response");
+        var ov = d.overall || {};
+        var vb = d.engines.vibeshield || {};
+        var ib = d.engines.inboxshield || {};
+        var cr = d.engines.citeready || {};
+        var co = d.checkout || {};
+        var suiteUrl = co.completeSuite5Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
+        var vibeUrl = co.vibeshield2Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield";
+        auditOut.innerHTML =
+          '<div class="qs-head">' +
+            '<div><div class="qs-kicker">LIVE HEADER &amp; LAUNCH AUDIT · ' + esc(d.domain || host) + '</div>' +
+            '<div class="qs-overall">VibeShield ' + esc(vb.score) + '/100 (Observatory ' + esc(vb.observatory || "-") + ') · Overall ' + esc(ov.score) + '/100 (' + esc(ov.totalIssues || 0) + ' issues)</div></div>' +
+            '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+              '<a class="btn btn-outline btn-sm" data-paywall="hdr-qs-vibe" href="' + esc(vibeUrl) + '" target="_blank" rel="noopener">VibeShield Fix — $2</a>' +
+              '<a class="btn btn-accent btn-sm" data-paywall="hdr-qs-suite" href="' + esc(suiteUrl) + '" target="_blank" rel="noopener">3-in-1 Suite — $5 (83% OFF)</a>' +
+            '</div>' +
+          '</div>' +
+          '<div class="qs-grid">' +
+            '<div class="qs-card"><div class="qs-lbl">VibeShield v7.0</div><div class="qs-val">' + esc(vb.score) + '/100 · ' + esc(vb.grade || "-") + '</div><div class="qs-meta">Observatory ' + esc(vb.observatory || "-") + ' · ' + esc(vb.issues || 0) + ' issues' + (vb.projectedScore ? ' · Fix &rarr; ' + esc(vb.projectedScore) : '') + '</div><a href="' + esc(vb.reportUrl || "https://vibe-checker.appwrite.network/") + '" target="_blank" rel="noopener">Inspect Missing Headers &rarr;</a></div>' +
+            '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0</div><div class="qs-val">' + esc(ib.score) + '/100 · ' + esc(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + esc(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + esc(ib.dmarcPolicy || "none") + '</div><a href="' + esc(ib.reportUrl || "https://inbox-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full DNS Report &rarr;</a></div>' +
+            '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0</div><div class="qs-val">' + esc(cr.score) + '/100 · ' + esc(cr.grade || "-") + '</div><div class="qs-meta">/llms.txt ' + (cr.llmsTxt ? "present" : "missing") + ' · Entity ' + esc(cr.entityScore != null ? cr.entityScore + "/100" : "-") + '</div><a href="' + esc(cr.reportUrl || "https://citeready-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full GEO Report &rarr;</a></div>' +
+          '</div>';
+        auditOut.querySelectorAll("[data-paywall]").forEach(function (a) {
+          a.addEventListener("click", function () { opTrack("paywall", { target: a.getAttribute("data-paywall"), domain: d.domain || host }); });
+        });
+      })
+      .catch(function (err) {
+        auditOut.innerHTML = '<div style="font-size:0.88rem;color:#b45309;">Live quick-score timed out (' + esc(err && err.message ? err.message : "network") + '). Run VibeShield directly at vibe-checker.appwrite.network.</div>';
+      })
+      .finally(function () {
+        if (auditBtn) { auditBtn.disabled = false; auditBtn.textContent = "Verify Live Headers (Free)"; }
+      });
+  }
+
+  if (auditBtn) auditBtn.addEventListener("click", runAudit);
+  if (auditInput) auditInput.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); runAudit(); } });
+  document.querySelectorAll("[data-sample-domain]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var sample = btn.getAttribute("data-sample-domain") || "supabase.com";
+      if (auditInput) auditInput.value = sample;
+      opTrack("outbound", { target: "hdr-sample-pill", domain: sample });
+      runAudit();
+    });
+  });
+
+  document.querySelectorAll("[data-paywall]").forEach(function (a) {
+    a.addEventListener("click", function () { opTrack("paywall", { target: a.getAttribute("data-paywall") }); });
+  });
+
+  renderConfig();
+  renderSecurityTxt();
+})();
+</script>
+</body>
+</html>
