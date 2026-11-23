@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 State of Indie &amp; AI Startup Infrastructure Report (330 Live Audits) | OmniForge</title>
+  <meta name="description" content="Four open empirical benchmarks across 330 live SaaS &amp; AI startup domains (Nov 2026): Web Security Headers &amp; TLS (46.7% zero CSP), Email Auth &amp; SPF Bloat (v0.dev/bolt.new spoofable, vercel.com/posthog.com 10/10 SPF), AI Search /llms.txt (AI Labs dead last), and Top 100 AI TLD Adoption (.ai 41% overtakes .com 40%)." />
+  <link rel="canonical" href="https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Cpath d='M16 5l9 4v7c0 6-3.8 10.6-9 12.5C10.8 26.6 7 22 7 16V9l9-4z' fill='%23059669'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="2026 State of Indie &amp; AI Startup Infrastructure Report (330 Live Audits)" />
+  <meta property="og:description" content="4 open empirical studies across Security Headers, Email DNS/DMARC, AI Search /llms.txt, and .ai vs .com TLD adoption — with raw JSON datasets and free instant audits." />
+  <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2026 State of Indie &amp; AI Startup Infrastructure (330 Live Audits)" />
+  <meta name="twitter:description" content="4 open benchmarks: 46.7% zero CSP · 4 iconic brands spoofable (p=none/missing) · AI Labs last in /llms.txt · .ai overtakes .com (41% vs 40%)." />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "2026 State of Indie & AI Startup Infrastructure: 330 Live Audits Across Security, Email DNS, AI Search & Domains",
+      "description": "Unified empirical infrastructure study of 330 live SaaS and AI startup domains across four layers: Web Security Headers & TLS (N=60), Email Authentication & SPF Bloat (N=60 Top SaaS + N=60 Indie), AI Search /llms.txt Readiness (N=50), and AI Startup TLD Adoption (N=100, 500 probes).",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "author": {
+        "@type": "Organization",
+        "name": "OmniForge · Agent Arena Studio",
+        "url": "https://github.com/zColdWater"
+      },
+      "image": "https://brand-checker.appwrite.network/assets/cover-suite-5usd.png",
+      "mainEntityOfPage": "https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "OmniForge 2026 Open Infrastructure Benchmarks",
+      "description": "Four strictly passive, zero-intrusive public telemetry datasets covering Web Security Headers, Email DNS Authentication, AI Search GEO, and Domain TLD Adoption.",
+      "license": "https://opensource.org/licenses/MIT",
+      "url": "https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html",
+      "dataset": [
+        {
+          "@type": "Dataset",
+          "name": "Email Authentication & DMARC (Top 60 Iconic SaaS & AI Startups)",
+          "description": "45.0% below DMARC p=reject; 4 iconic brands spoofable (v0.dev, bolt.new, huggingface.co, gumroad.com); 15.0% at SPF 8-10/10 redline; 91.7% lack MTA-STS",
+          "url": "https://zcoldwater.github.io/inboxshield-cli/top-60-saas-email-authentication-benchmark-2026.html"
+        },
+        {
+          "@type": "Dataset",
+          "name": "Indie SaaS Email Deliverability (60 Active GitHub Indie SaaS Custom Domains)",
+          "description": "71.7% lack enforced DMARC (35.0% missing + 36.7% p=none); 33.3% missing SPF; 45.0% missing active DKIM; 100% missing MTA-STS/TLS-RPT",
+          "url": "https://zcoldwater.github.io/inboxshield-cli/email-deliverability-benchmark-2026.html"
+        },
+        {
+          "@type": "Dataset",
+          "name": "Web Security Headers & TLS 443 (60 Active Indie SaaS & AI Web Apps)",
+          "description": "46.7% zero CSP (85.0% missing or 'unsafe-inline'); 31.7% no clickjacking defense; 28.3% Grade F; 81.7% missing COOP despite 100% TLS 1.3",
+          "url": "https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html"
+        },
+        {
+          "@type": "Dataset",
+          "name": "AI Search Citation Readiness & /llms.txt (Top 50 AI & Developer SaaS Products)",
+          "description": "74% ship /llms.txt but only 22% ship /llms-full.txt; avg Schema Graph 35.6/100 (32% at 0/100); AI Labs rank dead last at 67.9/100",
+          "url": "https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html"
+        },
+        {
+          "@type": "Dataset",
+          "name": "AI Startup TLD Adoption & Aftermarket (Top 100 AI Startups (500 TLD Probes))",
+          "description": ".ai (41%) overtakes .com (40%) as #1 primary TLD; 81.7% of non-.com AI startups lack .com 301 control; 36% leave >=1 core TLD unregistered; 40% face brokered sibling TLDs",
+          "url": "https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg:#ffffff; --surface:#f8fafc; --border:#e2e8f0; --ink:#0f172a; --muted:#475569; --subtle:#64748b;
+      --emerald:#059669; --emerald-bg:#ecfdf5; --emerald-bd:#a7f3d0;
+      --blue:#2563eb; --blue-bg:#eff6ff; --blue-bd:#bfdbfe;
+      --amber:#b45309; --amber-bg:#fffbeb; --amber-bd:#fde68a;
+      --red:#dc2626; --red-bg:#fef2f2; --red-bd:#fecaca;
+    }
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif; line-height:1.58; -webkit-font-smoothing:antialiased; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .mono { font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; }
+    .topbar { border-bottom:1px solid var(--border); background:rgba(255,255,255,0.95); position:sticky; top:0; z-index:20; backdrop-filter:blur(8px); }
+    .topbar-in { max-width:1120px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .brand { display:inline-flex; align-items:center; gap:9px; font-weight:800; color:var(--ink); font-size:0.96rem; letter-spacing:-0.02em; }
+    .brand-dot { width:10px; height:10px; border-radius:50%; background:var(--emerald); }
+    .nav-links { display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-size:0.85rem; font-weight:600; }
+    .nav-links a { color:var(--muted); }
+    .nav-links a.nav-cta { background:var(--ink); color:#fff; padding:7px 13px; border-radius:7px; }
+    .nav-links a.nav-cta:hover { text-decoration:none; opacity:0.9; }
+    .wrap { max-width:1120px; margin:0 auto; padding:34px 20px 72px; }
+    .eyebrow { display:inline-block; font-size:0.74rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--emerald); background:var(--emerald-bg); border:1px solid var(--emerald-bd); padding:4px 10px; border-radius:99px; margin-bottom:14px; }
+    h1 { font-size:clamp(1.8rem,3.8vw,2.65rem); line-height:1.12; letter-spacing:-0.03em; margin:0 0 12px; max-width:920px; }
+    .lead { color:var(--muted); font-size:1.04rem; max-width:840px; margin:0 0 24px; }
+    .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:26px; }
+    .kpi { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:18px; }
+    .kpi-tag { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--subtle); margin-bottom:6px; }
+    .kpi-num { font-size:1.85rem; font-weight:800; letter-spacing:-0.03em; line-height:1.05; }
+    .kpi-lbl { font-size:0.84rem; font-weight:700; color:var(--ink); margin-top:6px; }
+    .kpi-sub { font-size:0.78rem; color:var(--subtle); margin-top:3px; }
+    .launcher { background:var(--ink); color:#fff; border-radius:14px; padding:22px 24px; margin-bottom:32px; }
+    .launcher h2 { margin:0 0 6px; font-size:1.18rem; color:#fff; }
+    .launcher p { margin:0 0 14px; font-size:0.89rem; color:#cbd5e1; }
+    .launch-row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+    .launch-row input { flex:1; min-width:220px; padding:11px 14px; border-radius:8px; border:1px solid #334155; background:#1e293b; color:#fff; font-size:0.95rem; }
+    .launch-row input::placeholder { color:#94a3b8; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:9px 14px; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; border:1px solid transparent; }
+    .btn-emerald { background:#10b981; color:#022c22; }
+    .btn-emerald:hover { background:#34d399; text-decoration:none; }
+    .btn-blue { background:#3b82f6; color:#fff; }
+    .btn-blue:hover { background:#60a5fa; text-decoration:none; }
+    .btn-ghost { background:transparent; color:#e2e8f0; border-color:#475569; }
+    .btn-ghost:hover { background:rgba(255,255,255,0.08); text-decoration:none; }
+    .btn-out { background:#fff; color:var(--ink); border-color:var(--border); }
+    .btn-out:hover { background:var(--surface); text-decoration:none; }
+    .sec-title { font-size:1.36rem; letter-spacing:-0.02em; margin:34px 0 14px; }
+    .pillars-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; }
+    .p-card { background:#fff; border:1px solid var(--border); border-radius:14px; padding:22px; display:flex; flex-direction:column; justify-content:space-between; }
+    .p-head { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
+    .pill { display:inline-block; padding:3px 9px; border-radius:99px; font-size:0.74rem; font-weight:700; border:1px solid transparent; }
+    .pill-green { background:var(--emerald-bg); color:var(--emerald); border-color:var(--emerald-bd); }
+    .pill-blue { background:var(--blue-bg); color:var(--blue); border-color:var(--blue-bd); }
+    .pill-amber { background:var(--amber-bg); color:var(--amber); border-color:var(--amber-bd); }
+    .pill-red { background:var(--red-bg); color:var(--red); border-color:var(--red-bd); }
+    .p-card h3 { margin:0 0 8px; font-size:1.12rem; line-height:1.25; }
+    .p-card ul { margin:0 0 16px; padding-left:18px; font-size:0.88rem; color:var(--muted); }
+    .p-card li { margin-bottom:6px; }
+    .p-actions { display:flex; gap:8px; flex-wrap:wrap; padding-top:12px; border-top:1px solid #f1f5f9; }
+    .table-wrap { border:1px solid var(--border); border-radius:12px; overflow-x:auto; background:#fff; margin-top:12px; }
+    table { width:100%; border-collapse:collapse; font-size:0.86rem; min-width:740px; }
+    th { text-align:left; background:var(--surface); color:var(--muted); font-weight:700; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.04em; padding:11px 14px; border-bottom:1px solid var(--border); }
+    td { padding:11px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top; }
+    tr:last-child td { border-bottom:0; }
+    .stack-box { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px; margin-top:28px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+    pre { background:#0f172a; color:#d1fae5; padding:12px 14px; border-radius:8px; overflow-x:auto; font-size:0.83rem; margin:10px 0 0; }
+    footer { border-top:1px solid var(--border); margin-top:44px; padding-top:20px; font-size:0.83rem; color:var(--subtle); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="./index.html"><span class="brand-dot"></span><span>OmniForge Open Research 2026</span></a>
+      <nav class="nav-links">
+        <a href="#studies">4 Benchmarks</a>
+        <a href="#summary-matrix">Master Matrix</a>
+        <a href="./index.html">50 AI Agent Skills</a>
+        <a href="./state-of-ai-startup-infrastructure-2026.json">Master JSON</a>
+        <a class="nav-cta" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener" data-track="paywall">3-in-1 Suite $5 (reg. $29)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="eyebrow">OPEN EMPIRICAL TELEMETRY · NOVEMBER 2026 · 330 LIVE PRODUCTION AUDITS · 730+ PROBES</div>
+    <h1>2026 State of Indie &amp; AI Startup Infrastructure Report</h1>
+    <p class="lead">Across November 2026, OmniForge ran strictly passive, non-intrusive public telemetry across <strong>330 active SaaS and AI startup domains</strong> spanning four launch-critical layers: <strong>Web Security Headers &amp; TLS</strong>, <strong>Email Authentication &amp; DMARC</strong>, <strong>AI Search / <code>/llms.txt</code> Visibility</strong>, and <strong>Domain TLD &amp; Aftermarket Control</strong>. Every dataset below is open-source (MIT) and independently reproducible in seconds.</p>
+
+    <section class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-tag">Security Headers (N=60)</div>
+        <div class="kpi-num" style="color:var(--red);">46.7%</div>
+        <div class="kpi-lbl">Ship Zero CSP Header</div>
+        <div class="kpi-sub">85.0% lack strict CSP · 28.3% Grade F despite 100% TLS 1.3</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-tag">Email DNS (N=60 Top + 60 Indie)</div>
+        <div class="kpi-num" style="color:var(--amber);">30.8 pt</div>
+        <div class="kpi-lbl">Leader vs. Indie Gap (91.1 vs 60.3)</div>
+        <div class="kpi-sub">45% of Top 60 below p=reject · 15% at SPF 8–10/10 redline</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-tag">AI Search GEO (N=50)</div>
+        <div class="kpi-num" style="color:var(--blue);">22.0%</div>
+        <div class="kpi-lbl">Publish <code>/llms-full.txt</code></div>
+        <div class="kpi-sub">74% ship /llms.txt · AI Labs rank dead last (67.9/100)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-tag">Domain TLDs (N=100 · 500 Probes)</div>
+        <div class="kpi-num" style="color:var(--emerald);">41% vs 40%</div>
+        <div class="kpi-lbl"><code>.ai</code> Overtakes <code>.com</code> as #1</div>
+        <div class="kpi-sub">81.7% of non-.com AI startups lack .com 301 control</div>
+      </div>
+    </section>
+
+    <section class="launcher">
+      <h2>Audit Your Own Startup Against All 4 2026 Benchmarks (Free, Zero Signup)</h2>
+      <p>Enter your custom domain once and launch any of our four strictly read-only live scanners. Unlock copy-paste fixes for <strong>$2 Launch Special</strong> per tool (reg. $9–$12) or <strong>$5</strong> for the complete 3-in-1 suite (reg. $29, one-time, $0/mo). BrandShield is <strong>100% Free Forever</strong>.</p>
+      <div class="launch-row">
+        <input id="hubDomainInput" type="text" placeholder="Enter your domain (e.g. yoursaas.com)" aria-label="Target domain" />
+        <button type="button" class="btn btn-emerald" data-launch="vibe">1. Security Scan (VibeShield)</button>
+        <button type="button" class="btn btn-blue" data-launch="inbox">2. Email DNS (InboxShield)</button>
+        <button type="button" class="btn btn-ghost" data-launch="cite">3. AI Search (CiteReady)</button>
+        <button type="button" class="btn btn-ghost" data-launch="brand">4. 78 TLDs (BrandShield Free)</button>
+      </div>
+    </section>
+
+    <h2 id="studies" class="sec-title">Four Flagship Empirical Studies (November 2026)</h2>
+    <section class="pillars-grid">
+      <article class="p-card">
+        <div>
+          <div class="p-head">
+            <span class="pill pill-red">Study 1 · Web Security</span>
+            <span class="mono" style="font-size:0.78rem;color:var(--subtle);">N=60 Active Indie SaaS</span>
+          </div>
+          <h3>2026 Indie SaaS Web Security Headers &amp; TLS Benchmark</h3>
+          <ul>
+            <li><strong>Mean Score: 68.9/100</strong> — <strong>28.3%</strong> score Grade F despite <strong>100% TLS 1.3</strong> via Cloudflare (41.7%) and Vercel (40.0%).</li>
+            <li><strong>46.7%</strong> publish zero Content-Security-Policy; among those that do, <strong>71.9%</strong> weaken it with <code>'unsafe-inline'</code> (<strong>85.0%</strong> lack strict CSP).</li>
+            <li><strong>31.7%</strong> lack clickjacking defense (XFO / <code>frame-ancestors</code>), <strong>81.7%</strong> omit COOP, and <strong>25.0%</strong> leak <code>X-Powered-By</code>.</li>
+          </ul>
+        </div>
+        <div class="p-actions">
+          <a class="btn btn-out" href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html" target="_blank" rel="noopener">Read Full Study</a>
+          <a class="btn btn-out" href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.json" target="_blank" rel="noopener">Raw JSON</a>
+          <a class="btn btn-emerald" href="https://vibe-checker.appwrite.network/?ref=state-of-infra-card" target="_blank" rel="noopener" data-track="outbound">Scan Free ($2 Fix)</a>
+        </div>
+      </article>
+
+      <article class="p-card">
+        <div>
+          <div class="p-head">
+            <span class="pill pill-amber">Study 2 · Email DNS &amp; DMARC</span>
+            <span class="mono" style="font-size:0.78rem;color:var(--subtle);">N=60 Top SaaS + N=60 Indie</span>
+          </div>
+          <h3>2026 Top 60 SaaS &amp; AI Startups Email Authentication, SPF Bloat &amp; DMARC Benchmark</h3>
+          <ul>
+            <li><strong>Top 60 Mean: 91.1/100</strong> vs. <strong>60.3/100</strong> for Indie SaaS (where <strong>71.7%</strong> lack enforced DMARC).</li>
+            <li>Even among iconic leaders, <strong>45.0%</strong> fall short of <code>p=reject</code> and <strong>4 brands remain spoofable</strong>: <code>v0.dev</code> (missing DMARC &amp; SPF, 9/100), <code>bolt.new</code>, <code>huggingface.co</code>, and <code>gumroad.com</code> (<code>p=none</code>).</li>
+            <li><strong>15.0% (9/60)</strong> sit at the SPF <strong>8–10/10</strong> redline (<code>vercel.com</code> &amp; <code>posthog.com</code> at exact <strong>10/10</strong>); <strong>41.7%</strong> deploy BIMI (<strong>30.0%</strong> VMC); <strong>91.7%</strong> lack MTA-STS.</li>
+          </ul>
+        </div>
+        <div class="p-actions">
+          <a class="btn btn-out" href="https://zcoldwater.github.io/inboxshield-cli/top-60-saas-email-authentication-benchmark-2026.html" target="_blank" rel="noopener">Top 60 Study</a>
+          <a class="btn btn-out" href="https://zcoldwater.github.io/inboxshield-cli/email-deliverability-benchmark-2026.html" target="_blank" rel="noopener">Indie 60 Study</a>
+          <a class="btn btn-out" href="https://zcoldwater.github.io/inboxshield-cli/spf-record-generator.html" target="_blank" rel="noopener">Free SPF/DMARC Tools</a>
+          <a class="btn btn-emerald" href="https://inbox-checker.appwrite.network/?ref=state-of-infra-card" target="_blank" rel="noopener" data-track="outbound">Audit Free ($2 Fix)</a>
+        </div>
+      </article>
+
+      <article class="p-card">
+        <div>
+          <div class="p-head">
+            <span class="pill pill-blue">Study 3 · AI Search / GEO</span>
+            <span class="mono" style="font-size:0.78rem;color:var(--subtle);">N=50 Top AI &amp; Dev SaaS</span>
+          </div>
+          <h3>2026 Top 50 AI &amp; Dev SaaS AI Search Readiness &amp; <code>/llms.txt</code> Benchmark</h3>
+          <ul>
+            <li><strong>Mean Score: 74.8/100</strong> — <strong>74% (37/50)</strong> publish <code>/llms.txt</code>, yet only <strong>22% (11/50)</strong> ship expanded <code>/llms-full.txt</code>.</li>
+            <li><strong>Schema Entity Graph averages 35.6/100</strong> (<strong>32%</strong> score 0/100). Top 5 tied at 90/100: Auth0, Resend, Railway, Postmark, Mintlify.</li>
+            <li><strong>The AI Lab Paradox:</strong> AI Labs rank dead last (<strong>67.9/100</strong>) — OpenAI, Anthropic, Hugging Face, and Perplexity all score 0/100 Schema and omit root <code>/llms.txt</code>.</li>
+          </ul>
+        </div>
+        <div class="p-actions">
+          <a class="btn btn-out" href="https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html" target="_blank" rel="noopener">Read Full Study</a>
+          <a class="btn btn-out" href="https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.json" target="_blank" rel="noopener">Raw JSON</a>
+          <a class="btn btn-emerald" href="https://citeready-checker.appwrite.network/?ref=state-of-infra-card" target="_blank" rel="noopener" data-track="outbound">Audit Free ($2 Kit)</a>
+        </div>
+      </article>
+
+      <article class="p-card">
+        <div>
+          <div class="p-head">
+            <span class="pill pill-green">Study 4 · Domains &amp; TLDs</span>
+            <span class="mono" style="font-size:0.78rem;color:var(--subtle);">N=100 AI Startups · 500 Probes</span>
+          </div>
+          <h3>2026 Top 100 AI Startups TLD Adoption (<code>.ai</code> vs <code>.com</code>) &amp; Aftermarket Study</h3>
+          <ul>
+            <li><strong><code>.ai</code> (41%) overtakes <code>.com</code> (40%)</strong> as the #1 primary domain extension across Top 100 AI startups (<code>.dev</code> 7%, <code>.io</code> 5%).</li>
+            <li><strong>81.7% (49/60)</strong> of non-<code>.com</code> AI startups do not control a 301 redirect from their matching <code>.com</code> domain.</li>
+            <li><strong>36%</strong> leave at least one core extension unregistered, while <strong>40%</strong> have sibling TLDs listed on Sedo/Afternic aftermarket brokers; Cloudflare hosts <strong>55%</strong> of authoritative DNS.</li>
+          </ul>
+        </div>
+        <div class="p-actions">
+          <a class="btn btn-out" href="https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html" target="_blank" rel="noopener">Read Full Study</a>
+          <a class="btn btn-out" href="https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json" target="_blank" rel="noopener">Raw JSON</a>
+          <a class="btn btn-emerald" href="https://brand-checker.appwrite.network/?ref=state-of-infra-card" target="_blank" rel="noopener" data-track="outbound">Check 78 TLDs (100% Free)</a>
+        </div>
+      </article>
+    </section>
+
+    <h2 id="summary-matrix" class="sec-title">Cross-Layer Open Research Matrix &amp; Reproducible Datasets</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Infrastructure Layer</th>
+            <th>Cohort</th>
+            <th>Mean Score</th>
+            <th>Primary Production Risk Found</th>
+            <th>Open Dataset &amp; CLI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Email Authentication & DMARC</strong><div style="font-size:0.78rem;color:var(--subtle);">InboxShield v7.0</div></td>
+            <td>Top 60 Iconic SaaS & AI Startups</td>
+            <td class="mono"><strong>91.1/100</strong></td>
+            <td>45.0% below DMARC p=reject; 4 iconic brands spoofable (v0.dev, bolt.new, huggingface.co, gumroad.com); 15.0% at SPF 8-10/10 redline; 91.7% lack MTA-STS</td>
+            <td><a href="https://zcoldwater.github.io/inboxshield-cli/top-60-saas-email-authentication-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/inboxshield-cli/top-60-saas-email-authentication-benchmark-2026.json" target="_blank" rel="noopener">JSON</a> · <a href="https://inbox-checker.appwrite.network/?ref=state-of-infra-2026" target="_blank" rel="noopener">Live Tool</a></td>
+          </tr>
+          <tr>
+            <td><strong>Indie SaaS Email Deliverability</strong><div style="font-size:0.78rem;color:var(--subtle);">InboxShield v7.0</div></td>
+            <td>60 Active GitHub Indie SaaS Custom Domains</td>
+            <td class="mono"><strong>60.3/100</strong></td>
+            <td>71.7% lack enforced DMARC (35.0% missing + 36.7% p=none); 33.3% missing SPF; 45.0% missing active DKIM; 100% missing MTA-STS/TLS-RPT</td>
+            <td><a href="https://zcoldwater.github.io/inboxshield-cli/email-deliverability-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/inboxshield-cli/email-deliverability-benchmark-2026.html" target="_blank" rel="noopener">JSON</a> · <a href="https://inbox-checker.appwrite.network/?ref=state-of-infra-2026" target="_blank" rel="noopener">Live Tool</a></td>
+          </tr>
+          <tr>
+            <td><strong>Web Security Headers & TLS 443</strong><div style="font-size:0.78rem;color:var(--subtle);">VibeShield v7.0</div></td>
+            <td>60 Active Indie SaaS & AI Web Apps</td>
+            <td class="mono"><strong>68.9/100</strong></td>
+            <td>46.7% zero CSP (85.0% missing or 'unsafe-inline'); 31.7% no clickjacking defense; 28.3% Grade F; 81.7% missing COOP despite 100% TLS 1.3</td>
+            <td><a href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.json" target="_blank" rel="noopener">JSON</a> · <a href="https://vibe-checker.appwrite.network/?ref=state-of-infra-2026" target="_blank" rel="noopener">Live Tool</a></td>
+          </tr>
+          <tr>
+            <td><strong>AI Search Citation Readiness & /llms.txt</strong><div style="font-size:0.78rem;color:var(--subtle);">CiteReady v6.0</div></td>
+            <td>Top 50 AI & Developer SaaS Products</td>
+            <td class="mono"><strong>74.8/100</strong></td>
+            <td>74% ship /llms.txt but only 22% ship /llms-full.txt; avg Schema Graph 35.6/100 (32% at 0/100); AI Labs rank dead last at 67.9/100</td>
+            <td><a href="https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.json" target="_blank" rel="noopener">JSON</a> · <a href="https://citeready-checker.appwrite.network/?ref=state-of-infra-2026" target="_blank" rel="noopener">Live Tool</a></td>
+          </tr>
+          <tr>
+            <td><strong>AI Startup TLD Adoption & Aftermarket</strong><div style="font-size:0.78rem;color:var(--subtle);">BrandShield v6.2 (100% Free)</div></td>
+            <td>Top 100 AI Startups (500 TLD Probes)</td>
+            <td class="mono"><strong>500 probes</strong></td>
+            <td>.ai (41%) overtakes .com (40%) as #1 primary TLD; 81.7% of non-.com AI startups lack .com 301 control; 36% leave >=1 core TLD unregistered; 40% face brokered sibling TLDs</td>
+            <td><a href="https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html" target="_blank" rel="noopener">Report</a> · <a href="https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json" target="_blank" rel="noopener">JSON</a> · <a href="https://brand-checker.appwrite.network/?ref=state-of-infra-2026" target="_blank" rel="noopener">Live Tool</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="stack-box">
+      <div style="max-width:640px;">
+        <h3 style="margin:0 0 6px;font-size:1.08rem;">Automate All 4 Launch Checks Inside Claude Code, Codex, Cursor &amp; CI</h3>
+        <p style="margin:0;font-size:0.88rem;color:var(--muted);">Install our 50 zero-dependency MIT <code>SKILL.md</code> skills via Vercel <code>skills.sh</code>, connect our 5-tool MCP server, or unlock complete copy-paste remediation kits across VibeShield + InboxShield + CiteReady for <strong>$5 one-time (reg. $29)</strong>.</p>
+        <pre>npx skills add zColdWater/omniforge-skills</pre>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a class="btn btn-emerald" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener" data-track="paywall">Unlock 3-in-1 Complete Suite ($5 Launch, reg. $29)</a>
+        <a class="btn btn-out" href="./index.html">Browse All 50 Agent Skills</a>
+        <a class="btn btn-out" href="https://github.com/zColdWater/mcp-launch-audit" target="_blank" rel="noopener">5-Tool MCP Server (MIT)</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>MIT (c) OmniForge · Agent Arena Studio · Support: <a href="mailto:agentarenastudio@proton.me">agentarenastudio@proton.me</a> · <a href="https://x.com/agentarenastudi">@agentarenastudi</a></div>
+      <div><a href="./index.html">50 Agent Skills</a> · <a href="./state-of-ai-startup-infrastructure-2026.json">Master JSON</a> · <a href="https://www.skills.sh/zColdWater/omniforge-skills" target="_blank" rel="noopener">skills.sh</a></div>
+    </footer>
+  </main>
+  <script>
+(function () {
+  function opTrack(ev, extra) {
+    try {
+      var p = JSON.stringify(Object.assign({
+        site: "vibeshield", event: ev, path: "/state-of-ai-startup-infrastructure-2026",
+        referrer: document.referrer || "", lang: "en",
+        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "") || "",
+        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : ""
+      }, extra || {}));
+      if (navigator.sendBeacon) navigator.sendBeacon("https://omnipulse-x402.appwrite.network/v1/telemetry", new Blob([p], { type: "text/plain;charset=UTF-8" }));
+    } catch (e) {}
+  }
+  opTrack("pageview");
+
+  var domInput = document.getElementById("hubDomainInput");
+  function cleanHost() {
+    var raw = String((domInput && domInput.value) || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0];
+    return raw || "stripe.com";
+  }
+
+  document.addEventListener("click", function (e) {
+    var launch = e.target.closest("button[data-launch]");
+    if (launch) {
+      var target = launch.getAttribute("data-launch");
+      var host = cleanHost();
+      var baseName = host.split(".")[0];
+      var url = "";
+      if (target === "vibe") url = "https://vibe-checker.appwrite.network/?url=" + encodeURIComponent("https://" + host) + "&ref=state-of-infra-2026";
+      else if (target === "inbox") url = "https://inbox-checker.appwrite.network/?domain=" + encodeURIComponent(host) + "&ref=state-of-infra-2026";
+      else if (target === "cite") url = "https://citeready-checker.appwrite.network/?url=" + encodeURIComponent("https://" + host) + "&ref=state-of-infra-2026";
+      else if (target === "brand") url = "https://brand-checker.appwrite.network/?q=" + encodeURIComponent(baseName) + "&ref=state-of-infra-2026";
+      if (url) {
+        opTrack("outbound", { target: "hub-launch-" + target, domain: host });
+        window.open(url, "_blank", "noopener");
+      }
+      return;
+    }
+    var tr = e.target.closest("a[data-track]");
+    if (tr) opTrack(tr.getAttribute("data-track"), { href: tr.getAttribute("href") });
+  });
+})();
+</script>
+</body>
+</html>

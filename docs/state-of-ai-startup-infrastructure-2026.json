@@ -1,0 +1,75 @@
+{
+  "title": "OmniForge 2026 State of Indie & AI Startup Infrastructure Report",
+  "publishedAt": "2026-11-23",
+  "author": "OmniForge · Agent Arena Studio",
+  "canonicalUrl": "https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html",
+  "totalAuditedEntities": 330,
+  "totalDomainProbes": 730,
+  "studies": [
+    {
+      "id": "email-top60",
+      "pillar": "Email Authentication & DMARC",
+      "tool": "InboxShield v7.0",
+      "sampleSize": 60,
+      "cohort": "Top 60 Iconic SaaS & AI Startups",
+      "meanScore": 91.1,
+      "headlineMetric": "45.0% below DMARC p=reject; 4 iconic brands spoofable (v0.dev, bolt.new, huggingface.co, gumroad.com); 15.0% at SPF 8-10/10 redline; 91.7% lack MTA-STS",
+      "reportUrl": "https://zcoldwater.github.io/inboxshield-cli/top-60-saas-email-authentication-benchmark-2026.html",
+      "jsonUrl": "https://zcoldwater.github.io/inboxshield-cli/top-60-saas-email-authentication-benchmark-2026.json",
+      "liveToolUrl": "https://inbox-checker.appwrite.network/?ref=state-of-infra-2026",
+      "pricing": "Free 6-Phase Audit · $2 Launch Special Fix (reg. $9)"
+    },
+    {
+      "id": "email-indie60",
+      "pillar": "Indie SaaS Email Deliverability",
+      "tool": "InboxShield v7.0",
+      "sampleSize": 60,
+      "cohort": "60 Active GitHub Indie SaaS Custom Domains",
+      "meanScore": 60.3,
+      "headlineMetric": "71.7% lack enforced DMARC (35.0% missing + 36.7% p=none); 33.3% missing SPF; 45.0% missing active DKIM; 100% missing MTA-STS/TLS-RPT",
+      "reportUrl": "https://zcoldwater.github.io/inboxshield-cli/email-deliverability-benchmark-2026.html",
+      "jsonUrl": "https://zcoldwater.github.io/inboxshield-cli/email-deliverability-benchmark-2026.html",
+      "liveToolUrl": "https://inbox-checker.appwrite.network/?ref=state-of-infra-2026",
+      "pricing": "Free 6-Phase Audit · $2 Launch Special Fix (reg. $9)"
+    },
+    {
+      "id": "security-headers-60",
+      "pillar": "Web Security Headers & TLS 443",
+      "tool": "VibeShield v7.0",
+      "sampleSize": 60,
+      "cohort": "60 Active Indie SaaS & AI Web Apps",
+      "meanScore": 68.9,
+      "headlineMetric": "46.7% zero CSP (85.0% missing or 'unsafe-inline'); 31.7% no clickjacking defense; 28.3% Grade F; 81.7% missing COOP despite 100% TLS 1.3",
+      "reportUrl": "https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html",
+      "jsonUrl": "https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.json",
+      "liveToolUrl": "https://vibe-checker.appwrite.network/?ref=state-of-infra-2026",
+      "pricing": "Free 6-Phase Audit · $2 Launch Special Fix (reg. $9)"
+    },
+    {
+      "id": "ai-search-geo-50",
+      "pillar": "AI Search Citation Readiness & /llms.txt",
+      "tool": "CiteReady v6.0",
+      "sampleSize": 50,
+      "cohort": "Top 50 AI & Developer SaaS Products",
+      "meanScore": 74.8,
+      "headlineMetric": "74% ship /llms.txt but only 22% ship /llms-full.txt; avg Schema Graph 35.6/100 (32% at 0/100); AI Labs rank dead last at 67.9/100",
+      "reportUrl": "https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html",
+      "jsonUrl": "https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.json",
+      "liveToolUrl": "https://citeready-checker.appwrite.network/?ref=state-of-infra-2026",
+      "pricing": "Free GEO Audit & PK · $2 Launch Special Kit (reg. $12)"
+    },
+    {
+      "id": "brand-tld-100",
+      "pillar": "AI Startup TLD Adoption & Aftermarket",
+      "tool": "BrandShield v6.2 (100% Free)",
+      "sampleSize": 100,
+      "cohort": "Top 100 AI Startups (500 TLD Probes)",
+      "meanScore": null,
+      "headlineMetric": ".ai (41%) overtakes .com (40%) as #1 primary TLD; 81.7% of non-.com AI startups lack .com 301 control; 36% leave >=1 core TLD unregistered; 40% face brokered sibling TLDs",
+      "reportUrl": "https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html",
+      "jsonUrl": "https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json",
+      "liveToolUrl": "https://brand-checker.appwrite.network/?ref=state-of-infra-2026",
+      "pricing": "100% Free Forever (78 TLDs + 17 Aftermarket + USPTO)"
+    }
+  ]
+}

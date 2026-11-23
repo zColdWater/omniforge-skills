@@ -19,6 +19,7 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 ```
 
 - **Live Vercel Skills Registry Directory:** [https://www.skills.sh/zColdWater/omniforge-skills](https://www.skills.sh/zColdWater/omniforge-skills)
+- **2026 Flagship Empirical Report Hub (330 Live Audits Across Security, Email DNS, AI Search & TLDs):** [2026 State of Indie & AI Startup Infrastructure Report](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html) · [Master JSON](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.json)
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~ — Unlocks VibeShield + InboxShield + CiteReady):** [https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)
 
 ---
