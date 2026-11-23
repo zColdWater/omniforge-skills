@@ -961,8 +961,11 @@
         var cr = d.engines.citeready || {};
         var br = d.engines.brandshield || {};
         var co = d.checkout || {};
+        var bg = d.badge || {};
         var suiteUrl = co.completeSuite5Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
         var issues = typeof ov.totalIssues === "number" ? ov.totalIssues : 0;
+        var badgeSvg = bg.suiteSvgUrl || ("https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=" + encodeURIComponent(d.domain || host));
+        var badgeMd = bg.markdown || ("[![OmniForge Launch Score](" + badgeSvg + ")](" + suiteUrl + ")");
 
         qsOut.innerHTML =
           '<div class="qs-head">' +
@@ -975,7 +978,20 @@
             '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0 (Email DNS)</div><div class="qs-val">' + escHtml(ib.score) + '/100 · ' + escHtml(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + escHtml(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + escHtml(ib.dmarcPolicy || "none") + ' · DKIM ' + escHtml(ib.dkimKeys || 0) + '</div><div class="qs-links"><a href="' + escHtml(ib.reportUrl || "https://inbox-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full DNS</a> · <a data-gumroad="qs-inbox" href="' + escHtml(co.inboxshield2Usd || ib.checkoutUrl || "https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
             '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0 (AI GEO)</div><div class="qs-val">' + escHtml(cr.score) + '/100 · ' + escHtml(cr.grade || "-") + '</div><div class="qs-meta">Entity ' + escHtml(cr.entityScore != null ? cr.entityScore + "/100" : "-") + ' · /llms.txt ' + (cr.llmsTxt ? "present" : "missing") + ' · ' + escHtml(cr.issues || 0) + ' issues</div><div class="qs-links"><a href="' + escHtml(cr.reportUrl || "https://citeready-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full GEO</a> · <a data-gumroad="qs-cite" href="' + escHtml(co.citeready2Usd || cr.checkoutUrl || "https://omnipulse-x402.appwrite.network/go/gumroad/citeready") + '" target="_blank" rel="noopener">$2 Kit</a></div></div>' +
             '<div class="qs-card"><div class="qs-lbl">BrandShield v6.2 (Free)</div><div class="qs-val">78+ TLDs</div><div class="qs-meta">Live RDAP + 17 Aftermarket Brokers + Preliminary USPTO</div><div class="qs-links"><a href="' + escHtml(br.reportUrl || "https://brand-checker.appwrite.network/") + '" target="_blank" rel="noopener">Run Free Brand Check &rarr;</a></div></div>' +
+          '</div>' +
+          '<div style="margin-top:12px;padding-top:12px;border-top:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">' +
+            '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><span style="font-size:0.76rem;font-weight:700;color:#64748b;text-transform:uppercase;">Live README Badge:</span><img src="' + escHtml(badgeSvg) + '" alt="OmniForge Launch Score badge" style="height:22px;max-width:100%;" /></div>' +
+            '<button id="bf-copy-badge-btn" class="btn btn-outline btn-sm" type="button">Copy Badge Markdown</button>' +
           '</div>';
+        var bBtn = document.getElementById("bf-copy-badge-btn");
+        if (bBtn) {
+          bBtn.addEventListener("click", function () {
+            if (navigator.clipboard) navigator.clipboard.writeText(badgeMd).catch(function () {});
+            bBtn.textContent = "Badge Copied";
+            opTrack("outbound", { target: "bf2026-copy-suite-badge", domain: d.domain || host });
+            setTimeout(function () { bBtn.textContent = "Copy Badge Markdown"; }, 1600);
+          });
+        }
       })
       .catch(function (err) {
         qsOut.innerHTML = '<div style="font-size:0.88rem;color:#b45309;">Live quick-score timed out (' + escHtml(err && err.message ? err.message : "network") + '). Click any individual scanner button above to open the full workbench directly.</div>';

@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "50 zero-dependency, read-only pre-launch security, email DNS, domain/trademark, and /llms.txt AI search audit skills for Claude Code, Codex, Cursor, and Gemini CLI.",
-    "version": "2.4.0"
+    "version": "2.5.0"
   },
   "plugins": [
     {
       "name": "omniforge-skills",
       "source": "./",
       "description": "50 read-only pre-launch audit skills covering VibeShield v7.0 web security, InboxShield v7.0 SPF/DKIM/DMARC DNS, BrandShield v6.2 free 78-TLD/USPTO checks, and CiteReady v6.0 /llms.txt GEO.",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "author": {
         "name": "OmniForge · Agent Arena Studio"
       },

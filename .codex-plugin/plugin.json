@@ -1,6 +1,6 @@
 {
   "name": "omniforge-skills",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "50 zero-dependency, read-only pre-launch audit skills for AI coding agents covering web/AI security (VibeShield v7.0), SPF/DKIM/DMARC email DNS (InboxShield v7.0), 78-TLD domain & USPTO trademark checks (BrandShield v6.2 — 100% Free), and /llms.txt AI search visibility (CiteReady v6.0).",
   "author": {
     "name": "OmniForge · Agent Arena Studio",

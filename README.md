@@ -1,7 +1,8 @@
 # OmniForge Agent Skills — 50 Pre-Launch Security, Email DNS, Domain & AI Search Skills
 
-[![GitHub Release](https://img.shields.io/badge/release-v2.4.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
+[![GitHub Release](https://img.shields.io/badge/release-v2.5.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
 [![Skills Count](https://img.shields.io/badge/skills-50-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
+[![OmniForge Launch Score](https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=vibe-checker.appwrite.network)](https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html)
 [![AI Search Readiness](https://citeready-checker.appwrite.network/api/badge?url=zcoldwater.github.io/omniforge-skills)](https://citeready-checker.appwrite.network/?url=https://zcoldwater.github.io/omniforge-skills/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
