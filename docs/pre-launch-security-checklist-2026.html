@@ -473,11 +473,13 @@
 
       <div class="input-row">
         <input id="cl-domain" type="text" placeholder="Enter your launch domain (e.g. yoursaas.com)" aria-label="Launch domain" />
-        <button class="btn btn-dark" type="button" data-launch="vibe">Live Security Scan</button>
-        <button class="btn btn-out" type="button" data-launch="inbox">Live Email DNS</button>
-        <button class="btn btn-out" type="button" data-launch="cite">Live AI GEO</button>
+        <button id="cl-quick-scan-btn" class="btn btn-accent" type="button">Auto-Scan 3-in-1 (Free)</button>
+        <button class="btn btn-dark" type="button" data-launch="vibe">VibeShield</button>
+        <button class="btn btn-out" type="button" data-launch="inbox">InboxShield</button>
+        <button class="btn btn-out" type="button" data-launch="cite">CiteReady</button>
         <button class="btn btn-out" type="button" data-launch="brand">78-TLD Free</button>
       </div>
+      <div id="cl-quick-scan-out" style="display:none;background:#ffffff;border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;margin-bottom:12px;" aria-live="polite"></div>
 
       <div class="cli-bar">
         <div class="cli-scroll">
@@ -955,6 +957,64 @@
   });
 
   var copyCliBtn = document.getElementById("copy-cli-btn");
+  var autoBtn = document.getElementById("cl-quick-scan-btn");
+  var autoOut = document.getElementById("cl-quick-scan-out");
+
+  function escHtml(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function runLiveAutoVerify() {
+    if (!autoOut) return;
+    var raw = domainInput ? domainInput.value.trim() : "";
+    var host = sanitizeHost(raw || "supabase.com");
+    if (domainInput && !raw) { domainInput.value = host; syncDomain(); }
+    if (autoBtn) { autoBtn.disabled = true; autoBtn.textContent = "Scanning " + host + "..."; }
+    autoOut.style.display = "block";
+    autoOut.innerHTML = '<div style="font-size:0.88rem;color:#475569;">Running live read-only 3-in-1 check on <strong>' + escHtml(host) + '</strong>...</div>';
+    opTrack("scan", { target: "checklist-quick-score", domain: host });
+
+    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok || !d.engines) throw new Error("Unexpected payload");
+        var vb = d.engines.vibeshield || {};
+        var ib = d.engines.inboxshield || {};
+        var cr = d.engines.citeready || {};
+        var ov = d.overall || {};
+        var co = d.checkout || {};
+        var autoChecked = [];
+        if (vb.ok && vb.secretsLeaked === 0) { state.checked["sec-1"] = true; autoChecked.push("No JS secrets"); }
+        if (ib.ok && ib.spfStatus === "pass") { state.checked["mail-1"] = true; autoChecked.push("SPF <=10"); }
+        if (ib.ok && ib.dkimKeys > 0) { state.checked["mail-2"] = true; autoChecked.push("DKIM active"); }
+        if (ib.ok && (ib.dmarcPolicy === "reject" || ib.dmarcPolicy === "quarantine")) { state.checked["mail-3"] = true; autoChecked.push("DMARC " + ib.dmarcPolicy); }
+        if (cr.ok && cr.llmsTxt) { state.checked["geo-1"] = true; autoChecked.push("/llms.txt"); }
+        saveState();
+        syncScore();
+
+        var suiteUrl = co.completeSuite5Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
+        autoOut.innerHTML =
+          '<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">' +
+            '<div>' +
+              '<div style="font-size:0.74rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;color:#047857;">LIVE TELEMETRY · ' + escHtml(d.domain || host) + ' · OVERALL ' + escHtml(ov.score) + '/100 (' + escHtml(ov.grade || "-") + ')</div>' +
+              '<div style="font-size:0.86rem;color:#334155;margin-top:3px;">VibeShield ' + escHtml(vb.score) + '/100 (' + escHtml(vb.issues || 0) + ' issues) · InboxShield ' + escHtml(ib.score) + '/100 (DMARC ' + escHtml(ib.dmarcPolicy || "none") + ') · CiteReady ' + escHtml(cr.score) + '/100 (Entity ' + escHtml(cr.entityScore != null ? cr.entityScore : "-") + ')</div>' +
+              '<div style="font-size:0.8rem;color:#475569;margin-top:3px;">Auto-checked ' + autoChecked.length + ' verified items: ' + (autoChecked.length ? escHtml(autoChecked.join(", ")) : "none passed automatically") + '.</div>' +
+            '</div>' +
+            '<a class="btn btn-accent" data-paywall="checklist-live-suite" href="' + escHtml(suiteUrl) + '" target="_blank" rel="noopener">Unlock ' + escHtml(ov.totalIssues || 0) + ' Fixes — $5 Suite</a>' +
+          '</div>';
+      })
+      .catch(function (err) {
+        autoOut.innerHTML = '<div style="font-size:0.85rem;color:#b45309;">Live check could not complete (' + escHtml(err && err.message ? err.message : "network") + '). Use any scanner button above to inspect directly.</div>';
+      })
+      .finally(function () {
+        if (autoBtn) { autoBtn.disabled = false; autoBtn.textContent = "Auto-Scan 3-in-1 (Free)"; }
+      });
+  }
+
+  if (autoBtn) autoBtn.addEventListener("click", runLiveAutoVerify);
+  if (domainInput) {
+    domainInput.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); runLiveAutoVerify(); } });
+  }
   if (copyCliBtn) {
     copyCliBtn.addEventListener("click", function () {
       if (navigator.clipboard && cliCode) navigator.clipboard.writeText(cliCode.textContent || "").catch(function () {});

@@ -423,6 +423,32 @@
       gap: 10px;
       margin-bottom: 18px;
     }
+    .qs-box {
+      display: none;
+      background: #ffffff;
+      border: 1px solid var(--border-strong);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 0 0 18px;
+    }
+    .qs-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .qs-kicker { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-dark); }
+    .qs-overall { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
+    .qs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .qs-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+    .qs-lbl { font-size: 0.74rem; font-weight: 700; color: var(--subtle); text-transform: uppercase; }
+    .qs-val { font-size: 1.25rem; font-weight: 800; color: var(--ink); margin: 4px 0; }
+    .qs-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; }
+    .qs-links { font-size: 0.8rem; font-weight: 700; }
     .cli-stack {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
@@ -601,7 +627,9 @@
       <div class="try-box">
         <div class="input-row">
           <input id="bf-domain" type="text" value="" placeholder="yourdomain.com (e.g. myapp.vercel.app)" aria-label="Domain to audit" />
+          <button id="bf-quick-score-btn" class="btn btn-accent" type="button">Run Instant 3-in-1 Score (Free)</button>
         </div>
+        <div id="bf-quick-score-out" class="qs-box" aria-live="polite"></div>
         <div class="launch-grid">
           <button class="btn btn-primary btn-sm" type="button" data-launch="vibe">Scan Web Security (VibeShield)</button>
           <button class="btn btn-outline btn-sm" type="button" data-launch="inbox">Scan Email DNS (InboxShield)</button>
@@ -899,12 +927,67 @@
   var cmdSingle = document.getElementById("cmd-single");
   var cmdSuite = document.getElementById("cmd-suite");
   var cmdGate = document.getElementById("cmd-gate");
+  var qsBtn = document.getElementById("bf-quick-score-btn");
+  var qsOut = document.getElementById("bf-quick-score-out");
+
+  function escHtml(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
 
   function updateCommands() {
     var host = sanitizeHost(domainInput ? domainInput.value : "");
     if (cmdSingle) cmdSingle.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- " + host;
     if (cmdSuite) cmdSuite.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + host;
     if (cmdGate) cmdGate.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --fail-below 80 " + host;
+  }
+
+  function runQuickScore() {
+    if (!qsOut) return;
+    var raw = domainInput ? domainInput.value.trim() : "";
+    var host = sanitizeHost(raw || "supabase.com");
+    if (domainInput && !raw) { domainInput.value = host; updateCommands(); }
+    if (qsBtn) { qsBtn.disabled = true; qsBtn.textContent = "Auditing " + host + "..."; }
+    qsOut.style.display = "block";
+    qsOut.innerHTML = '<div style="font-size:0.9rem;color:#475569;">Running read-only VibeShield v7.0 + InboxShield v7.2 + CiteReady v6.0 audit on <strong>' + escHtml(host) + '</strong>...</div>';
+    opTrack("scan", { target: "bf2026-quick-score", domain: host });
+
+    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.ok || !d.engines) throw new Error("Unexpected response");
+        var ov = d.overall || {};
+        var vb = d.engines.vibeshield || {};
+        var ib = d.engines.inboxshield || {};
+        var cr = d.engines.citeready || {};
+        var br = d.engines.brandshield || {};
+        var co = d.checkout || {};
+        var suiteUrl = co.completeSuite5Usd || "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
+        var issues = typeof ov.totalIssues === "number" ? ov.totalIssues : 0;
+
+        qsOut.innerHTML =
+          '<div class="qs-head">' +
+            '<div><div class="qs-kicker">LIVE 3-IN-1 AUDIT RESULT · ' + escHtml(d.domain || host) + '</div>' +
+            '<div class="qs-overall">Overall ' + escHtml(ov.score) + '/100 (Grade ' + escHtml(ov.grade || "-") + ') · ' + escHtml(issues) + ' issue' + (issues === 1 ? '' : 's') + ' detected</div></div>' +
+            '<a class="btn btn-accent btn-sm" data-gumroad="quick-score-suite" href="' + escHtml(suiteUrl) + '" target="_blank" rel="noopener">Unlock All Fixes for ' + escHtml(d.domain || host) + ' — $5 (83% OFF)</a>' +
+          '</div>' +
+          '<div class="qs-grid">' +
+            '<div class="qs-card"><div class="qs-lbl">VibeShield v7.0 (Security)</div><div class="qs-val">' + escHtml(vb.score) + '/100 · ' + escHtml(vb.grade || "-") + '</div><div class="qs-meta">Observatory ' + escHtml(vb.observatory || "-") + ' · ' + escHtml(vb.issues || 0) + ' issues' + (vb.projectedScore ? ' · Fix &rarr; ' + escHtml(vb.projectedScore) : '') + '</div><div class="qs-links"><a href="' + escHtml(vb.reportUrl || "https://vibe-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full Report</a> · <a data-gumroad="qs-vibe" href="' + escHtml(co.vibeshield2Usd || vb.checkoutUrl || "https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0 (Email DNS)</div><div class="qs-val">' + escHtml(ib.score) + '/100 · ' + escHtml(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + escHtml(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + escHtml(ib.dmarcPolicy || "none") + ' · DKIM ' + escHtml(ib.dkimKeys || 0) + '</div><div class="qs-links"><a href="' + escHtml(ib.reportUrl || "https://inbox-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full DNS</a> · <a data-gumroad="qs-inbox" href="' + escHtml(co.inboxshield2Usd || ib.checkoutUrl || "https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0 (AI GEO)</div><div class="qs-val">' + escHtml(cr.score) + '/100 · ' + escHtml(cr.grade || "-") + '</div><div class="qs-meta">Entity ' + escHtml(cr.entityScore != null ? cr.entityScore + "/100" : "-") + ' · /llms.txt ' + (cr.llmsTxt ? "present" : "missing") + ' · ' + escHtml(cr.issues || 0) + ' issues</div><div class="qs-links"><a href="' + escHtml(cr.reportUrl || "https://citeready-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full GEO</a> · <a data-gumroad="qs-cite" href="' + escHtml(co.citeready2Usd || cr.checkoutUrl || "https://omnipulse-x402.appwrite.network/go/gumroad/citeready") + '" target="_blank" rel="noopener">$2 Kit</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">BrandShield v6.2 (Free)</div><div class="qs-val">78+ TLDs</div><div class="qs-meta">Live RDAP + 17 Aftermarket Brokers + Preliminary USPTO</div><div class="qs-links"><a href="' + escHtml(br.reportUrl || "https://brand-checker.appwrite.network/") + '" target="_blank" rel="noopener">Run Free Brand Check &rarr;</a></div></div>' +
+          '</div>';
+      })
+      .catch(function (err) {
+        qsOut.innerHTML = '<div style="font-size:0.88rem;color:#b45309;">Live quick-score timed out (' + escHtml(err && err.message ? err.message : "network") + '). Click any individual scanner button above to open the full workbench directly.</div>';
+      })
+      .finally(function () {
+        if (qsBtn) { qsBtn.disabled = false; qsBtn.textContent = "Run Instant 3-in-1 Score (Free)"; }
+      });
+  }
+
+  if (qsBtn) qsBtn.addEventListener("click", runQuickScore);
+  if (domainInput) {
+    domainInput.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); runQuickScore(); } });
   }
 
   if (domainInput) {
