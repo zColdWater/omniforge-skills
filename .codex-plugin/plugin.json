@@ -1,0 +1,49 @@
+{
+  "name": "omniforge-skills",
+  "version": "2.3.0",
+  "description": "50 zero-dependency, read-only pre-launch audit skills for AI coding agents covering web/AI security (VibeShield v7.0), SPF/DKIM/DMARC email DNS (InboxShield v7.0), 78-TLD domain & USPTO trademark checks (BrandShield v6.2 — 100% Free), and /llms.txt AI search visibility (CiteReady v6.0).",
+  "author": {
+    "name": "OmniForge · Agent Arena Studio",
+    "url": "https://github.com/zColdWater"
+  },
+  "homepage": "https://zcoldwater.github.io/omniforge-skills/",
+  "repository": "https://github.com/zColdWater/omniforge-skills",
+  "license": "MIT",
+  "privacyPolicyURL": "https://github.com/zColdWater/omniforge-skills/blob/main/SECURITY.md",
+  "termsOfServiceURL": "https://github.com/zColdWater/omniforge-skills/blob/main/LICENSE",
+  "keywords": [
+    "security",
+    "supabase-rls",
+    "nextjs",
+    "spf-dkim-dmarc",
+    "email-deliverability",
+    "llms-txt",
+    "geo",
+    "domain-availability",
+    "uspto-trademark",
+    "pre-launch-audit",
+    "skills",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OmniForge Pre-Launch Audit Skills",
+    "shortDescription": "50 read-only security, email DNS, domain & /llms.txt audit skills.",
+    "longDescription": "50 zero-dependency SKILL.md skills teaching Codex, Claude Code, Cursor, and Windsurf how to run strictly read-only pre-launch audits via free no-auth APIs and MIT CLIs: Supabase/Firebase RLS, Next.js CVE-2025-29927, Lovable/Bolt/v0/Replit/Clerk/Auth0/Stripe security, SPF 10-lookup flattening, 24 DKIM selectors, RFC 7489 DMARC linting, 78-TLD RDAP + USPTO trademark checks (100% free), and /llms.txt AI search citation readiness.",
+    "developerName": "OmniForge · Agent Arena Studio",
+    "category": "Development & Workflow",
+    "capabilities": [
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Use the saas-launch-audit skill to run a read-only pre-launch security, email DNS, and /llms.txt check on my domain.",
+      "Use the supabase-rls-audit skill to inspect my deployed web app for leaked client keys and open PostgREST tables."
+    ],
+    "websiteURL": "https://zcoldwater.github.io/omniforge-skills/",
+    "privacyPolicyURL": "https://github.com/zColdWater/omniforge-skills/blob/main/SECURITY.md",
+    "termsOfServiceURL": "https://github.com/zColdWater/omniforge-skills/blob/main/LICENSE",
+    "brandColor": "#16a34a",
+    "screenshots": [],
+    "composerIcon": "./assets/icon.svg"
+  }
+}
