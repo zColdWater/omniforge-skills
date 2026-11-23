@@ -2,4 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://zcoldwater.github.io/omniforge-skills/</loc><lastmod>2026-11-23</lastmod><priority>1.0</priority></url>
   <url><loc>https://zcoldwater.github.io/omniforge-skills/llms.txt</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/llms-full.txt</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/vibeshield-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/supabase-rls-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/nextjs-security-scanner.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/cursor-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/firebase-security-rules-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/client-secret-leak-scanner.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/csp-hsts-security-headers.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/tls-ssl-cname-takeover-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/api-endpoint-sourcemap-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/spf-dmarc-deliverability-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/spf-dkim-dmarc-fix.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/spf-flattener-10-lookup-fix.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/dmarc-rfc7489-policy-linter.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/mx-ns-dns-redundancy-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/brand-domain-trademark-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/domain-availability-search.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/startup-brand-name-generator.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/llms-txt-citation-readiness.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/llms-txt-generator.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/ai-search-geo-schema-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/lovable-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/bolt-new-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/vercel-security-headers.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/cloudflare-waf-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/graphql-introspection-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/oauth-cookie-cors-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/google-workspace-spf-dmarc-setup.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/resend-postmark-email-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/bimi-mta-sts-email-security.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/robots-txt-ai-crawler-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/v0-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/replit-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/vite-env-leak-scanner.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/stripe-webhook-security-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/cold-email-deliverability-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/aws-ses-sendgrid-dns-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/microsoft-365-spf-dmarc-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/chatgpt-perplexity-seo-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/uspto-trademark-domain-check.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zcoldwater.github.io/omniforge-skills/skills/saas-launch-audit.html</loc><lastmod>2026-11-23</lastmod><priority>0.9</priority></url>
 </urlset>
