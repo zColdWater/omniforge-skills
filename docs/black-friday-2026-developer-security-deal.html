@@ -605,61 +605,94 @@
     }
     @media (max-width: 780px) {
       .featured-deal { grid-template-columns: 1fr; padding: 20px; }
-      .wrap { padding: 28px 16px 56px; }
-      .try-box { padding: 18px; }
+      .wrap { padding: 20px 16px 52px; }
+      .try-box { padding: 14px; }
+      .topbar-inner { padding: 10px 14px; gap: 8px; flex-wrap: nowrap; }
+      .brand { font-size: 0.88rem; white-space: nowrap; }
+      .nav-links { gap: 10px; font-size: 0.8rem; flex-wrap: nowrap; }
+      .nav-links .nav-secondary { display: none; }
+      .eyebrow { font-size: 0.68rem; padding: 4px 9px; margin-bottom: 10px; }
+      h1 { font-size: 1.56rem; line-height: 1.14; margin-bottom: 10px; }
+      .lead { font-size: 0.92rem; margin-bottom: 14px; line-height: 1.48; }
+      .hero-actions { gap: 8px; margin-bottom: 14px; }
+      .hero-actions .btn { padding: 10px 14px; font-size: 0.86rem; width: 100%; }
+      .hero-actions .hero-tertiary { display: none; }
+      .trust-strip { font-size: 0.78rem; gap: 6px 14px; padding-top: 10px; }
+      .section { margin-top: 32px; }
+      .hero-scan-card { padding: 14px; margin-top: 14px; }
+    }
+    .hero-scan-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .hero-scan-label {
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 8px;
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="./index.html">OmniForge · Agent Arena Studio</a>
+      <a class="brand" href="./index.html">OmniForge</a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#pricing">Pricing ($2 / $5)</a>
-        <a href="#try-free">Free Live Audit</a>
-        <a href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a>
-        <a href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a>
-        <a href="./index.html">50 Agent Skills</a>
+        <a href="#pricing">$2 / $5 Pricing</a>
+        <a href="#try-free">Free Scan</a>
+        <a class="nav-secondary" href="./pre-launch-security-checklist-2026.html">24-Point Checklist</a>
+        <a class="nav-secondary" href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Report</a>
+        <a class="nav-secondary" href="./index.html">50 Agent Skills</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
     <section>
-      <div class="eyebrow">BLACK FRIDAY 2026 DEVELOPER DEAL · ONE-TIME LAUNCH PASS ($0/MO)</div>
-      <h1>Developer Security, Email DNS &amp; AI Search Audit Stack — $2 Single Tool or $5 Complete Suite (83% OFF)</h1>
-      <p class="lead">Audit any production domain for free right now — in your browser or with a single zero-install terminal command. Unlock tailored copy-paste remediation code once for $2 per tool or $5 for the full 3-in-1 launch suite (regularly $29). Zero subscriptions. MIT open-source CLI and 50 Agent Skills included.</p>
+      <div class="eyebrow">BLACK FRIDAY 2026 · ONE-TIME LAUNCH PASS ($0/MO)</div>
+      <h1>Developer Security, Email DNS &amp; AI Search Stack — $2 Single Tool or $5 Complete Suite (83% OFF)</h1>
+      <p class="lead">Run a free live read-only audit on your own domain right below — then unlock tailored copy-paste security, SPF/DMARC, and /llms.txt fixes once for $2 per tool or $5 for all three (regularly $29). Zero subscriptions.</p>
       <div class="hero-actions">
         <a class="btn btn-accent" data-gumroad="launch-stack-hero" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener">Unlock 3-in-1 Complete Suite — $5 (83% OFF)</a>
-        <a class="btn btn-primary" href="#try-free">Run Free Live Scan First</a>
-        <a class="btn btn-outline" href="./state-of-ai-startup-infrastructure-2026.html">Read 2026 390-Audit Benchmark Hub</a>
+        <a class="btn btn-outline hero-tertiary" href="#pricing">Compare $2 Single Passes</a>
+        <a class="btn btn-outline hero-tertiary" href="./state-of-ai-startup-infrastructure-2026.html">390-Audit Benchmark Hub</a>
       </div>
-      <div class="trust-strip">
-        <span><strong>Offer Window:</strong> Active through Dec 1, 2026 (23:59 UTC)</span>
+
+      <div class="hero-scan-card" id="try-free">
+        <div class="hero-scan-label">VERIFY BEFORE YOU BUY · FREE LIVE 3-IN-1 DOMAIN AUDIT (ZERO SIGNUP)</div>
+        <div class="input-row">
+          <input id="bf-domain" type="text" value="" placeholder="yourdomain.com (e.g. myapp.vercel.app)" aria-label="Domain to audit" />
+          <button id="bf-quick-score-btn" class="btn btn-primary" type="button">Run Instant 3-in-1 Score (Free)</button>
+        </div>
+        <div class="sample-row">
+          <span>1-tap live example:</span>
+          <button class="sample-pill" type="button" data-sample-domain="v0.dev">v0.dev (DMARC gap)</button>
+          <button class="sample-pill" type="button" data-sample-domain="supabase.com">supabase.com</button>
+          <button class="sample-pill" type="button" data-sample-domain="vercel.com">vercel.com</button>
+        </div>
+        <div id="bf-quick-score-out" class="qs-box" aria-live="polite"></div>
+      </div>
+
+      <div class="trust-strip" style="margin-top:16px;">
+        <span><strong>Offer Window:</strong> Active through Dec 1, 2026</span>
         <span><strong>Pricing:</strong> $2 single / $5 suite (one-time, $0/mo)</span>
-        <span><strong>Free Forever:</strong> All diagnostic scans + BrandShield v6.2 + cli.sh + 50 SKILL.md</span>
-        <span><strong>Safety:</strong> 100% read-only passive HTTP/TLS/DNS/RDAP</span>
+        <span><strong>Free Forever:</strong> Live scans + BrandShield v6.2 + cli.sh + 50 Skills</span>
+        <span><strong>Safety:</strong> 100% read-only HTTP/TLS/DNS/RDAP</span>
       </div>
     </section>
 
-    <section class="section" id="try-free">
+    <section class="section" id="cli-workbenches">
       <div class="section-head">
-        <div class="section-kicker">VERIFY BEFORE YOU BUY</div>
-        <h2>Run a Free Live Read-Only Audit on Your Own Domain</h2>
-        <p class="section-sub">Zero signup, zero credit card. Enter your domain or click a live example to inspect real findings before paying $2 or $5.</p>
+        <div class="section-kicker">INDIVIDUAL WORKBENCHES &amp; 1-LINE TERMINAL CLI</div>
+        <h2>Open Any Full Scanner or Audit from Your Terminal</h2>
+        <p class="section-sub">Every scanner works free with zero signup. Use the POSIX terminal script to verify CI/CD gates locally.</p>
       </div>
       <div class="try-box">
-        <div class="input-row">
-          <input id="bf-domain" type="text" value="" placeholder="yourdomain.com (e.g. myapp.vercel.app)" aria-label="Domain to audit" />
-          <button id="bf-quick-score-btn" class="btn btn-accent" type="button">Run Instant 3-in-1 Score (Free)</button>
-        </div>
-        <div class="sample-row">
-          <span>Try 1-click live scan:</span>
-          <button class="sample-pill" type="button" data-sample-domain="v0.dev">v0.dev (DMARC gap)</button>
-          <button class="sample-pill" type="button" data-sample-domain="supabase.com">supabase.com</button>
-          <button class="sample-pill" type="button" data-sample-domain="vercel.com">vercel.com (SPF 10/10)</button>
-        </div>
-        <div id="bf-quick-score-out" class="qs-box" aria-live="polite"></div>
         <div class="launch-grid">
           <button class="btn btn-primary btn-sm" type="button" data-launch="vibe">Scan Web Security (VibeShield)</button>
           <button class="btn btn-outline btn-sm" type="button" data-launch="inbox">Scan Email DNS (InboxShield)</button>
@@ -928,23 +961,64 @@
   <script>
 (function () {
   var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var SID = "bf_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  var COUNTS = { scan: 0, outbound: 0, paywall: 0 };
+  var visStart = document.hidden ? 0 : Date.now();
+  var accMs = 0, maxScroll = 0, lastSentAt = 0;
+
+  function updateScroll() {
+    var el = document.documentElement;
+    var h = el.scrollHeight || 1;
+    var pct = h <= window.innerHeight ? 100 : (window.scrollY < 3 ? 0 : Math.min(100, Math.round((window.scrollY + window.innerHeight) / h * 100)));
+    if (pct > maxScroll) maxScroll = pct;
+  }
+
   function opTrack(eventName, extra) {
     try {
+      updateScroll();
+      if (eventName === "scan") COUNTS.scan++;
+      else if (eventName === "paywall") COUNTS.paywall++;
+      else if (eventName === "outbound") COUNTS.outbound++;
+      var dwellSec = Math.round((accMs + (visStart ? (Date.now() - visStart) : 0)) / 1000);
       var p = JSON.stringify(Object.assign({
         site: "vibeshield",
+        sid: SID,
         event: eventName,
         path: "/black-friday-2026-developer-security-deal",
-        referrer: document.referrer || "",
+        webdriver: !!navigator.webdriver,
+        referrer: (document.referrer || "").slice(0, 128),
         lang: "en",
-        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "") || "",
-        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : ""
+        tz: (Intl && Intl.DateTimeFormat ? Intl.DateTimeFormat().resolvedOptions().timeZone : "").slice(0, 64) || "",
+        screen: window.screen ? (window.screen.width + "x" + window.screen.height) : "",
+        dwellSec: dwellSec,
+        scrollPct: maxScroll,
+        scansRun: COUNTS.scan,
+        outboundClicks: COUNTS.outbound,
+        paywallClicks: COUNTS.paywall
       }, extra || {}));
       if (navigator.sendBeacon) {
         navigator.sendBeacon(TRACK_URL, new Blob([p], { type: "text/plain;charset=UTF-8" }));
+      } else {
+        fetch(TRACK_URL, { method: "POST", keepalive: true, body: p }).catch(function () {});
       }
+      lastSentAt = Date.now();
     } catch (_) {}
   }
 
+  window.addEventListener("scroll", updateScroll, { passive: true });
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      if (visStart) { accMs += Date.now() - visStart; visStart = 0; }
+      opTrack("leave");
+    } else if (!visStart) {
+      visStart = Date.now();
+    }
+  });
+  window.addEventListener("pagehide", function () {
+    if (visStart) { accMs += Date.now() - visStart; visStart = 0; }
+    if (Date.now() - lastSentAt > 400) opTrack("leave");
+  });
+  setInterval(function () { if (!document.hidden) opTrack("heartbeat"); }, 15000);
   opTrack("pageview");
 
   function sanitizeHost(raw) {
@@ -1086,10 +1160,14 @@
     });
   });
 
-  document.querySelectorAll("[data-gumroad]").forEach(function (a) {
-    a.addEventListener("click", function () {
-      opTrack("paywall", { target: a.getAttribute("data-gumroad") || "gumroad", href: a.getAttribute("href") });
-    });
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    var gTag = a.getAttribute("data-gumroad");
+    if (gTag || /\/(go\/gumroad|checkout)\//.test(href)) {
+      opTrack("paywall", { target: gTag || "gumroad", href: href });
+    }
   });
 })();
 </script>
