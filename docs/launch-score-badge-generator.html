@@ -11,9 +11,9 @@
   <meta property="og:title" content="Free Live GitHub README Launch Score SVG Badge Studio | OmniForge" />
   <meta property="og:description" content="Embed self-updating Security, Email DNS, AI Search GEO &amp; 4-in-1 Launch Score SVG badges in your GitHub README in 1 click. Zero signup." />
   <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/launch-score-badge-generator.html" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,7 +47,7 @@
           "name": "How do I raise my badge grade to A+ before embedding it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Click Run Live 3-in-1 Audit on this page or run curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com to inspect failing headers, SPF/DMARC records, or /llms.txt gaps, then unlock ready-to-paste fixes for $2/tool or $5 for the 3-in-1 Complete Suite."
+            "text": "Click Run Live 3-in-1 Audit on this page or run curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com to inspect failing headers, SPF/DMARC records, or /llms.txt gaps, then unlock ready-to-paste fixes for $2/tool or $5 for the 3-in-1 Complete Suite."
           }
         }
       ]
@@ -241,7 +241,7 @@
 
     <section class="bar">
       <div class="input-row">
-        <input id="bg-domain" type="text" value="vibe-checker.appwrite.network" placeholder="yourdomain.com (e.g. supabase.com)" aria-label="Domain for live SVG badges" />
+        <input id="bg-domain" type="text" value="shipbastion.com" placeholder="yourdomain.com (e.g. supabase.com)" aria-label="Domain for live SVG badges" />
         <button id="bg-run-btn" class="btn btn-accent" type="button">Preview Live Badges &amp; Score</button>
       </div>
       <div id="bg-qs-box" class="qs-box" aria-live="polite"></div>
@@ -274,7 +274,7 @@
 
   <script>
 (function () {
-  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var TRACK_URL = "https://api.shipbastion.com/v1/telemetry";
   function opTrack(ev, extra) {
     try {
       var p = JSON.stringify(Object.assign({
@@ -299,7 +299,7 @@
 
   function sanitizeHost(raw) {
     var v = (raw || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/\/.*$/, "").replace(/[^a-z0-9.-]/g, "");
-    return v || "vibe-checker.appwrite.network";
+    return v || "shipbastion.com";
   }
 
   var inputEl = document.getElementById("bg-domain");
@@ -308,7 +308,7 @@
   var stripPre = document.getElementById("bg-strip-md");
   var stripBtn = document.getElementById("bg-copy-strip");
   var qsBox = document.getElementById("bg-qs-box");
-  var currentHost = "vibe-checker.appwrite.network";
+  var currentHost = "shipbastion.com";
 
   function buildSpecs(host) {
     var enc = encodeURIComponent(host);
@@ -319,7 +319,7 @@
         kicker: "4-IN-1 COMBINED SCORE (FULL)",
         title: "OmniForge Launch Score (Full Breakdown)",
         desc: "Shows overall score + Security, Email DNS, and AI Search sub-scores in one live SVG.",
-        svg: "https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=" + enc,
+        svg: "https://api.shipbastion.com/v1/badge/suite.svg?domain=" + enc,
         link: "https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html",
         alt: "OmniForge Launch Score"
       },
@@ -328,7 +328,7 @@
         kicker: "4-IN-1 COMBINED SCORE (COMPACT)",
         title: "OmniForge Launch Score (Compact Pill)",
         desc: "Minimal README badge showing your combined Launch Score and letter grade.",
-        svg: "https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=" + enc + "&compact=1",
+        svg: "https://api.shipbastion.com/v1/badge/suite.svg?domain=" + enc + "&compact=1",
         link: "https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html",
         alt: "OmniForge Launch Score"
       },
@@ -337,8 +337,8 @@
         kicker: "WEB & BAAS SECURITY",
         title: "VibeShield v7.0 Security Grade",
         desc: "Live passive grade across TLS 443, 52 JS secret rules, Supabase RLS & Observatory headers.",
-        svg: "https://vibe-checker.appwrite.network/api/badge.svg?url=" + enc,
-        link: "https://vibe-checker.appwrite.network/?url=https://" + enc,
+        svg: "https://shipbastion.com/api/badge.svg?url=" + enc,
+        link: "https://shipbastion.com/?url=https://" + enc,
         alt: "VibeShield Security Score"
       },
       {
@@ -346,8 +346,8 @@
         kicker: "EMAIL DELIVERABILITY DNS",
         title: "InboxShield v7.0 Email Auth Grade",
         desc: "Live SPF 10-lookup, DKIM, DMARC, MTA-STS & DNSBL deliverability score.",
-        svg: "https://inbox-checker.appwrite.network/badge/inbox/" + enc + ".svg",
-        link: "https://inbox-checker.appwrite.network/?domain=" + enc,
+        svg: "https://inbox.shipbastion.com/badge/inbox/" + enc + ".svg",
+        link: "https://inbox.shipbastion.com/?domain=" + enc,
         alt: "InboxShield Email Security"
       },
       {
@@ -355,8 +355,8 @@
         kicker: "AI SEARCH & /LLMS.TXT GEO",
         title: "CiteReady v6.0 AI Search Readiness",
         desc: "Live /llms.txt, AI crawler robots.txt, and Schema.org entity graph score.",
-        svg: "https://citeready-checker.appwrite.network/api/badge?url=" + enc,
-        link: "https://citeready-checker.appwrite.network/?url=https://" + enc,
+        svg: "https://cite.shipbastion.com/api/badge?url=" + enc,
+        link: "https://cite.shipbastion.com/?url=https://" + enc,
         alt: "CiteReady AI Search Readiness"
       },
       {
@@ -364,8 +364,8 @@
         kicker: "DOMAIN & TRADEMARK (100% FREE)",
         title: "BrandShield v6.2 Brand Availability",
         desc: "Live RDAP TLD & brand clearance badge — 100% free forever.",
-        svg: "https://brand-checker.appwrite.network/badge/brand/" + brand + ".svg",
-        link: "https://brand-checker.appwrite.network/?q=" + brand,
+        svg: "https://brand.shipbastion.com/badge/brand/" + brand + ".svg",
+        link: "https://brand.shipbastion.com/?q=" + brand,
         alt: "BrandShield Status"
       }
     ];
@@ -406,7 +406,7 @@
     if (runBtn) { runBtn.disabled = true; runBtn.textContent = "Loading..."; }
     opTrack("scan", { target: "badge-studio-quick-score", domain: host });
 
-    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+    fetch("https://api.shipbastion.com/v1/quick-score?domain=" + encodeURIComponent(host))
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) {
         if (!d || !d.ok) throw new Error("Bad payload");

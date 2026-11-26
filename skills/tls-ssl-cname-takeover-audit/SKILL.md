@@ -15,10 +15,10 @@ Use when verifying HTTPS certificate health, checking upcoming SSL expiration, o
 
 ```bash
 # Zero-install 1-line terminal audit (POSIX sh, supports --suite, --fail-below 80, --json)
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- YOUR_DOMAIN
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- YOUR_DOMAIN
 
 # Live hosted free API check
-curl -sS "https://vibe-checker.appwrite.network/api/scan-tls?url=https://YOUR_DOMAIN"
+curl -sS "https://shipbastion.com/api/scan-tls?url=https://YOUR_DOMAIN"
 
 # Local / companion command
 npx github:zColdWater/vibeshield-cli scan https://YOUR_DOMAIN --fast
@@ -35,7 +35,7 @@ npx github:zColdWater/vibeshield-cli scan https://YOUR_DOMAIN --fast
 ## CI Gate & Interactive Workbench
 
 - **CI / Automation:** `uses: zColdWater/vibeshield-action@v1`
-- **Free Interactive Web Workbench:** https://vibe-checker.appwrite.network/?ref=skill-tls-ssl-cname-takeover-audit
+- **Free Interactive Web Workbench:** https://shipbastion.com/?ref=skill-tls-ssl-cname-takeover-audit
 - **Full Copy-Paste Fix Unlock ($2 Launch Special (reg. $9, one-time)):** https://agentarenastudi.gumroad.com/l/omniforge-vibeshield?wanted=true
 - **Black Friday 2026 Developer Deal Stack ($2 Single / $5 Complete Suite — 83% OFF):** https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true

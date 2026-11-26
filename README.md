@@ -2,8 +2,8 @@
 
 [![GitHub Release](https://img.shields.io/badge/release-v2.6.0-16a34a)](https://github.com/zColdWater/omniforge-skills/releases)
 [![Skills Count](https://img.shields.io/badge/skills-50-2563eb)](https://www.skills.sh/zColdWater/omniforge-skills)
-[![OmniForge Launch Score](https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=vibe-checker.appwrite.network)](https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html)
-[![AI Search Readiness](https://citeready-checker.appwrite.network/api/badge?url=zcoldwater.github.io/omniforge-skills)](https://citeready-checker.appwrite.network/?url=https://zcoldwater.github.io/omniforge-skills/)
+[![OmniForge Launch Score](https://api.shipbastion.com/v1/badge/suite.svg?domain=shipbastion.com)](https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html)
+[![AI Search Readiness](https://cite.shipbastion.com/api/badge?url=zcoldwater.github.io/omniforge-skills)](https://cite.shipbastion.com/?url=https://zcoldwater.github.io/omniforge-skills/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 **Zero-dependency `SKILL.md`, Codex Plugin & Claude Code Plugin pack (50 specialized developer skills) for Claude Code, OpenAI Codex CLI, Cursor, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs, a zero-install POSIX `cli.sh` one-liner, and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
@@ -12,14 +12,14 @@
 
 ```bash
 # 6-phase Web/AI Security audit (116+ read-only checks)
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yourdomain.com
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- yourdomain.com
 
 # Parallel 3-in-1 Suite (VibeShield + InboxShield + CiteReady)
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com
 
 # CI/CD Score Gate (exits code 2 if score < 80) or raw JSON for jq
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --fail-below 80 yourdomain.com
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --json yourdomain.com | jq '.assessment'
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --fail-below 80 yourdomain.com
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --json yourdomain.com | jq '.assessment'
 ```
 
 ## Install All 50 Skills in 10 Seconds (`npx skills`)
@@ -106,10 +106,10 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 
 | Product | Free Live Tool (Zero Signup) | Pricing |
 | :--- | :--- | :--- |
-| **VibeShield v7.0** | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network/?ref=gh-omniforge-skills) | Free 6-Phase Scan · [$2 Launch Special Fix Unlock (~~$9~~)](https://agentarenastudi.gumroad.com/l/omniforge-vibeshield?wanted=true) |
-| **InboxShield v7.0** | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network/?ref=gh-omniforge-skills) · [/spf-flattener](https://inbox-checker.appwrite.network/spf-flattener?ref=gh-omniforge-skills) | Free 6-Phase DNS Trace · [$2 Launch Special Fix (~~$9~~)](https://agentarenastudi.gumroad.com/l/omniforge-inboxshield?wanted=true) |
-| **CiteReady v6.0** | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network/?ref=gh-omniforge-skills) · [/generator](https://citeready-checker.appwrite.network/generator?ref=gh-omniforge-skills) | Free GEO PK & Audit · [$2 Launch Special Kit (~~$12~~)](https://agentarenastudi.gumroad.com/l/omniforge-citeready?wanted=true) |
-| **BrandShield v6.2** | [brand-checker.appwrite.network](https://brand-checker.appwrite.network/?ref=gh-omniforge-skills) · [/namer](https://brand-checker.appwrite.network/namer?ref=gh-omniforge-skills) | **100% Free Forever** (78 TLDs + 17 Aftermarket + USPTO) |
+| **VibeShield v7.0** | [shipbastion.com](https://shipbastion.com/?ref=gh-omniforge-skills) | Free 6-Phase Scan · [$2 Launch Special Fix Unlock (~~$9~~)](https://agentarenastudi.gumroad.com/l/omniforge-vibeshield?wanted=true) |
+| **InboxShield v7.0** | [inbox.shipbastion.com](https://inbox.shipbastion.com/?ref=gh-omniforge-skills) · [/spf-flattener](https://inbox.shipbastion.com/spf-flattener?ref=gh-omniforge-skills) | Free 6-Phase DNS Trace · [$2 Launch Special Fix (~~$9~~)](https://agentarenastudi.gumroad.com/l/omniforge-inboxshield?wanted=true) |
+| **CiteReady v6.0** | [cite.shipbastion.com](https://cite.shipbastion.com/?ref=gh-omniforge-skills) · [/generator](https://cite.shipbastion.com/generator?ref=gh-omniforge-skills) | Free GEO PK & Audit · [$2 Launch Special Kit (~~$12~~)](https://agentarenastudi.gumroad.com/l/omniforge-citeready?wanted=true) |
+| **BrandShield v6.2** | [brand.shipbastion.com](https://brand.shipbastion.com/?ref=gh-omniforge-skills) · [/namer](https://brand.shipbastion.com/namer?ref=gh-omniforge-skills) | **100% Free Forever** (78 TLDs + 17 Aftermarket + USPTO) |
 | **Complete 3-in-1 Suite** | Unlocks VibeShield + InboxShield + CiteReady | [$5 Launch Special (~~$29~~, one-time, $0/mo)](https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true) |
 
 ## Companion GitHub Actions (`@v1`) & MCP Server

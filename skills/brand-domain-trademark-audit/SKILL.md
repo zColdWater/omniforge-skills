@@ -15,10 +15,10 @@ Use when naming a startup, SaaS product, CLI package, or open-source project bef
 
 ```bash
 # Live hosted free API check
-curl -sS "https://brand-checker.appwrite.network/api/check?name=YOUR_BRAND"
+curl -sS "https://brand.shipbastion.com/api/check?name=YOUR_BRAND"
 
 # Local / companion command
-curl -sS "https://brand-checker.appwrite.network/api/instant-tlds?q=YOUR_BRAND"
+curl -sS "https://brand.shipbastion.com/api/instant-tlds?q=YOUR_BRAND"
 ```
 
 ## Step-by-Step Audit & Remediation Workflow
@@ -31,5 +31,5 @@ curl -sS "https://brand-checker.appwrite.network/api/instant-tlds?q=YOUR_BRAND"
 ## CI Gate & Interactive Workbench
 
 - **CI / Automation:** `100% Free Web App — zero signup, zero paywall`
-- **Free Interactive Web Workbench:** https://brand-checker.appwrite.network/?ref=skill-brand-domain-trademark-audit
-- **Pricing:** **100% Free Forever** (zero signup, zero paywall) — pair with [VibeShield v7.0 ($2 Launch Special)](https://vibe-checker.appwrite.network/?ref=skill-brand-domain-trademark-audit) and [InboxShield v7.0 ($2 Launch Special)](https://inbox-checker.appwrite.network/?ref=skill-brand-domain-trademark-audit) once your domain is live.
+- **Free Interactive Web Workbench:** https://brand.shipbastion.com/?ref=skill-brand-domain-trademark-audit
+- **Pricing:** **100% Free Forever** (zero signup, zero paywall) — pair with [VibeShield v7.0 ($2 Launch Special)](https://shipbastion.com/?ref=skill-brand-domain-trademark-audit) and [InboxShield v7.0 ($2 Launch Special)](https://inbox.shipbastion.com/?ref=skill-brand-domain-trademark-audit) once your domain is live.

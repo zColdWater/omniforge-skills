@@ -15,10 +15,10 @@ Use right before launching a SaaS, indie app, or Product Hunt / Hacker News rele
 
 ```bash
 # Zero-install 1-line terminal audit (POSIX sh, supports --suite, --fail-below 80, --json)
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite YOUR_DOMAIN
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite YOUR_DOMAIN
 
 # Live hosted free API check
-curl -sS "https://vibe-checker.appwrite.network/api/free-scan?url=https://YOUR_DOMAIN" && curl -sS "https://inbox-checker.appwrite.network/api/free-audit?domain=YOUR_DOMAIN" && curl -sS "https://citeready-checker.appwrite.network/api/free-geo?url=https://YOUR_DOMAIN"
+curl -sS "https://shipbastion.com/api/free-scan?url=https://YOUR_DOMAIN" && curl -sS "https://inbox.shipbastion.com/api/free-audit?domain=YOUR_DOMAIN" && curl -sS "https://cite.shipbastion.com/api/free-geo?url=https://YOUR_DOMAIN"
 
 # Local / companion command
 npx -y github:zColdWater/mcp-launch-audit
@@ -26,7 +26,7 @@ npx -y github:zColdWater/mcp-launch-audit
 
 ## Step-by-Step Audit & Remediation Workflow
 
-1. Run all three live free read-only audit APIs above (plus `https://brand-checker.appwrite.network/api/check?name=YOUR_BRAND` for 100% free brand/trademark clearance).
+1. Run all three live free read-only audit APIs above (plus `https://brand.shipbastion.com/api/check?name=YOUR_BRAND` for 100% free brand/trademark clearance).
 2. Compile a single unified Launch Readiness Scorecard across Security (0-100), Email Deliverability (0-100), AI Search / GEO (0-100), and Brand Clearance.
 3. Fix P0 launch blockers first: leaked client secrets or open Supabase/Firebase tables (VibeShield), missing SPF/DKIM/DMARC records causing onboarding emails to hit spam (InboxShield), and blocked `OAI-SearchBot`/`PerplexityBot` or missing `/llms.txt` (CiteReady).
 4. Wire continuous pre-deploy regression gates via GitHub Actions (`vibeshield-action@v1`, `inboxshield-action@v1`, `citeready-action@v1`) or the 5-tool MCP server (`npx -y github:zColdWater/mcp-launch-audit`).
@@ -35,7 +35,7 @@ npx -y github:zColdWater/mcp-launch-audit
 ## CI Gate & Interactive Workbench
 
 - **CI / Automation:** `uses: zColdWater/vibeshield-action@v1 + inboxshield-action@v1 + citeready-action@v1`
-- **Free Interactive Web Workbench:** https://vibe-checker.appwrite.network/?ref=skill-saas-launch-audit
+- **Free Interactive Web Workbench:** https://shipbastion.com/?ref=skill-saas-launch-audit
 - **Full Copy-Paste Fix Unlock ($5 Complete Suite Launch Special (reg. $29, one-time)):** https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true
 - **Black Friday 2026 Developer Deal Stack ($2 Single / $5 Complete Suite — 83% OFF):** https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true

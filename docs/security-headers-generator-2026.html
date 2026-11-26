@@ -11,9 +11,9 @@
   <meta property="og:title" content="2026 HTTP Security Headers &amp; RFC 9116 security.txt Generator (5 Stacks)" />
   <meta property="og:description" content="Generate copy-paste Grade A+ CSP, HSTS, COOP, Permissions-Policy &amp; RFC 9116 security.txt configs for Next.js, Vercel, Cloudflare Pages, Netlify, and Nginx — and verify your live domain free." />
   <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/security-headers-generator-2026.html" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/og-benchmark-security-headers-2026.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/og-benchmark-security-headers-2026.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/og-benchmark-security-headers-2026.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/og-benchmark-security-headers-2026.png" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +55,7 @@
           "name": "How can I verify my live production security headers after deploying?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Run the free in-page 3-in-1 Live Audit above, open VibeShield v7.0 at vibe-checker.appwrite.network, or run curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yourdomain.com directly from your terminal."
+            "text": "Run the free in-page 3-in-1 Live Audit above, open VibeShield v7.0 at shipbastion.com, or run curl -fsSL https://shipbastion.com/cli.sh | sh -s -- yourdomain.com directly from your terminal."
           }
         }
       ]
@@ -237,7 +237,7 @@
   </main>
   <script>
 (function () {
-  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var TRACK_URL = "https://api.shipbastion.com/v1/telemetry";
   function opTrack(eventName, extra) {
     try {
       var p = JSON.stringify(Object.assign({
@@ -474,7 +474,7 @@
     auditOut.innerHTML = '<div style="font-size:0.9rem;color:#475569;">Checking live headers, TLS, DMARC &amp; GEO on <strong>' + esc(host) + '</strong>...</div>';
     opTrack("scan", { target: "hdr-gen-quick-score", domain: host });
 
-    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+    fetch("https://api.shipbastion.com/v1/quick-score?domain=" + encodeURIComponent(host))
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) {
         if (!d || !d.ok || !d.engines) throw new Error("Unexpected response");
@@ -495,16 +495,16 @@
             '</div>' +
           '</div>' +
           '<div class="qs-grid">' +
-            '<div class="qs-card"><div class="qs-lbl">VibeShield v7.0</div><div class="qs-val">' + esc(vb.score) + '/100 · ' + esc(vb.grade || "-") + '</div><div class="qs-meta">Observatory ' + esc(vb.observatory || "-") + ' · ' + esc(vb.issues || 0) + ' issues' + (vb.projectedScore ? ' · Fix &rarr; ' + esc(vb.projectedScore) : '') + '</div><a href="' + esc(vb.reportUrl || "https://vibe-checker.appwrite.network/") + '" target="_blank" rel="noopener">Inspect Missing Headers &rarr;</a></div>' +
-            '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0</div><div class="qs-val">' + esc(ib.score) + '/100 · ' + esc(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + esc(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + esc(ib.dmarcPolicy || "none") + '</div><a href="' + esc(ib.reportUrl || "https://inbox-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full DNS Report &rarr;</a></div>' +
-            '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0</div><div class="qs-val">' + esc(cr.score) + '/100 · ' + esc(cr.grade || "-") + '</div><div class="qs-meta">/llms.txt ' + (cr.llmsTxt ? "present" : "missing") + ' · Entity ' + esc(cr.entityScore != null ? cr.entityScore + "/100" : "-") + '</div><a href="' + esc(cr.reportUrl || "https://citeready-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full GEO Report &rarr;</a></div>' +
+            '<div class="qs-card"><div class="qs-lbl">VibeShield v7.0</div><div class="qs-val">' + esc(vb.score) + '/100 · ' + esc(vb.grade || "-") + '</div><div class="qs-meta">Observatory ' + esc(vb.observatory || "-") + ' · ' + esc(vb.issues || 0) + ' issues' + (vb.projectedScore ? ' · Fix &rarr; ' + esc(vb.projectedScore) : '') + '</div><a href="' + esc(vb.reportUrl || "https://shipbastion.com/") + '" target="_blank" rel="noopener">Inspect Missing Headers &rarr;</a></div>' +
+            '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0</div><div class="qs-val">' + esc(ib.score) + '/100 · ' + esc(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + esc(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + esc(ib.dmarcPolicy || "none") + '</div><a href="' + esc(ib.reportUrl || "https://inbox.shipbastion.com/") + '" target="_blank" rel="noopener">Full DNS Report &rarr;</a></div>' +
+            '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0</div><div class="qs-val">' + esc(cr.score) + '/100 · ' + esc(cr.grade || "-") + '</div><div class="qs-meta">/llms.txt ' + (cr.llmsTxt ? "present" : "missing") + ' · Entity ' + esc(cr.entityScore != null ? cr.entityScore + "/100" : "-") + '</div><a href="' + esc(cr.reportUrl || "https://cite.shipbastion.com/") + '" target="_blank" rel="noopener">Full GEO Report &rarr;</a></div>' +
           '</div>';
         auditOut.querySelectorAll("[data-paywall]").forEach(function (a) {
           a.addEventListener("click", function () { opTrack("paywall", { target: a.getAttribute("data-paywall"), domain: d.domain || host }); });
         });
       })
       .catch(function (err) {
-        auditOut.innerHTML = '<div style="font-size:0.88rem;color:#b45309;">Live quick-score timed out (' + esc(err && err.message ? err.message : "network") + '). Run VibeShield directly at vibe-checker.appwrite.network.</div>';
+        auditOut.innerHTML = '<div style="font-size:0.88rem;color:#b45309;">Live quick-score timed out (' + esc(err && err.message ? err.message : "network") + '). Run VibeShield directly at shipbastion.com.</div>';
       })
       .finally(function () {
         if (auditBtn) { auditBtn.disabled = false; auditBtn.textContent = "Verify Live Headers (Free)"; }

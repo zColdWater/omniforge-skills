@@ -15,10 +15,10 @@ Use when integrating Resend, Postmark, SendGrid, Mailgun, or Amazon SES into a N
 
 ```bash
 # Zero-install 1-line terminal audit (POSIX sh, supports --suite, --fail-below 80, --json)
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite YOUR_DOMAIN
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite YOUR_DOMAIN
 
 # Live hosted free API check
-curl -sS "https://inbox-checker.appwrite.network/api/free-audit?domain=YOUR_DOMAIN"
+curl -sS "https://inbox.shipbastion.com/api/free-audit?domain=YOUR_DOMAIN"
 
 # Local / companion command
 npx github:zColdWater/inboxshield-cli check YOUR_DOMAIN
@@ -35,7 +35,7 @@ npx github:zColdWater/inboxshield-cli check YOUR_DOMAIN
 ## CI Gate & Interactive Workbench
 
 - **CI / Automation:** `uses: zColdWater/inboxshield-action@v1`
-- **Free Interactive Web Workbench:** https://inbox-checker.appwrite.network/?ref=skill-resend-postmark-email-audit
+- **Free Interactive Web Workbench:** https://inbox.shipbastion.com/?ref=skill-resend-postmark-email-audit
 - **Full Copy-Paste Fix Unlock ($2 Launch Special (reg. $9, one-time)):** https://agentarenastudi.gumroad.com/l/omniforge-inboxshield?wanted=true
 - **Black Friday 2026 Developer Deal Stack ($2 Single / $5 Complete Suite — 83% OFF):** https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true

@@ -11,9 +11,9 @@
   <meta property="og:title" content="2026 Interactive SaaS Pre-Launch Security, DNS &amp; AI Search Checklist (24 Points)" />
   <meta property="og:description" content="Interactive 24-point launch readiness gate with localStorage progress, 1-click live auto-verify across VibeShield, InboxShield, CiteReady &amp; BrandShield, and GitHub PR Markdown export." />
   <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -178,7 +178,7 @@
           "name": "Can I run these 24 pre-launch checks automatically against my domain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Enter your domain at the top of this checklist to launch our four free read-only web scanners (VibeShield, InboxShield, CiteReady, BrandShield) or run the single zero-install terminal command: curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com."
+            "text": "Yes. Enter your domain at the top of this checklist to launch our four free read-only web scanners (VibeShield, InboxShield, CiteReady, BrandShield) or run the single zero-install terminal command: curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com."
           }
         },
         {
@@ -483,7 +483,7 @@
 
       <div class="cli-bar">
         <div class="cli-scroll">
-          <code id="cl-cli-cmd">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com</code>
+          <code id="cl-cli-cmd">curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com</code>
         </div>
         <button class="btn btn-accent" id="copy-cli-btn" type="button" style="padding:6px 11px;font-size:0.78rem;">Copy CLI</button>
       </div>
@@ -825,7 +825,7 @@
   <script>
 (function () {
   var STORAGE_KEY = "omniforge_launch_checklist_v1";
-  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var TRACK_URL = "https://api.shipbastion.com/v1/telemetry";
   var PILLARS = [{"id":"security","name":"Web & AI App Security","items":[{"id":"sec-1","sev":"critical","title":"Zero leaked secrets in frontend JS bundles"},{"id":"sec-2","sev":"critical","title":"Supabase RLS enabled & forced on all public tables (CVE-2025-48757)"},{"id":"sec-3","sev":"critical","title":"Firebase RTDB & Firestore default-deny security rules"},{"id":"sec-4","sev":"high","title":"Next.js patched against CVE-2025-29927 middleware bypass"},{"id":"sec-5","sev":"high","title":"Production source maps & sensitive dotfiles blocked"},{"id":"sec-6","sev":"medium","title":"Strict CSP, HSTS, COOP, Permissions-Policy & RFC 9116 security.txt"}]},{"id":"email","name":"Email Authentication & Deliverability","items":[{"id":"mail-1","sev":"critical","title":"Single SPF TXT record strictly under 10 DNS lookups"},{"id":"mail-2","sev":"critical","title":"2048-bit DKIM signing active on every sending ESP"},{"id":"mail-3","sev":"critical","title":"Enforced DMARC policy (p=quarantine or p=reject) with RUA reporting"},{"id":"mail-4","sev":"high","title":"Clean sending domain & MX IPs across major DNSBL blocklists"},{"id":"mail-5","sev":"medium","title":"Publish MTA-STS policy & TLS-RPT reporting record"},{"id":"mail-6","sev":"medium","title":"Add BIMI SVG Tiny-PS logo (and VMC when eligible)"}]},{"id":"geo","name":"AI Search & /llms.txt Visibility (GEO)","items":[{"id":"geo-1","sev":"high","title":"Publish spec-compliant /llms.txt at site root"},{"id":"geo-2","sev":"high","title":"Publish expanded /llms-full.txt factual reference"},{"id":"geo-3","sev":"high","title":"Allow AI retrieval crawlers in /robots.txt"},{"id":"geo-4","sev":"medium","title":"Render pricing, features & FAQ copy in initial SSR HTML"},{"id":"geo-5","sev":"medium","title":"Deploy interconnected Schema.org @graph JSON-LD"},{"id":"geo-6","sev":"medium","title":"Self-referencing canonical URLs, sitemap.xml & 1280x720 og:image"}]},{"id":"brand","name":"Domain, TLD & Brand Clearance","items":[{"id":"br-1","sev":"high","title":"Check live RDAP availability across 78+ TLD extensions"},{"id":"br-2","sev":"high","title":"Audit .com redirect & sibling TLD squatting exposure"},{"id":"br-3","sev":"high","title":"Run preliminary USPTO trademark conflict screening"},{"id":"br-4","sev":"medium","title":"Reserve matching GitHub, npm, PyPI & X/social handles"},{"id":"br-5","sev":"medium","title":"Check for dangling CNAME subdomain takeover risks"},{"id":"br-6","sev":"medium","title":"Configure registrar lock, DNSSEC & redundant nameservers"}]}];
   var TOTAL = 24;
 
@@ -881,7 +881,7 @@
     var host = sanitizeHost(domainInput ? domainInput.value : "");
     state.domain = domainInput ? domainInput.value : "";
     saveState();
-    if (cliCode) cliCode.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + host;
+    if (cliCode) cliCode.textContent = "curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite " + host;
   }
 
   function syncScore() {
@@ -947,10 +947,10 @@
     btn.addEventListener("click", function () {
       var kind = btn.getAttribute("data-launch");
       var host = sanitizeHost(domainInput ? domainInput.value : "");
-      var url = "https://vibe-checker.appwrite.network/?url=https://" + encodeURIComponent(host) + "&ref=checklist-2026";
-      if (kind === "inbox") url = "https://inbox-checker.appwrite.network/?domain=" + encodeURIComponent(host) + "&ref=checklist-2026";
-      else if (kind === "cite") url = "https://citeready-checker.appwrite.network/?url=https://" + encodeURIComponent(host) + "&ref=checklist-2026";
-      else if (kind === "brand") url = "https://brand-checker.appwrite.network/?q=" + encodeURIComponent(host.split(".")[0] || "omniforge") + "&ref=checklist-2026";
+      var url = "https://shipbastion.com/?url=https://" + encodeURIComponent(host) + "&ref=checklist-2026";
+      if (kind === "inbox") url = "https://inbox.shipbastion.com/?domain=" + encodeURIComponent(host) + "&ref=checklist-2026";
+      else if (kind === "cite") url = "https://cite.shipbastion.com/?url=https://" + encodeURIComponent(host) + "&ref=checklist-2026";
+      else if (kind === "brand") url = "https://brand.shipbastion.com/?q=" + encodeURIComponent(host.split(".")[0] || "omniforge") + "&ref=checklist-2026";
       opTrack("outbound", { target: "checklist-launch-" + kind, domain: host });
       window.open(url, "_blank", "noopener,noreferrer");
     });
@@ -974,7 +974,7 @@
     autoOut.innerHTML = '<div style="font-size:0.88rem;color:#475569;">Running live read-only 3-in-1 check on <strong>' + escHtml(host) + '</strong>...</div>';
     opTrack("scan", { target: "checklist-quick-score", domain: host });
 
-    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+    fetch("https://api.shipbastion.com/v1/quick-score?domain=" + encodeURIComponent(host))
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) {
         if (!d || !d.ok || !d.engines) throw new Error("Unexpected payload");
@@ -1032,7 +1032,7 @@
       var lines = [
         "# Pre-Launch Audit Checklist (" + host + ") — " + done + "/" + TOTAL + " (" + Math.round((done / TOTAL) * 100) + "%)",
         "",
-        "Run live 3-in-1 read-only scan: \`curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + host + "\`",
+        "Run live 3-in-1 read-only scan: \`curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite " + host + "\`",
         ""
       ];
       PILLARS.forEach(function (p) {

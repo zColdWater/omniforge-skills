@@ -15,10 +15,10 @@ Use when evaluating a startup domain that appears taken to see whether it is act
 
 ```bash
 # Live hosted free API check
-curl -sS "https://brand-checker.appwrite.network/api/instant-tlds?q=YOUR_NAME"
+curl -sS "https://brand.shipbastion.com/api/instant-tlds?q=YOUR_NAME"
 
 # Local / companion command
-curl -sS "https://brand-checker.appwrite.network/api/check?name=YOUR_NAME"
+curl -sS "https://brand.shipbastion.com/api/check?name=YOUR_NAME"
 ```
 
 ## Step-by-Step Audit & Remediation Workflow
@@ -31,5 +31,5 @@ curl -sS "https://brand-checker.appwrite.network/api/check?name=YOUR_NAME"
 ## CI Gate & Interactive Workbench
 
 - **CI / Automation:** `npx github:zColdWater/brandshield-cli check YOUR_NAME`
-- **Free Interactive Web Workbench:** https://brand-checker.appwrite.network/?ref=skill-saas-domain-aftermarket-check
-- **Pricing:** **100% Free Forever** (zero signup, zero paywall) — pair with [VibeShield v7.0 ($2 Launch Special)](https://vibe-checker.appwrite.network/?ref=skill-saas-domain-aftermarket-check) and [InboxShield v7.0 ($2 Launch Special)](https://inbox-checker.appwrite.network/?ref=skill-saas-domain-aftermarket-check) once your domain is live.
+- **Free Interactive Web Workbench:** https://brand.shipbastion.com/?ref=skill-saas-domain-aftermarket-check
+- **Pricing:** **100% Free Forever** (zero signup, zero paywall) — pair with [VibeShield v7.0 ($2 Launch Special)](https://shipbastion.com/?ref=skill-saas-domain-aftermarket-check) and [InboxShield v7.0 ($2 Launch Special)](https://inbox.shipbastion.com/?ref=skill-saas-domain-aftermarket-check) once your domain is live.

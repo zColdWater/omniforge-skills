@@ -11,9 +11,9 @@
   <meta property="og:title" content="OmniForge Agent Skills — 50 Pre-Launch Audit Skills + Live 3-in-1 Scanner" />
   <meta property="og:description" content="Audit any production domain free in 3 seconds, install 50 MIT skills for Claude Code, Codex, Cursor &amp; Gemini CLI, or unlock copy-paste fixes ($2 single / $5 Complete Suite, 83% OFF)." />
   <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -153,7 +153,7 @@
         <div class="cmd-row">
           <div class="cmd-code-wrap">
             <span class="cmd-label">Zero-Install 1-Line POSIX Terminal 3-in-1 Audit (No Node/npm Required)</span>
-            <code id="idx-cmd-suite">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com</code>
+            <code id="idx-cmd-suite">curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com</code>
           </div>
           <button class="copy-btn" type="button" data-copy-id="idx-cmd-suite">Copy</button>
         </div>
@@ -294,7 +294,7 @@
   </main>
   <script>
 (function () {
-  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var TRACK_URL = "https://api.shipbastion.com/v1/telemetry";
   function opTrack(eventName, extra) {
     try {
       var p = JSON.stringify(Object.assign({
@@ -331,7 +331,7 @@
 
   function updateCli() {
     var host = sanitizeHost(domainInput ? domainInput.value : "");
-    if (cliSuiteEl) cliSuiteEl.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + host;
+    if (cliSuiteEl) cliSuiteEl.textContent = "curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite " + host;
   }
 
   function runQuickScore() {
@@ -344,7 +344,7 @@
     qsOut.innerHTML = '<div style="font-size:0.9rem;color:#475569;">Running live read-only VibeShield v7.0 + InboxShield v7.0 + CiteReady v6.0 audit on <strong>' + esc(host) + '</strong>...</div>';
     opTrack("scan", { target: "skills-hub-quick-score", domain: host });
 
-    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+    fetch("https://api.shipbastion.com/v1/quick-score?domain=" + encodeURIComponent(host))
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) {
         if (!d || !d.ok || !d.engines) throw new Error("Unexpected response");
@@ -357,7 +357,7 @@
         var bg = d.badge || {};
         var suiteUrl = co.completeSuite5Usd || "https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true";
         var issues = typeof ov.totalIssues === "number" ? ov.totalIssues : 0;
-        var badgeSvg = bg.suiteSvgUrl || ("https://omnipulse-x402.appwrite.network/v1/badge/suite.svg?domain=" + encodeURIComponent(d.domain || host));
+        var badgeSvg = bg.suiteSvgUrl || ("https://api.shipbastion.com/v1/badge/suite.svg?domain=" + encodeURIComponent(d.domain || host));
         var badgeMd = bg.markdown || ("[![OmniForge Launch Score](" + badgeSvg + ")](" + suiteUrl + ")");
 
         qsOut.innerHTML =
@@ -367,10 +367,10 @@
             '<a class="btn btn-accent btn-sm" data-paywall="hub-qs-suite" href="' + esc(suiteUrl) + '" target="_blank" rel="noopener">Unlock All Fixes for ' + esc(d.domain || host) + ' — $5 (83% OFF)</a>' +
           '</div>' +
           '<div class="qs-grid">' +
-            '<div class="qs-card"><div class="qs-lbl">VibeShield v7.0 (Security)</div><div class="qs-val">' + esc(vb.score) + '/100 · ' + esc(vb.grade || "-") + '</div><div class="qs-meta">Observatory ' + esc(vb.observatory || "-") + ' · ' + esc(vb.issues || 0) + ' issues</div><div class="qs-links"><a href="' + esc(vb.reportUrl || "https://vibe-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full Report</a> · <a data-paywall="hub-qs-vibe" href="' + esc(co.vibeshield2Usd || "https://agentarenastudi.gumroad.com/l/omniforge-vibeshield?wanted=true") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
-            '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0 (Email DNS)</div><div class="qs-val">' + esc(ib.score) + '/100 · ' + esc(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + esc(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + esc(ib.dmarcPolicy || "none") + ' · DKIM ' + esc(ib.dkimKeys || 0) + '</div><div class="qs-links"><a href="' + esc(ib.reportUrl || "https://inbox-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full DNS</a> · <a data-paywall="hub-qs-inbox" href="' + esc(co.inboxshield2Usd || "https://agentarenastudi.gumroad.com/l/omniforge-inboxshield?wanted=true") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
-            '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0 (AI GEO)</div><div class="qs-val">' + esc(cr.score) + '/100 · ' + esc(cr.grade || "-") + '</div><div class="qs-meta">Entity ' + esc(cr.entityScore != null ? cr.entityScore + "/100" : "-") + ' · /llms.txt ' + (cr.llmsTxt ? "present" : "missing") + '</div><div class="qs-links"><a href="' + esc(cr.reportUrl || "https://citeready-checker.appwrite.network/") + '" target="_blank" rel="noopener">Full GEO</a> · <a data-paywall="hub-qs-cite" href="' + esc(co.citeready2Usd || "https://agentarenastudi.gumroad.com/l/omniforge-citeready?wanted=true") + '" target="_blank" rel="noopener">$2 Kit</a></div></div>' +
-            '<div class="qs-card"><div class="qs-lbl">BrandShield v6.2 (Free)</div><div class="qs-val">78+ TLDs</div><div class="qs-meta">Live RDAP + 17 Aftermarket + USPTO</div><div class="qs-links"><a href="' + esc(br.reportUrl || "https://brand-checker.appwrite.network/") + '" target="_blank" rel="noopener">Check Brand Free &rarr;</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">VibeShield v7.0 (Security)</div><div class="qs-val">' + esc(vb.score) + '/100 · ' + esc(vb.grade || "-") + '</div><div class="qs-meta">Observatory ' + esc(vb.observatory || "-") + ' · ' + esc(vb.issues || 0) + ' issues</div><div class="qs-links"><a href="' + esc(vb.reportUrl || "https://shipbastion.com/") + '" target="_blank" rel="noopener">Full Report</a> · <a data-paywall="hub-qs-vibe" href="' + esc(co.vibeshield2Usd || "https://agentarenastudi.gumroad.com/l/omniforge-vibeshield?wanted=true") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">InboxShield v7.0 (Email DNS)</div><div class="qs-val">' + esc(ib.score) + '/100 · ' + esc(ib.grade || "-") + '</div><div class="qs-meta">SPF ' + esc(ib.spfLookups != null ? ib.spfLookups + "/10" : "-") + ' · DMARC ' + esc(ib.dmarcPolicy || "none") + ' · DKIM ' + esc(ib.dkimKeys || 0) + '</div><div class="qs-links"><a href="' + esc(ib.reportUrl || "https://inbox.shipbastion.com/") + '" target="_blank" rel="noopener">Full DNS</a> · <a data-paywall="hub-qs-inbox" href="' + esc(co.inboxshield2Usd || "https://agentarenastudi.gumroad.com/l/omniforge-inboxshield?wanted=true") + '" target="_blank" rel="noopener">$2 Fix</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">CiteReady v6.0 (AI GEO)</div><div class="qs-val">' + esc(cr.score) + '/100 · ' + esc(cr.grade || "-") + '</div><div class="qs-meta">Entity ' + esc(cr.entityScore != null ? cr.entityScore + "/100" : "-") + ' · /llms.txt ' + (cr.llmsTxt ? "present" : "missing") + '</div><div class="qs-links"><a href="' + esc(cr.reportUrl || "https://cite.shipbastion.com/") + '" target="_blank" rel="noopener">Full GEO</a> · <a data-paywall="hub-qs-cite" href="' + esc(co.citeready2Usd || "https://agentarenastudi.gumroad.com/l/omniforge-citeready?wanted=true") + '" target="_blank" rel="noopener">$2 Kit</a></div></div>' +
+            '<div class="qs-card"><div class="qs-lbl">BrandShield v6.2 (Free)</div><div class="qs-val">78+ TLDs</div><div class="qs-meta">Live RDAP + 17 Aftermarket + USPTO</div><div class="qs-links"><a href="' + esc(br.reportUrl || "https://brand.shipbastion.com/") + '" target="_blank" rel="noopener">Check Brand Free &rarr;</a></div></div>' +
           '</div>' +
           '<div class="qs-badge-row">' +
             '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0;"><span style="font-size:0.74rem;font-weight:700;color:#64748b;text-transform:uppercase;">Live README Badge:</span><img src="' + esc(badgeSvg) + '" alt="OmniForge Launch Score badge" style="height:22px;max-width:100%;" /></div>' +

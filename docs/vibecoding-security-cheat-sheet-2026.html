@@ -11,9 +11,9 @@
   <meta property="og:title" content="2026 Cursor, Lovable, Bolt.new &amp; v0 Security Cheat Sheet (8 Copy-Paste Fix Prompts)" />
   <meta property="og:description" content="Harden any AI-built SaaS in 10 minutes: copy-paste Cursor/Lovable prompts for Supabase RLS, Next.js CVE-2025-29927, leaked keys, CSP, SPF/DMARC &amp; /llms.txt, plus live read-only 3-in-1 scan." />
   <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/og-benchmark-vibe-coding-2026.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/og-benchmark-vibe-coding-2026.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/og-benchmark-vibe-coding-2026.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/og-benchmark-vibe-coding-2026.png" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,7 +28,7 @@
         "@type": "Organization",
         "name": "OmniForge · Agent Arena Studio"
       },
-      "image": "https://brand-checker.appwrite.network/assets/og-benchmark-vibe-coding-2026.png",
+      "image": "https://brand.shipbastion.com/assets/og-benchmark-vibe-coding-2026.png",
       "mainEntityOfPage": "https://zcoldwater.github.io/omniforge-skills/vibecoding-security-cheat-sheet-2026.html"
     },
     {
@@ -39,7 +39,7 @@
           "name": "How can I check my Cursor, Lovable, or Bolt.new app for all 8 issues in one command?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Run curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com in any POSIX terminal (zero install) or enter your domain in the live in-page 3-in-1 auditor at the top of this cheat sheet."
+            "text": "Run curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com in any POSIX terminal (zero install) or enter your domain in the live in-page 3-in-1 auditor at the top of this cheat sheet."
           }
         },
         {
@@ -139,7 +139,7 @@
       <div id="vc-scan-out" style="display:none;background:#ffffff;border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;margin-bottom:12px;" aria-live="polite"></div>
       <div class="cli-bar">
         <div class="cli-scroll">
-          <code id="vc-cli">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com</code>
+          <code id="vc-cli">curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com</code>
         </div>
         <button id="vc-copy-cli" class="btn btn-out btn-sm" type="button">Copy CLI</button>
       </div>
@@ -293,7 +293,7 @@
 
   <script>
 (function () {
-  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var TRACK_URL = "https://api.shipbastion.com/v1/telemetry";
   function opTrack(ev, extra) {
     try {
       var p = JSON.stringify(Object.assign({
@@ -328,7 +328,7 @@
 
   function syncCli() {
     var h = sanitizeHost(inp ? inp.value : "");
-    if (cliEl) cliEl.textContent = "curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite " + h;
+    if (cliEl) cliEl.textContent = "curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite " + h;
   }
   if (inp) { inp.addEventListener("input", syncCli); syncCli(); }
 
@@ -342,7 +342,7 @@
     out.innerHTML = '<div style="font-size:0.88rem;color:#475569;">Auditing <strong>' + escHtml(host) + '</strong> across VibeShield v7.0 + InboxShield + CiteReady...</div>';
     opTrack("scan", { target: "vibecoding-cheat-sheet", domain: host });
 
-    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+    fetch("https://api.shipbastion.com/v1/quick-score?domain=" + encodeURIComponent(host))
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) {
         if (!d || !d.ok) throw new Error("Bad payload");
@@ -359,13 +359,13 @@
               '<div style="font-size:0.86rem;color:#334155;margin-top:3px;">Security ' + escHtml(vb.score) + '/100 (' + escHtml(vb.issues || 0) + ' issues) · Email DNS ' + escHtml(ib.score) + '/100 (DMARC ' + escHtml(ib.dmarcPolicy || "none") + ') · AI GEO ' + escHtml(cr.score) + '/100</div>' +
             '</div>' +
             '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
-              '<a class="btn btn-out btn-sm" href="' + escHtml(vb.reportUrl || "https://vibe-checker.appwrite.network/") + '" target="_blank" rel="noopener">Open Full Report</a>' +
+              '<a class="btn btn-out btn-sm" href="' + escHtml(vb.reportUrl || "https://shipbastion.com/") + '" target="_blank" rel="noopener">Open Full Report</a>' +
               '<a class="btn btn-accent btn-sm" data-paywall="vc-live-suite" href="' + escHtml(suiteUrl) + '" target="_blank" rel="noopener">Unlock All ' + escHtml(ov.totalIssues || 0) + ' Fixes — $5 Suite</a>' +
             '</div>' +
           '</div>';
       })
       .catch(function (err) {
-        out.innerHTML = '<div style="font-size:0.85rem;color:#b45309;">Live quick-score unavailable (' + escHtml(err && err.message ? err.message : "network") + '). Run the 1-line cli.sh command below or open vibe-checker.appwrite.network directly.</div>';
+        out.innerHTML = '<div style="font-size:0.85rem;color:#b45309;">Live quick-score unavailable (' + escHtml(err && err.message ? err.message : "network") + '). Run the 1-line cli.sh command below or open shipbastion.com directly.</div>';
       })
       .finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = "Run Instant 3-in-1 Audit (Free)"; }

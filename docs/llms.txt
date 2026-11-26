@@ -4,7 +4,7 @@
 
 - Registry: https://www.skills.sh/zColdWater/omniforge-skills
 - GitHub Repo: https://github.com/zColdWater/omniforge-skills
-- Zero-Install 1-Line Audit: curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- --suite yourdomain.com
+- Zero-Install 1-Line Audit: curl -fsSL https://shipbastion.com/cli.sh | sh -s -- --suite yourdomain.com
 - Black Friday 2026 Deal Stack ($2 Single / $5 Complete Suite — 83% OFF): https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
 - 24-Point Interactive Pre-Launch Checklist: https://zcoldwater.github.io/omniforge-skills/pre-launch-security-checklist-2026.html
 - Free Live README SVG Badge Studio: https://zcoldwater.github.io/omniforge-skills/launch-score-badge-generator.html
@@ -14,10 +14,10 @@
 - 2026 State of AI Startup Infrastructure Report (390 Audits): https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html
 - Full Skills Reference: https://zcoldwater.github.io/omniforge-skills/llms-full.txt
 - Live Tools:
-  - VibeShield v7.0 ($2 Launch Special, reg. $9): https://vibe-checker.appwrite.network/
-  - InboxShield v7.0 ($2 Launch Special, reg. $9): https://inbox-checker.appwrite.network/
-  - CiteReady v6.0 ($2 Launch Special, reg. $12): https://citeready-checker.appwrite.network/
-  - BrandShield v6.2 (100% Free Forever): https://brand-checker.appwrite.network/
+  - VibeShield v7.0 ($2 Launch Special, reg. $9): https://shipbastion.com/
+  - InboxShield v7.0 ($2 Launch Special, reg. $9): https://inbox.shipbastion.com/
+  - CiteReady v6.0 ($2 Launch Special, reg. $12): https://cite.shipbastion.com/
+  - BrandShield v6.2 (100% Free Forever): https://brand.shipbastion.com/
   - OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29): https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true
 
 ## 50 Skills

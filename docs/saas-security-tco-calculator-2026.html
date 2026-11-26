@@ -11,9 +11,9 @@
   <meta property="og:title" content="2026 Indie SaaS Security, Email DNS &amp; AI Search TCO Calculator | OmniForge" />
   <meta property="og:description" content="Plug in your own monthly security, DMARC, and AI search tool quotes to compare 1-year and 3-year costs against $5 one-time remediation + free MIT GitHub Actions." />
   <meta property="og:url" content="https://zcoldwater.github.io/omniforge-skills/saas-security-tco-calculator-2026.html" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-suite-5usd.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/cover-suite-5usd.png" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -283,7 +283,7 @@
 
   <script>
 (function () {
-  var TRACK_URL = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+  var TRACK_URL = "https://api.shipbastion.com/v1/telemetry";
   function opTrack(ev, extra) {
     try {
       var p = JSON.stringify(Object.assign({
@@ -389,7 +389,7 @@
     qsOut.innerHTML = '<div style="font-size:0.88rem;color:#475569;">Running live read-only 3-in-1 check on <strong>' + escHtml(host) + '</strong>...</div>';
     opTrack("scan", { target: "tco-quick-score", domain: host });
 
-    fetch("https://omnipulse-x402.appwrite.network/v1/quick-score?domain=" + encodeURIComponent(host))
+    fetch("https://api.shipbastion.com/v1/quick-score?domain=" + encodeURIComponent(host))
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (d) {
         if (!d || !d.ok) throw new Error("Unexpected response");
