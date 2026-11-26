@@ -41,7 +41,7 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 - **2026 HTTP Security Headers & RFC 9116 `security.txt` Generator (Next.js, Vercel, Cloudflare, Netlify, Nginx):** [Interactive Headers Config Generator](https://zcoldwater.github.io/omniforge-skills/security-headers-generator-2026.html)
 - **Live Vercel Skills Registry Directory:** [https://www.skills.sh/zColdWater/omniforge-skills](https://www.skills.sh/zColdWater/omniforge-skills)
 - **2026 Flagship Empirical Report Hub (390 Live Audits Across Security, security.txt, Email DNS, AI Search & TLDs):** [2026 State of Indie & AI Startup Infrastructure Report](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.html) · [Master JSON](https://zcoldwater.github.io/omniforge-skills/state-of-ai-startup-infrastructure-2026.json)
-- **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~ — Unlocks VibeShield + InboxShield + CiteReady):** [https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)
+- **OmniForge 3-in-1 Complete Suite ($5 Launch Special, ~~$29~~ — Unlocks VibeShield + InboxShield + CiteReady):** [https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true](https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true)
 
 ---
 
@@ -106,11 +106,11 @@ cp -R omniforge-skills/skills/* ~/.claude/skills/
 
 | Product | Free Live Tool (Zero Signup) | Pricing |
 | :--- | :--- | :--- |
-| **VibeShield v7.0** | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network/?ref=gh-omniforge-skills) | Free 6-Phase Scan · [$2 Launch Special Fix Unlock (~~$9~~)](https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield) |
-| **InboxShield v7.0** | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network/?ref=gh-omniforge-skills) · [/spf-flattener](https://inbox-checker.appwrite.network/spf-flattener?ref=gh-omniforge-skills) | Free 6-Phase DNS Trace · [$2 Launch Special Fix (~~$9~~)](https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield) |
-| **CiteReady v6.0** | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network/?ref=gh-omniforge-skills) · [/generator](https://citeready-checker.appwrite.network/generator?ref=gh-omniforge-skills) | Free GEO PK & Audit · [$2 Launch Special Kit (~~$12~~)](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) |
+| **VibeShield v7.0** | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network/?ref=gh-omniforge-skills) | Free 6-Phase Scan · [$2 Launch Special Fix Unlock (~~$9~~)](https://agentarenastudi.gumroad.com/l/omniforge-vibeshield?wanted=true) |
+| **InboxShield v7.0** | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network/?ref=gh-omniforge-skills) · [/spf-flattener](https://inbox-checker.appwrite.network/spf-flattener?ref=gh-omniforge-skills) | Free 6-Phase DNS Trace · [$2 Launch Special Fix (~~$9~~)](https://agentarenastudi.gumroad.com/l/omniforge-inboxshield?wanted=true) |
+| **CiteReady v6.0** | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network/?ref=gh-omniforge-skills) · [/generator](https://citeready-checker.appwrite.network/generator?ref=gh-omniforge-skills) | Free GEO PK & Audit · [$2 Launch Special Kit (~~$12~~)](https://agentarenastudi.gumroad.com/l/omniforge-citeready?wanted=true) |
 | **BrandShield v6.2** | [brand-checker.appwrite.network](https://brand-checker.appwrite.network/?ref=gh-omniforge-skills) · [/namer](https://brand-checker.appwrite.network/namer?ref=gh-omniforge-skills) | **100% Free Forever** (78 TLDs + 17 Aftermarket + USPTO) |
-| **Complete 3-in-1 Suite** | Unlocks VibeShield + InboxShield + CiteReady | [$5 Launch Special (~~$29~~, one-time, $0/mo)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) |
+| **Complete 3-in-1 Suite** | Unlocks VibeShield + InboxShield + CiteReady | [$5 Launch Special (~~$29~~, one-time, $0/mo)](https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true) |
 
 ## Companion GitHub Actions (`@v1`) & MCP Server
 

@@ -36,6 +36,6 @@ npx github:zColdWater/citeready-cli audit https://YOUR_SITE_URL --json
 
 - **CI / Automation:** `uses: zColdWater/citeready-action@v1`
 - **Free Interactive Web Workbench:** https://citeready-checker.appwrite.network/?ref=skill-canonical-sitemap-geo-audit
-- **Full Copy-Paste Fix Unlock ($2 Launch Special (reg. $12, one-time)):** https://omnipulse-x402.appwrite.network/go/gumroad/citeready
+- **Full Copy-Paste Fix Unlock ($2 Launch Special (reg. $12, one-time)):** https://agentarenastudi.gumroad.com/l/omniforge-citeready?wanted=true
 - **Black Friday 2026 Developer Deal Stack ($2 Single / $5 Complete Suite — 83% OFF):** https://zcoldwater.github.io/omniforge-skills/black-friday-2026-developer-security-deal.html
-- **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
+- **OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29 — Unlocks VibeShield + InboxShield + CiteReady):** https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true

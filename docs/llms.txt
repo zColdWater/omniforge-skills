@@ -18,7 +18,7 @@
   - InboxShield v7.0 ($2 Launch Special, reg. $9): https://inbox-checker.appwrite.network/
   - CiteReady v6.0 ($2 Launch Special, reg. $12): https://citeready-checker.appwrite.network/
   - BrandShield v6.2 (100% Free Forever): https://brand-checker.appwrite.network/
-  - OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29): https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
+  - OmniForge 3-in-1 Complete Suite ($5 Launch Special, reg. $29): https://agentarenastudi.gumroad.com/l/omniforge-launch-stack?wanted=true
 
 ## 50 Skills
 - vibeshield-security-audit (VibeShield v7.0): https://zcoldwater.github.io/omniforge-skills/skills/vibeshield-security-audit.html | https://www.skills.sh/zColdWater/omniforge-skills/vibeshield-security-audit — Run a read-only 6-phase security audit on Next.js, Vite, Cursor, Lovable, Bolt, Supabase, and Firebase apps: TLS 443, CNAME takeover, 24 full JS bundles (52 secret patterns), 28 SPA-filtered probes, Supabase RLS, Firebase rules, CSP AST & passive CVEs.
