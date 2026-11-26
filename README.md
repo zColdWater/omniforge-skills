@@ -8,6 +8,17 @@
 
 **Zero-dependency `SKILL.md`, Codex Plugin & Claude Code Plugin pack (50 specialized developer skills) for Claude Code, OpenAI Codex CLI, Cursor, Windsurf, Cline, Antigravity, and Gemini CLI** — teaching coding agents how to run deterministic, strictly read-only pre-launch audits via free live APIs, a zero-install POSIX `cli.sh` one-liner, and MIT CLIs across **Web/AI App Security (VibeShield v7.0)**, **Email DNS Deliverability (InboxShield v7.0)**, **78-TLD Domain & Trademark Clearance (BrandShield v6.2 — 100% Free)**, and **AI Search / `/llms.txt` Citation Readiness (CiteReady v6.0)**.
 
+
+<!-- shipbastion-hero:start -->
+<p align="center">
+  <a href="https://shipbastion.com/">
+    <img src="./assets/shipbastion-suite-preview.png" alt="ShipBastion 4-in-1 Pre-Launch Security, Email DNS, AI Search & Domain Suite" width="100%" />
+  </a>
+</p>
+
+*All 50 MIT Agent Skills connect directly to our live [ShipBastion](https://shipbastion.com/) scanners (`shipbastion.com`, `inbox.`, `cite.`, `brand.`).*
+<!-- shipbastion-hero:end -->
+
 ## Zero-Install 1-Line Terminal Audit (`cli.sh` — No Node/npm Required)
 
 ```bash
